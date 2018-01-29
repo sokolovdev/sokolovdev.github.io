@@ -1,0 +1,28 @@
++b.SECTION.main
+	+e.container.container
+		+e.text.text--main
+			h1 Кирилл Гурбанов</br> - Product Head
+			p Я разбираюсь в управлении цифровыми продуктами. Большую часть времени я посвящаю 
+				a(href="#") Сбербанку
+				| , еще немного — консалтингу, киберспортивному бизнесу в 
+				a(href="#") «Битве Корпораций»
+				| и, конечно, моему любимому проекту о здоровом образе жизни, 
+				a(href="#") GetLean
+				| . 
+			+e.BUTTON(type="button").button.button--gray Написать мне
+		+e.FORM(action="#").subscribe.form__.--main
+			+e.body
+				+e.text.text--subscribe
+					h3 Подписаться</br> на рассылку
+					p Пришлю лучшие материалы. Без спама.
+				+e.line
+					+e.input
+						input
+					+e.BUTTON(type="button").button.button--blue-icon
+				+e.privacy
+					p Нажимая «Подписаться», вы даете согласие на 
+						a(href="#") обработку персональных данных
+			+e.respons.text--respons
+				span Вы успешно подписались!
+			+e.bg
+				img(src="/img/mail.svg")
