@@ -2,12 +2,13 @@
 	+e.container.container
 		+e.A(href="/" title="Логотип").logo
 			img(src="/img/logo.jpg")
-			p Кирилл Гурбанов
-		+e.UL.menu.menu__.--header
-			+e.LI.item
-				a(href="/contacts.html") Контакты
+		+e.wrapper
+			+e.name Кирилл Гурбанов
+			+e.UL.menu.menu__.--header
+				+e.LI.item
+					a(href="/contacts.html") Контакты
 		+e.search.search__
-			input
+			input(placeholder="Поиск по сайту")
 			+e.results
 				+e.A(href="#").result
 				+e.A(href="#").result
