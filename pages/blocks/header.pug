@@ -1,9 +1,9 @@
 +b.HEADER.header
 	+e.container.container
-		+e.A(href="/" title="Логотип").logo
-			img(src="/img/logo.jpg")
 		+e.wrapper
-			+e.name Кирилл Гурбанов
+			+e.A(href="/" title="Логотип").logo
+				img(src="/img/logo.jpg")
+				+e.name Кирилл Гурбанов
 			+e.UL.menu.menu__.--header
 				+e.LI.item
 					a(href="/contacts.html") Обо мне
@@ -11,8 +11,12 @@
 					a(href="/contacts.html") Консультация
 				+e.LI.item
 					a(href="/contacts.html") Контакты
+		+e.search-button
+		+e.hamburger
+			span
 		+e.search.search__
 			input(placeholder="Поиск по сайту")
+			+e.close
 			+e.results
 				+e.A(href="#").result
 				+e.A(href="#").result
