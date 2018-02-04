@@ -257,14 +257,14 @@ a {
         &__item {
             display: block;
             font-size: 16px;
-            font-family: light;
-            height: 44px;
-            line-height: 44px;
-            border-bottom: 1px solid rgba(102,153,255,.3);
-		    color: #69f;
-            a {
-                color: inherit;
-                display: block;
+            font-family: light;              
+            a {                
+                border-bottom: 1px solid rgba(102,153,255,.3);
+			    color: #69f;
+                display: inline-block;
+            }
+            & + .menu__item{
+            	margin-top: 10px;
             }
         }
     }
@@ -1083,8 +1083,13 @@ a {
                 border-bottom: 1px solid rgba(102, 153, 255, 0.3);
                 padding-bottom: 2px;
                 color: #6699ff;
+                a {
+					color: inherit;
+					border-bottom: none;
+                }
                 &+.menu__item {
                     margin-left: 10px;
+                    margin-top: 0;
                 }
             }
         }
