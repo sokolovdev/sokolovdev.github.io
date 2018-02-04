@@ -11,6 +11,7 @@ $susy: ( 'columns': susy-repeat(48),
 
 body {
     font-size: 14px;
+    background-color: #fff;
     font-family: 'reg';
 }
 
@@ -499,7 +500,6 @@ a {
         &__post-title {
             font-size: 16px;
             color: #000;
-            font-family: light;
             margin-bottom: 5px;
             display: block;
             &::before {
@@ -702,7 +702,7 @@ a {
             font-size: 18px;
             color: #333;
             line-height: 30px;
-            border-bottom: 1px solid rgba(51, 51, 51, 0.3);
+            border-bottom: 1px solid rgba(102, 153, 255, 1);
             display: inline;
             &::before {
                 content: '';
@@ -842,7 +842,7 @@ a {
         &__title {
             color: rgba(51, 51, 51, 0.9);
             font-size: 18px;
-            border-bottom: 1px solid rgba(51, 51, 51, 0.2);
+            border-bottom: 1px solid rgba(102, 153, 255, 0.6);
             line-height: 24px;
             &::before {
                 content: '';
@@ -962,8 +962,8 @@ a {
             display: inline-block;
             vertical-align: top;
             width: 50%;
-            margin-bottom: 20px;
-            padding: 0 10px;
+            margin-bottom: 10px;
+            padding: 0 5px;
             box-sizing: border-box;
 
             &+.posts__item {
@@ -971,14 +971,14 @@ a {
             }
         }
     }
-    .post--card{
-    	.post{
-    		&__body{
-    			position: relative;    			
+    .post--card {
+        .post {
+            &__body {
+                position: relative;
                 border-radius: 5px;
                 overflow: hidden;
-    		}
-    	}
+            }
+        }
     }
 }
 
@@ -1137,7 +1137,7 @@ a {
     }
 
     .posts {
-        padding: 55px 0 70px;       
+        padding: 55px 0 70px;
         &__title {
             font-size: 40px;
             margin-bottom: 15px;
@@ -1154,6 +1154,11 @@ a {
             height: 480px;
             padding: 0 10px;
             margin: 0 auto;
+        }
+        &__item {
+
+            margin-bottom: 20px;
+            padding: 0 10px;
         }
         &__promo {
             display: inline-block;
@@ -1353,7 +1358,7 @@ a {
                 .post {
                     &__title {
                         color: #333;
-                        border-bottom: 1px solid rgba(102, 153, 255, 0.5);
+                        border-bottom: 1px solid rgba(51, 51, 51, 0.5);
                     }
                 }
             }
@@ -1402,8 +1407,7 @@ a {
             }
         }
         .post {
-            &__body {
-            }
+            &__body {}
             &__title {
                 font-size: 21px;
                 line-height: 30px;
@@ -1842,10 +1846,7 @@ a {
                 padding: 35px;
             }
             &__post-title {
-                display: inline;
-            }
-            &__text {
-                margin-top: 5px;
+                margin-bottom: 7px;
             }
         }
     }
@@ -1875,6 +1876,13 @@ a {
         }
     }
 
+
+    .post--card {
+        .post__title {
+            border-bottom: 1px solid rgba(51, 51, 51, 0.3);
+        }
+    }
+
     .popular {
         padding: 95px 0;
         &__title {
@@ -1891,6 +1899,7 @@ a {
             &__title {
                 font-size: 36px;
                 line-height: 40px;
+                border-bottom: 1px solid rgba(51, 51, 51, 0.2);
             }
             &__excerpt {
                 font-size: 24px;
@@ -2099,6 +2108,7 @@ a {
 
 
 
+
 /* HOVERS */
 
 @media (min-width: 1240px) {
@@ -2112,7 +2122,7 @@ a {
         }
         .post__photo {
             img {
-                transition: 2s ease;
+                transition: 0.4s ease;
             }
         }
         &:hover {
@@ -2121,25 +2131,22 @@ a {
                     box-shadow: 5px 8.7px 30px 0 rgba(0, 0, 0, 0.15);
                 }
                 &__title {
-                    border-bottom: 1px solid rgba(102, 153, 255, .3);
+                    border-bottom: 1px solid rgba(102, 153, 255, 1);
                 }
                 &__photo {
                     img {
-                        transition: 15s ease;
-                        transform: translate(-50%, -50%) scale(1.3);
+                        transform: translate(-50%, -50%) scale(1.1);
                     }
                 }
             }
 
-            transform: translate(0, -10px);
+            transform: translate(0, -5px);
         }
     }
 
     .recomend {
         &__post-title {
             transition: 0.3s ease;
-            border-bottom: 1px solid transparent;
-            display: inline;
         }
         &__item {
 
@@ -2147,20 +2154,12 @@ a {
                 transition: 0.3s ease;
             }
         }
-        &__item:nth-child(1):hover {
+        &__item:hover {
             &::before {
-                transform: scale(1.5);
+                transform: scale(1.4);
             }
             .recomend__post-title {
                 color: #a05b89;
-            }
-        }
-        &__item:nth-child(2):hover {
-            &::before {
-                transform: scale(1.5);
-            }
-            .recomend__post-title {
-                border-bottom: 1px solid rgba(0, 0, 0, 0.5);
             }
         }
     }
@@ -2219,9 +2218,40 @@ a {
                 transition: 0.3s ease;
                 &:hover {
                     color: #a05b89;
+                    border-bottom: 1px solid rgba(160, 91, 137, 0.5)
                 }
             }
         }
+    }
+
+
+    .text--main, .text--footer {
+        a {
+            transition: 0.3s ease;
+            &:hover {
+                color: #a05b89;
+                border-bottom: 1px solid rgba(160, 91, 137, 0.5)
+            }
+        }
+    }
+    .list--tags{
+    	.list__item{
+    		transition: 0.3s ease;
+    		&:hover{
+    			color: #a05b89;
+                border-bottom: 1px solid rgba(160,91,137,0.5)
+    		}
+    	}
+    }
+
+    .contact{
+    	&__link{
+			transition: 0.3s ease;
+			&:hover{
+				color: #a05b89;
+                border-bottom: 1px solid rgba(160,91,137,0.5)
+			}
+    	}
     }
 }
 
