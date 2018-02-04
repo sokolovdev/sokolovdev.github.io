@@ -2150,9 +2150,11 @@ a {
                     }
                 }
             }
-
-            transform: translate(0, -5px);
         }
+    }
+
+    .post--card:not(.post--big):hover{
+    	transform: translate(0, -5px);
     }
 
     .recomend {
