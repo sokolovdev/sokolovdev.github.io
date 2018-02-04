@@ -906,8 +906,8 @@ a {
     p {
         font-size: 18px;
         line-height: 22px;
-        a{
-        	margin-top: 0;
+        a {
+            margin-top: 0;
         }
     }
     a {
@@ -949,7 +949,7 @@ a {
             }
         }
     }
-     @media (min-width: 1240px) {
+    @media (min-width: 1240px) {
         padding-top: 125px;
         .footer {
             &__bottom {
@@ -2120,6 +2120,7 @@ a {
 
 
 
+
 /* HOVERS */
 
 @media (min-width: 1240px) {
@@ -2144,17 +2145,21 @@ a {
                 &__title {
                     border-bottom: 1px solid rgba(102, 153, 255, 1);
                 }
-                &__photo {
-                    img {
-                        transform: translate(-50%, -50%) scale(1.1);
-                    }
-                }
             }
         }
     }
 
-    .post--card:not(.post--big):hover{
-    	transform: translate(0, -5px);
+    .post--card:not(.post--big):hover {
+        transform: translate(0, -5px);
+    }
+    .post--big:hover {
+        .post {
+            &__photo {
+                img {
+                    transform: translate(-50%, -50%) scale(1.1);
+                }
+            }
+        }
     }
 
     .recomend {
@@ -2170,6 +2175,7 @@ a {
         &__item:hover {
             &::before {
                 transform: scale(1.4);
+                background-color: #a05b89;
             }
             .recomend__post-title {
                 color: #a05b89;
@@ -2238,7 +2244,8 @@ a {
     }
 
 
-    .text--main, .text--footer {
+    .text--main,
+    .text--footer {
         a {
             transition: 0.3s ease;
             &:hover {
@@ -2247,32 +2254,32 @@ a {
             }
         }
     }
-    .list--tags{
-    	.list__item{
-    		transition: 0.3s ease;
-    		&:hover{
-    			color: #a05b89;
-                border-bottom: 1px solid rgba(160,91,137,0.5)
-    		}
-    	}
+    .list--tags {
+        .list__item {
+            transition: 0.3s ease;
+            &:hover {
+                color: #a05b89;
+                border-bottom: 1px solid rgba(160, 91, 137, 0.5)
+            }
+        }
     }
 
-    .contact{
-    	&__link{
-			transition: 0.3s ease;
-			&:hover{
-				color: #a05b89;
-                border-bottom: 1px solid rgba(160,91,137,0.5)
-			}
-    	}
+    .contact {
+        &__link {
+            transition: 0.3s ease;
+            &:hover {
+                color: #a05b89;
+                border-bottom: 1px solid rgba(160, 91, 137, 0.5)
+            }
+        }
     }
 
-    .button--blue-icon{
-    	transition: 0.3s ease;
-    	&:hover{
-    		background-color: #fff;
-    		color: #69f;
-    	}
+    .button--blue-icon {
+        transition: 0.3s ease;
+        &:hover {
+            background-color: #fff;
+            color: #69f;
+        }
     }
 }
 
