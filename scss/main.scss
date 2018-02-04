@@ -949,6 +949,14 @@ a {
             }
         }
     }
+     @media (min-width: 1240px) {
+        padding-top: 125px;
+        .footer {
+            &__bottom {
+                bottom: 125px;
+            }
+        }
+    }
     @media (min-width: 1560px) {
         padding-top: 240px;
         .footer {
@@ -1991,7 +1999,6 @@ a {
     .recomend--main {
         .recomend {
             &__post-title {
-                font-size: 18px;
                 margin-bottom: 5px;
             }
         }
