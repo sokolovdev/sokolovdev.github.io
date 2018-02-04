@@ -371,17 +371,35 @@ a {
             padding-left: 15px;
             width: 100%;
             box-sizing: border-box;
+            &:focus {
+                &::-webkit-input-placeholder {
+                    color: rgba(28, 28, 28, 0.2);
+                }
+                &::-moz-placeholder {
+                    color: rgba(28, 28, 28, 0.2);
+                }
+                &:-moz-placeholder {
+                    color: rgba(28, 28, 28, 0.2);
+                }
+                &::-ms-input-placeholder {
+                    color: rgba(28, 28, 28, 0.2);
+                }
+            }
             &::-webkit-input-placeholder {
                 color: rgba(28, 28, 28, 0.6);
+                transition: 0.3s ease;
             }
             &::-moz-placeholder {
                 color: rgba(28, 28, 28, 0.6);
+                transition: 0.3s ease;
             }
             &:-moz-placeholder {
                 color: rgba(28, 28, 28, 0.6);
+                transition: 0.3s ease;
             }
             &::-ms-input-placeholder {
                 color: rgba(28, 28, 28, 0.6);
+                transition: 0.3s ease;
             }
         }
     }
@@ -967,7 +985,7 @@ a {
     }
 }
 
-@media (min-width: 590px) {
+@media (min-width: 600px) {
     .posts {
         &__item {
             max-width: none;
@@ -1539,13 +1557,13 @@ a {
             }
         }
         &__wrapper {
-            width: span(20 of 24);
+            width: span(19 of 24);
         }
         &__search {
-            width: span(4 of 24);
+            width: span(5 of 24);
         }
         &__menu {
-            width: span(13 of 20);
+            width: span(12 of 19);
         }
     }
 
@@ -1669,6 +1687,11 @@ a {
                 &__photo {
                     height: 430px;
                 }
+            }
+        }
+        .post {
+            &__tags {
+                padding: 0 20px;
             }
         }
     }
@@ -2121,6 +2144,7 @@ a {
 
 
 
+
 /* HOVERS */
 
 @media (min-width: 1240px) {
@@ -2174,7 +2198,7 @@ a {
         }
         &__item:hover {
             &::before {
-                transform: scale(1.4);
+                // transform: scale(1.4);
                 background-color: #a05b89;
             }
             .recomend__post-title {
