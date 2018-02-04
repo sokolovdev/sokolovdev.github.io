@@ -86,7 +86,7 @@ body {
         width: 100%;
         background-color: #fefefe;
         padding-top: 90px;
-        padding-left: 40px;
+        padding-left: 72px;
         box-sizing: border-box;
         box-shadow: 0px 6px 10px 0 rgba(0, 0, 0, 0.15);
         transition: all 0.3s cubic-bezier(1, 0, 0, 1);
@@ -256,12 +256,12 @@ a {
     .menu {
         &__item {
             display: block;
-            font-size: 18px;
-            color: #333;
+            font-size: 16px;
             font-family: light;
             height: 44px;
             line-height: 44px;
-            border-bottom: 1px solid rgba(51, 51, 51, 0.5);
+            border-bottom: 1px solid rgba(102,153,255,.3);
+		    color: #69f;
             a {
                 color: inherit;
                 display: block;
