@@ -1280,14 +1280,12 @@ a {
             width: span(3.5 of 12);
             position: static;
             margin-left: span(0.2 of 12);
+            &::before{
+            	display: none;
+            }
         }
         &__privacy {
             font-size: 14px;
-        }
-        &--subscribe{
-        	.form__button:before{
-        		font-size: 0;
-        	}
         }
     }
 
@@ -1740,6 +1738,9 @@ a {
                 width: span(1.9 of 8);
                 margin-left: span(0.1 of 8);
                 max-width: 60px;
+                &::before{
+                	display: block;
+                }
             }
             &__text {
                 margin-bottom: 25px;
@@ -1966,8 +1967,6 @@ a {
 
 
 @media (min-width: 1240px) {
-    .header {}
-
     .main {
         &__text {
             width: span(12 of 24);
@@ -2006,6 +2005,7 @@ a {
         &__promo {
             width: 100%;
             height: 440px;
+            padding: 0;
         }
         &__item {
             margin-bottom: 50px;
@@ -2017,6 +2017,7 @@ a {
             width: 100%;
             height: auto;
             margin-bottom: 20px;
+            padding: 0;
         }
         &__button {
             width: span(5 of 16);
@@ -2338,7 +2339,7 @@ a {
                     box-shadow: 5px 8.7px 30px 0 rgba(0, 0, 0, 0.15);
                 }
                 &__title {
-                    border-bottom: 1px solid rgba(102, 153, 255, 1);
+                    border-bottom: 1px solid rgba(102, 153, 255, 0.5)!important;
                 }
             }
         }
@@ -2451,6 +2452,16 @@ a {
             }
         }
     }
+	
+	.text--privacy{
+		a{
+			transition: 0.3s ease;
+			&:hover{
+				color: rgba(0,0,0,0.6);
+			    // border-bottom: 1px solid rgba(0,0,0,.6);
+			}
+		}
+	}
 
     .list--tags {
         .list__item {
@@ -2487,6 +2498,15 @@ a {
     }
 
     .form {
+    	&__privacy{
+    		a{
+    			transition: 0.3s ease;
+    			&:hover{
+    				color: rgba(255,255,255,1);
+    				border-bottom: 1px solid rgba(255,255,255,.5);
+    			}
+    		}
+    	}
         input {
             &:hover {
                 &::-webkit-input-placeholder {
