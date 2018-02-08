@@ -1,0 +1,210 @@
+.post--page {
+    padding: 85px 0 35px;
+    background-color: #f9f9f9;
+    .post {
+        &__photo {
+            height: 195px;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 25px;
+            img {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 100%;
+            }
+        }
+        &__title {
+            font-size: 24px;
+            line-height: 30px;
+            font-family: 'med';
+            margin-bottom: 10px;
+        }
+        &__excerpt {
+            font-size: 18px;
+            font-family: light;
+            margin-bottom: 30px;
+        }
+        &__body{
+        	border-bottom: 1px solid #515151;
+        	padding-bottom: 40px;
+        }
+        &__sharing--aside{
+        	display: none;
+        }
+        &__button-share{
+        	width: 40px;
+        	height: 40px;
+        	border-radius: 50%;
+        	box-sizing: border-box;
+        }
+
+    }
+}
+
+.text--post-page {
+    font-size: 16px;
+    &>p:nth-child(1):first-letter {
+        font-size: 48px;
+        line-height: 40px;
+        font-family: 'med';
+        float: left;
+        padding-right: 5px;
+    }
+    p {
+        color: #000;
+        font-family: light;
+        line-height: 21px;
+        &+a {
+            margin-top: 20px;
+        }
+        &+p {
+            margin-top: 25px;
+        }
+        &+h2 {
+            margin-top: 25px;
+        }
+        &+h3 {
+            margin-top: 25px;
+        }
+        &+h4 {
+            margin-top: 25px;
+        }
+        &+h5 {
+            margin-top: 25px;
+        }
+        &+h6 {
+            margin-top: 25px;
+        }
+    }
+    a {
+        color: #6699ff;
+        border-bottom: 1px solid rgba(102, 153, 255, 0.5);
+        padding-bottom: 3px;
+        &+p {
+            margin-top: 20px;
+        }
+    }
+    h3 {
+        font-size: 21px;
+        font-family: 'med';
+    }
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        +* {
+            margin-top: 25px;
+        }
+    }
+    *+.highlight {
+        margin-top: 25px;
+    }
+    .highlight {
+        text-align: center;
+        border-top: 1px solid rgba(0, 0, 0, 0.2);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+        padding: 25px 0;
+        p {
+            font-size: 24px;
+            line-height: normal;
+        }
+        &+* {
+            margin-top: 25px;
+        }
+    }
+    .recomendation {
+        background-color: #fff;
+        border-top: 7px solid #a16af5;
+        display: block;
+        padding: 20px span(1 of 12);
+        margin-top: 25px;
+        margin-bottom: 20px;
+        h3 {
+            color: #000;
+        }
+        p {
+            position: relative;
+            &:before {
+                content: '';
+                position: absolute;
+                width: 6px;
+                height: 6px;
+                border-radius: 50px;
+                background-color: #a16af5;
+                top: 8px;
+                left: -10px;
+            }
+        }
+        span {
+            color: #a16af5;
+            display: inline-block;
+            &:after {
+                font-family: icon;
+                content: '\e900';
+                color: #a16af5;
+                font-size: 10px;
+                display: inline-block;
+                vertical-align: middle;
+                margin-left: 4px;
+            }
+        }
+    }
+    blockquote {
+        background-color: #fff;
+        border-top: 7px solid #a16af5;
+        display: block;
+        padding: 20px span(0.5 of 12);
+        position: relative;
+        &:before {
+            content: '„';
+            line-height: 0;
+            position: absolute;
+            color: rgba(0, 0, 0, 0.05);
+            font-size: 230px;
+            font-family: 'med';
+            top: -40px;
+            right: span(0.5 of 12);
+        }
+        p+p {
+            margin-top: 10px;
+        }
+    }
+    .definition {
+        &+* {
+            margin-top: 20px;
+        }
+        p {
+            font-size: 14px;
+            color: rgba(0, 0, 0, 0.6);
+            line-height: normal;
+        }
+    }
+    *+.definition {
+        margin-top: 15px;
+    }
+    * + ul{
+    	margin-top: 20px;
+    }
+    ul {
+        padding-left: 20px;
+        & + *{
+        	margin-top: 20px;
+        }
+    }
+    li {
+        position: relative;
+        &:before {
+            content: '';
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            border-radius: 50px;
+            background-color: #000;
+            top: 6px;
+            left: -10px;
+        }
+    }
+}
