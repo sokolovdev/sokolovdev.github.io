@@ -219,6 +219,7 @@ a {
         padding: 0 20px;
         width: 100%;
         font-size: 14px;
+        background-color: transparent;
         &::-webkit-input-placeholder {
             color: rgba(51, 51, 51, 0.7);
         }
@@ -634,7 +635,7 @@ a {
 
 
 .post--card {
-    height: 370px;
+    height: 370px!important;
     position: relative;
     border-radius: 5px;
     &.post--photo-top {
@@ -1395,9 +1396,9 @@ a {
     .post--card {
         overflow: visible;
         border-radius: 0;
-        height: 440px;
+        height: 440px!important;
         &.post--big {
-            height: 450px;
+            height: 450px!important;
             text-align: center;
             .post {
                 &__title {
@@ -1826,7 +1827,7 @@ a {
     }
 
     .post--card {
-        height: 470px;
+        height: 470px!important;
         &.post--video {
             .post {
                 &__photo {
@@ -2189,9 +2190,9 @@ a {
     }
 
     .post--card {
-        height: 540px;
+        height: 540px!important;
         &.post--big {
-            height: 540px;
+            height: 540px!important;
             .post {
                 &__title {
                     font-size: 36px;
@@ -2525,5 +2526,8 @@ a {
         }
     }
 }
+
+
+@import '_swiper.scss';
 @import '_post.scss';
 @import '_fonts.scss';
