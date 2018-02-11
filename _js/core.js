@@ -41,4 +41,9 @@ $(document).ready(function() {
     })
 
 
+    $('.form__button').on('click', function(){
+    	$(this).closest('.form').addClass('send');
+    })
+
+
 });

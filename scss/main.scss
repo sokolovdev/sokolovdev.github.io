@@ -15,9 +15,9 @@ body {
     font-family: 'reg';
 }
 
-input{
-	-webkit-appearance: none;
-	border-radius: 0;
+input {
+    -webkit-appearance: none;
+    border-radius: 0;
 }
 
 * {
@@ -245,19 +245,19 @@ a {
         font-size: 14px;
         background-color: transparent;
         &::-webkit-input-placeholder {
-        	transition: 0.3s ease;
+            transition: 0.3s ease;
             color: rgba(51, 51, 51, 0.7);
         }
         &::-moz-placeholder {
-        	transition: 0.3s ease;
+            transition: 0.3s ease;
             color: rgba(51, 51, 51, 0.7);
         }
         &:-moz-placeholder {
-        	transition: 0.3s ease;
+            transition: 0.3s ease;
             color: rgba(51, 51, 51, 0.7);
         }
         &::-ms-input-placeholder {
-        	transition: 0.3s ease;
+            transition: 0.3s ease;
             color: rgba(51, 51, 51, 0.7);
         }
         &:focus {
@@ -371,7 +371,54 @@ a {
 
 .form {
     overflow: hidden;
-    &--main {
+    &::before {
+        transition: 0.3s ease;
+    }
+    &--subscribe{
+    	&.send {
+            .form {
+                &__body {
+                    transform: translate(150%, 0);
+                    @media (min-width: 768px){
+                    	transform: translate(0, 150%);
+                    }
+                }
+                &__response {
+                    transform: translate(-50%, -50%);
+                    opacity: 1;
+                }
+            }
+            &::before {
+                transform: translate(100%, 100%) rotate(-15deg);
+                @media (min-width: 768px){
+                	transform: translate(-50%, 100%) rotate(-15deg);
+                }
+                @media (min-width: 1024px) {
+                    transform: translate(-50%, 100%) rotate(-15deg);
+                }
+            }
+        }
+    }
+    &--main {    	
+		position: relative;
+        &.send {
+            .form {
+
+                &__body {
+                    transform: translate(150%, 0);
+                }
+                &__response {
+                    transform: translate(-50%, -50%);
+                    opacity: 1;
+                }
+            }
+            &::before {
+                transform: translate(100%, 100%) rotate(15deg);
+                @media (min-width: 1024px) {
+                    transform: translate(100%, 100%) rotate(-15deg);
+                }
+            }
+        }
         padding: 25px 20px 35px;
         margin: 0 -20px;
 
@@ -404,6 +451,7 @@ a {
     }
     &__body {
         max-width: 320px;
+        transition: 0.3s cubic-bezier(1, 0, 0, 1);
     }
     &__input {
         display: inline-block;
@@ -471,10 +519,18 @@ a {
         }
     }
     &__response {
-        display: none;
-    }
-    &__bg {
-        display: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -40%);
+        pointer-events: none;
+        text-align: center;
+        font-size: 24px;
+        font-family: 'reg';
+        width: 100%;
+        color: #fff;
+        opacity: 0;
+        transition: 0.3s ease 0.3s;
     }
 }
 
@@ -598,8 +654,8 @@ a {
                 background-color: #a16af5;
                 top: 6px;
                 left: -13px;
-                @media (min-width: 768px){
-                	top: 7px;
+                @media (min-width: 768px) {
+                    top: 7px;
                 }
             }
             &+.recomend__item {
@@ -916,6 +972,7 @@ a {
 
 .subscribe {
     padding: 25px 0 35px;
+    position: relative;
     background: -moz-linear-gradient(120deg, rgba(117, 74, 144, 1) 0%, rgba(160, 91, 137, 1) 100%);
     /* ff3.6+ */
     background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, rgba(160, 91, 137, 1)), color-stop(100%, rgba(117, 74, 144, 1)));
@@ -930,9 +987,7 @@ a {
     /* w3c */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a05b89', endColorstr='#754a90', GradientType=0);
     /* ie6-9 */
-    &__bg {
-        display: none;
-    }
+   
 }
 
 .popular {
@@ -1344,7 +1399,7 @@ a {
                 }
                 &::-ms-input-placeholder {
                     color: rgba(51, 51, 51, 1);
-                }            
+                }
             }
             &:hover {
                 &::-webkit-input-placeholder {
@@ -1366,7 +1421,7 @@ a {
         }
     }
 
-   
+
 
 
     .posts {
@@ -2030,10 +2085,10 @@ a {
 
 
 @media (min-width: 1240px) {
-	.button--gray{
-		height: 60px;
-		line-height: 58px;
-	}
+    .button--gray {
+        height: 60px;
+        line-height: 58px;
+    }
     .main {
         &__text {
             width: span(12 of 24);
@@ -2398,6 +2453,8 @@ a {
 
 
 
+
+
 /* HOVERS */
 
 @media (min-width: 1240px) {
@@ -2578,8 +2635,7 @@ a {
             &::before {
                 // color: #69f;
             }
-            background-color: #4c80e8;
-            // color: #69f;
+            background-color: #4c80e8; // color: #69f;
         }
     }
 
@@ -2610,66 +2666,66 @@ a {
             }
         }
     }
-    .text--post-page{
-    	a:not(.recomendation):hover{
-    		color: #a05b89;
-		    border-bottom: 1px solid rgba(160,91,137,.5);
-    	}
+    .text--post-page {
+        a:not(.recomendation):hover {
+            color: #a05b89;
+            border-bottom: 1px solid rgba(160, 91, 137, .5);
+        }
     }
-    .post{
-    	&__tag{
-    		transition: 0.3s ease;
-    		&:hover{
-    			color: #a05b89!important;
-			    border-bottom: 1px solid rgba(160,91,137,.5)!important;
-    		}
-    	}
-    	&__button-share{
-    		transition: 0.3s ease;
-    		&:before{
-    			transition: 0.3s ease;
-    		}
-    		&--twitter:hover{
-    			background-color: darken(#06b6eb, 10%)!important;
-    		}
-    		&--facebook:hover{
-    			background-color: darken(#425496, 10%)!important;
-    		}
-    		&--vk:hover{
-    			background-color: darken(#526d8e, 10%)!important;
-    		}
-    		&--telegram:hover{
-    			background-color: darken(#35aadd, 10%)!important;
-    		}
-    		&--blured.post__button-share--twitter:hover{
-    			border: 1px solid #06b6eb;
-    			background-color: transparent!important;
-    			&::before{
-    				color: #06b6eb;
-    			}
-    		}
-    		&--blured.post__button-share--facebook:hover{
-    			border: 1px solid #425496;
-    			background-color: transparent!important;
-    			&::before{
-    				color: #425496;
-    			}
-    		}
-    		&--blured.post__button-share--vk:hover{
-    			border: 1px solid #526d8e;
-    			background-color: transparent!important;
-    			&::before{
-    				color:  #526d8e;
-    			}
-    		}
-    		&--blured.post__button-share--telegram:hover{
-    			border: 1px solid #35aadd;
-    			background-color: transparent!important;
-    			&::before{
-    				color: #35aadd;
-    			}
-    		}
-    	}
+    .post {
+        &__tag {
+            transition: 0.3s ease;
+            &:hover {
+                color: #a05b89!important;
+                border-bottom: 1px solid rgba(160, 91, 137, .5)!important;
+            }
+        }
+        &__button-share {
+            transition: 0.3s ease;
+            &:before {
+                transition: 0.3s ease;
+            }
+            &--twitter:hover {
+                background-color: darken(#06b6eb, 10%)!important;
+            }
+            &--facebook:hover {
+                background-color: darken(#425496, 10%)!important;
+            }
+            &--vk:hover {
+                background-color: darken(#526d8e, 10%)!important;
+            }
+            &--telegram:hover {
+                background-color: darken(#35aadd, 10%)!important;
+            }
+            &--blured.post__button-share--twitter:hover {
+                border: 1px solid #06b6eb;
+                background-color: transparent!important;
+                &::before {
+                    color: #06b6eb;
+                }
+            }
+            &--blured.post__button-share--facebook:hover {
+                border: 1px solid #425496;
+                background-color: transparent!important;
+                &::before {
+                    color: #425496;
+                }
+            }
+            &--blured.post__button-share--vk:hover {
+                border: 1px solid #526d8e;
+                background-color: transparent!important;
+                &::before {
+                    color: #526d8e;
+                }
+            }
+            &--blured.post__button-share--telegram:hover {
+                border: 1px solid #35aadd;
+                background-color: transparent!important;
+                &::before {
+                    color: #35aadd;
+                }
+            }
+        }
     }
 }
 
