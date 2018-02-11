@@ -26,6 +26,7 @@
             font-size: 18px;
             font-family: light;
             margin-bottom: 30px;
+            line-height: normal;
         }
         &__body {
             margin-bottom: 40px;
@@ -121,8 +122,8 @@
             background-color: #f2eee3;
             padding: 30px 20px;
             box-sizing: border-box;
-            p + p{
-            	margin-top: 10px;
+            p+p {
+                margin-top: 10px;
             }
         }
         &__wrapper {
@@ -170,7 +171,7 @@
     a {
         color: #6699ff;
         border-bottom: 1px solid rgba(102, 153, 255, 0.5);
-        padding-bottom: 3px;
+        padding-bottom: 1px;
         &+p {
             margin-top: 20px;
         }
@@ -261,7 +262,9 @@
             position: relative;
             display: block;
             color: #000;
+            font-size: 16px;
             border-bottom: none;
+            font-family: 'reg';
             &:before {
                 content: '';
                 position: absolute;
@@ -272,13 +275,14 @@
                 top: 8px;
                 left: -10px;
             }
-            & + p{
-            	margin-top: 10px;
+            &+p {
+                margin-top: 10px;
             }
         }
-        p{
-        	font-size: 16px;
-        	line-height: 21px;
+        p {
+            font-size: 14px;
+            color: rgba(0, 0, 0, 0.7);
+            line-height: normal;
         }
     }
     blockquote {
@@ -475,7 +479,6 @@
                 font-size: 21px;
             }
             span {
-                font-size: 16px;
                 line-height: normal;
             }
         }
@@ -595,8 +598,8 @@
         .recomendation {
             padding: 20px 30px;
             width: span(9 of 18);
-            h3{
-            	font-size: 24px;
+            h3 {
+                font-size: 24px;
             }
         }
         .definition {
@@ -643,6 +646,9 @@
             }
             &__sharing {
                 width: span(14 of 20);
+                &--aside {
+                    width: auto;
+                }
             }
             &__postscriptum {
                 width: span(14 of 20);
@@ -665,6 +671,22 @@
         .recomendation {
             padding: 20px 30px;
             width: span(6.5 of 14);
+            h3,
+            p,
+            span {
+                transition: 0.3s ease;
+                &::before{
+                	transition: 0.3s ease;
+                }
+            }
+            &:hover {
+            	span{
+            		color: #a05b89;
+            		&::before{
+            			background-color: #a05b89;
+            		}
+            	}
+            }
         }
         .definition {
             width: span(4.5 of 14)
@@ -683,13 +705,13 @@
                 .definition {
                     width: 210px;
                 }
-                a{
-                	font-size: 18px;
+                a {
+                    font-size: 18px;
                 }
             }
         }
-        ul{
-        	padding-left: 40px;
+        ul {
+            padding-left: 40px;
         }
     }
 
@@ -702,7 +724,7 @@
         &__item {
             width: 33%!important;
             display: inline-block;
-            padding:0 20px;
+            padding: 0 20px;
             box-sizing: border-box;
         }
         &__slider {
@@ -725,6 +747,7 @@
             }
             &__title {
                 font-size: 60px;
+                line-height: 60px;
                 width: span(17 of 20);
             }
             &__excerpt {
@@ -776,7 +799,7 @@
             width: span(6 of 14);
             box-sizing: border-box;
             p {
-                font-size: 18px;
+                font-size: 16px;
             }
             span {
                 font-size: 18px;

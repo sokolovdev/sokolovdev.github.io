@@ -35,6 +35,12 @@ $(document).ready(function() {
         })
     }
 
+    $('.search input').on('keydown', function(e){
+    	if (e.keyCode === '13'){
+    		//поиск по сайту
+    	}
+    })
+
 
 });
 },{}]},{},[1]);
