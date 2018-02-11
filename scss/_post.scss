@@ -7,7 +7,7 @@
             position: relative;
             overflow: hidden;
             margin-bottom: 25px;
-            max-height: 250px;
+            max-height: 350px;
             img {
                 position: absolute;
                 top: 50%;
@@ -87,7 +87,7 @@
                 position: absolute;
                 top: 50%;
                 left: 50%;
-                transform: translate(-50%, -50%);
+                transform: translate(-53%, -50%);
             }
             &--twitter {
                 background-color: #06b6eb;
@@ -231,7 +231,7 @@
         background-color: #fff;
         border-top: 7px solid #a16af5;
         display: block;
-        padding: 20px span(1 of 12);
+        padding: 20px;
         margin-top: 25px;
         margin-bottom: 20px;
         border-bottom: none;
@@ -466,7 +466,7 @@
             }
         }
         .recomendation {
-            padding: 20px span(1 of 20);
+            padding: 20px;
             margin-top: 45px;
             margin-bottom: 30px;
             width: span(14 of 20);
@@ -593,7 +593,7 @@
             padding: 30px span(0.5 of 18);
         }
         .recomendation {
-            padding: 20px span(1 of 18);
+            padding: 20px 30px;
             width: span(9 of 18);
             h3{
             	font-size: 24px;
@@ -663,7 +663,7 @@
             padding: 30px span(0.5 of 20);
         }
         .recomendation {
-            padding: 20px span(1 of 18);
+            padding: 20px 30px;
             width: span(6.5 of 14);
         }
         .definition {
@@ -770,18 +770,15 @@
             }
         }
         .recomendation {
-            padding: 20px span(1 of 20);
+            padding: 20px 30px;
             margin-top: 45px;
             margin-bottom: 30px;
             width: span(6 of 14);
             box-sizing: border-box;
-            span {
-                font-size: 24px;
-            }
             p {
                 font-size: 18px;
             }
-            a {
+            span {
                 font-size: 18px;
             }
         }
@@ -793,8 +790,10 @@
         }
         li {
             font-size: 21px;
+            line-height: 28px;
+
             &::before {
-                top: 9px;
+                top: 12px;
             }
         }
     }

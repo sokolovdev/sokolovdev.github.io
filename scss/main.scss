@@ -597,8 +597,11 @@ a {
                 height: 6px;
                 border-radius: 50px;
                 background-color: #a16af5;
-                top: 5px;
+                top: 6px;
                 left: -13px;
+                @media (min-width: 768px){
+                	top: 7px;
+                }
             }
             &+.recomend__item {
                 margin-top: 20px;
@@ -1106,7 +1109,7 @@ a {
         }
     }
     @media (min-width: 1560px) {
-        padding-top: 240px;
+        padding-top: 210px;
         .footer {
             &__bottom {
                 bottom: 240px;
@@ -2052,6 +2055,10 @@ a {
 
 
 @media (min-width: 1240px) {
+	.button--gray{
+		height: 60px;
+		line-height: 58px;
+	}
     .main {
         &__text {
             width: span(12 of 24);
@@ -2519,7 +2526,7 @@ a {
         transition: 0.3s ease;
         &:hover {
             background-color: #000;
-            color: #fff;
+            color: #fff!important;
         }
     }
 
@@ -2594,10 +2601,10 @@ a {
         }
         &:hover {
             &::before {
-                color: #69f;
+                // color: #69f;
             }
-            background-color: #fff;
-            color: #69f;
+            background-color: darken(#69f, 10%);
+            // color: #69f;
         }
     }
 
@@ -2627,6 +2634,67 @@ a {
                 }
             }
         }
+    }
+    .text--post-page{
+    	a:not(.recomendation):hover{
+    		color: #a05b89;
+		    border-bottom: 1px solid rgba(160,91,137,.5);
+    	}
+    }
+    .post{
+    	&__tag{
+    		transition: 0.3s ease;
+    		&:hover{
+    			color: #a05b89!important;
+			    border-bottom: 1px solid rgba(160,91,137,.5)!important;
+    		}
+    	}
+    	&__button-share{
+    		transition: 0.3s ease;
+    		&:before{
+    			transition: 0.3s ease;
+    		}
+    		&--twitter:hover{
+    			background-color: darken(#06b6eb, 10%)!important;
+    		}
+    		&--facebook:hover{
+    			background-color: darken(#425496, 10%)!important;
+    		}
+    		&--vk:hover{
+    			background-color: darken(#526d8e, 10%)!important;
+    		}
+    		&--telegram:hover{
+    			background-color: darken(#35aadd, 10%)!important;
+    		}
+    		&--blured.post__button-share--twitter:hover{
+    			border: 1px solid #06b6eb;
+    			background-color: transparent!important;
+    			&::before{
+    				color: #06b6eb;
+    			}
+    		}
+    		&--blured.post__button-share--facebook:hover{
+    			border: 1px solid #425496;
+    			background-color: transparent!important;
+    			&::before{
+    				color: #425496;
+    			}
+    		}
+    		&--blured.post__button-share--vk:hover{
+    			border: 1px solid #526d8e;
+    			background-color: transparent!important;
+    			&::before{
+    				color:  #526d8e;
+    			}
+    		}
+    		&--blured.post__button-share--telegram:hover{
+    			border: 1px solid #35aadd;
+    			background-color: transparent!important;
+    			&::before{
+    				color: #35aadd;
+    			}
+    		}
+    	}
     }
 }
 
