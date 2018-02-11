@@ -24,4 +24,15 @@ $(document).ready(function() {
         }
         $(".similar__item").unwrap();
     }
+
+    if ($(window).width() >= 768) {
+        $('.search input').on('focusin', function() {
+            $(this).closest('.search').addClass('open');
+        })
+        $('.search input').on('focusout', function() {
+            $(this).closest('.search').removeClass('open');
+        })
+    }
+
+
 });
