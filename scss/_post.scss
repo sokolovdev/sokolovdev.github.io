@@ -265,7 +265,7 @@
             font-size: 16px;
             border-bottom: none;
             font-family: 'reg';
-            &:before {
+            /* &:before {
                 content: '';
                 position: absolute;
                 width: 6px;
@@ -274,7 +274,7 @@
                 background-color: #a16af5;
                 top: 8px;
                 left: -10px;
-            }
+            } */
             &+p {
                 margin-top: 10px;
             }
@@ -441,7 +441,7 @@
         }
         .aside {
             &+p {
-                margin-top: 40px;
+                margin-top: 25px;
             }
         }
         a {
