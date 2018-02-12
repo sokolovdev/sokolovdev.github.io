@@ -18,13 +18,14 @@
         }
         &__title {
             font-size: 24px;
-            line-height: 30px;
+            line-height: 1.2;
             font-family: 'med';
             margin-bottom: 10px;
         }
         &__excerpt {
             font-size: 18px;
             font-family: light;
+            color: rgba(0,0,0,0.7);
             margin-bottom: 30px;
             line-height: normal;
         }
@@ -546,6 +547,7 @@
                 }
                 &--aside {
                     display: block;
+                    background-color: transparent;
                     border: none;
                     padding: 0;
                     width: auto;
@@ -639,6 +641,7 @@
             }
             &__excerpt {
                 width: span(11 of 20);
+                font-size: 21px;
                 margin-bottom: 40px;
             }
             &__wrapper {
