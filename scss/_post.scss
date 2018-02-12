@@ -194,11 +194,11 @@
         margin-top: 25px;
     }
     *+.aside {
-        margin-top: 20px;
+        margin-top: 15px;
     }
     .aside {
         &+* {
-            margin-top: 25px;
+            margin-top: 15px;
         }
     }
     .highlight {
@@ -442,7 +442,7 @@
         }
         .aside {
             &+p {
-                margin-top: 25px;
+                // margin-top: 25px;
             }
         }
         a {
