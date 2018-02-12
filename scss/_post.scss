@@ -245,10 +245,11 @@
                     font-family: icon;
                     content: '\e900';
                     color: #a16af5;
-                    font-size: 10px;
+                    font-size: 7px;
                     display: inline-block;
                     vertical-align: middle;
-                    margin-left: 4px;
+                    margin-left: 3px;
+                    margin-bottom: 5px;
                     transform: translate(0, -1px);
                 }
             }
@@ -411,6 +412,9 @@
                 vertical-align: middle;
                 width: 60%;
                 text-align: right;
+            }
+            &__tag{
+            	font-size: 21px;
             }
         }
     }
@@ -599,10 +603,10 @@
             padding: 30px span(0.5 of 18);
         }
         .recomendation {
-            padding: 20px 30px;
+            padding: 20px;
             width: span(9 of 18);
             h3 {
-                font-size: 24px;
+                font-size: 21px;
             }
         }
         .definition {
@@ -637,12 +641,12 @@
             &__title {
                 width: span(13 of 20);
                 font-size: 36px;
-                margin-bottom: 10px;
+                margin-bottom: 20px;
             }
             &__excerpt {
                 width: span(11 of 20);
                 font-size: 21px;
-                margin-bottom: 40px;
+                margin-bottom: 50px;
             }
             &__wrapper {
                 padding: 0 span(2 of 24);
@@ -659,6 +663,7 @@
             &__postscriptum {
                 width: span(14 of 20);
             }
+
         }
     }
 
@@ -671,11 +676,16 @@
                 width: span(9 of 14);
             }
         }
+        * + h3{
+        	margin-top: 25px;
+        }
+        .aside + h3{
+        	margin-top: 25px;
+        }
         blockquote {
             padding: 30px span(0.5 of 20);
         }
         .recomendation {
-            padding: 20px 30px;
             width: span(6.5 of 14);
             h3,
             p,
@@ -688,8 +698,8 @@
             &:hover {
             	span{
             		color: #a05b89;
-            		&::before{
-            			background-color: #a05b89;
+            		&::after{
+            			color: #a05b89;
             		}
             	}
             }
@@ -761,6 +771,10 @@
                 font-size: 30px;
                 margin-bottom: 50px;
             }
+            &__tag{
+            	font-size: 24px;
+            	margin-right: 10px;
+            }
         }
     }
 
@@ -799,7 +813,6 @@
             }
         }
         .recomendation {
-            padding: 20px 30px;
             margin-top: 45px;
             margin-bottom: 30px;
             width: span(6 of 14);
