@@ -673,7 +673,7 @@ a {
                         vertical-align: baseline;
                         margin-left: 3px;
                         margin-bottom: 5px;
-                        transform: translate(0, -1px);
+                        transform: translate(0, -3px);
                     }
                 }
             }
@@ -2092,14 +2092,15 @@ a {
     }
     .main {
         &__text {
-            width: span(12 of 24);
+            width: span(13 of 24);
         }
         &__subscribe {
             width: span(7.5 of 24);
-            margin-left: span(3 of 24);
+            margin-left: span(2 of 24);
         }
         &__button {
             width: span(5 of 12);
+            margin-top: 30px;
         }
     }
 
@@ -2165,7 +2166,7 @@ a {
                 padding: 35px;
             }
             &__post-title {
-                margin-bottom: 7px;
+                margin-bottom: 3px;
             }
         }
     }
