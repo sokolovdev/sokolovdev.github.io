@@ -725,6 +725,7 @@ a {
             display: inline-block;
             font-family: light;
             border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+            cursor: pointer;
         }
     }
 }
@@ -754,10 +755,13 @@ a {
         .post {
             &__photo {
                 height: 160px;
-                bottom: 40px
+                bottom: 39px;
             }
             &__description {
                 padding: 20px 15px 0;
+            }
+            &__tags{
+            	 border-top: 1px solid rgba(51, 51, 51, 0.2);
             }
         }
     }
@@ -1378,7 +1382,7 @@ a {
                 position: absolute;
                 content: '\e907';
                 color: #000;
-                top: 0;
+                bottom: 8px;
                 left: 0;
                 font-size: 16px;
             }
@@ -1505,8 +1509,6 @@ a {
     .list--tags {
         .list__item {
             font-size: 16px;
-            display: inline;
-            margin-bottom: 0;
         }
         .list__more-tags {
             font-size: 16px;
@@ -2112,6 +2114,7 @@ a {
         }
         &__tags {
             padding-left: 0;
+            width: span(16 of 24);
         }
         &__body {
             display: inline-block;
@@ -2275,6 +2278,12 @@ a {
         }
     }
 
+    .text--main{
+    	p{
+    		width: 92%;
+    	}
+    }
+
     .form--subscribe {
         .form {
             &__line {
@@ -2362,7 +2371,7 @@ a {
             .post {
                 &__photo {
                     height: 256px;
-                    bottom: 55px;
+                    bottom: 54px;
                 }
                 &__description {
                     padding: 40px 30px 0;

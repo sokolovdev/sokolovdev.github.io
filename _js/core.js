@@ -46,4 +46,24 @@ $(document).ready(function() {
     })
 
 
+    var tags = $('.list--tags .tag').length;
+
+    if (tags > 5){
+    	$('.list--tags .tag').each(function(){
+    		if ($(this).index() > 5){
+    			$(this).hide();
+    		}
+    	})
+    	$('.list--tags .list__more-tags').html('Ещё + ' + (tags-6) + ' тегов');
+    }
+
+    $('.list--tags .list__more-tags').on('click', function(){
+    	$('.list--tags .tag').each(function(){
+    		if ($(this).index() > 5){
+    			$(this).fadeIn(300);
+    		}
+    	})
+    	$(this).fadeOut(300);
+    })
+
 });

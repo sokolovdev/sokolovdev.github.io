@@ -360,11 +360,12 @@
         padding: 0 20px;
         .swiper-wrapper {
             height: auto;
-            padding-bottom: 10px;
+            padding-bottom: 15px;
         }
     }
     &__item {
         width: 280px;
+        vertical-align: top;
     }
 }
 
@@ -853,7 +854,8 @@
             box-sizing: border-box;
         }
         &__slider {
-            margin: 0 -(span(0.5 of 24));
+            margin-left: -(span(0.5 of 24));
+            margin-right: -(span(0.5 of 24));
             font-size: 0;
             padding: 0;
             overflow: visible;
