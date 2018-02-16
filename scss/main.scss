@@ -69,7 +69,7 @@ input {
 .header {
     padding-top: 20px;
     position: absolute;
-    z-index: 1;
+    z-index: 3;
     width: 100%;
     left: 0;
     top: 0;
@@ -183,6 +183,7 @@ input {
 }
 
 .open-menu {
+	overflow: hidden;
     .header__hamburger {
         span {
             background-color: rgba(0, 0, 0, 0);
@@ -609,6 +610,13 @@ a {
         height: 390px;
         max-width: 350px;
         margin: 0 auto;
+    }
+    &--page{
+    	padding-top: 100px;
+    	.posts__title{
+    		margin-bottom: 30px;
+    		text-align: center;
+    	}
     }
 }
 
@@ -1303,7 +1311,7 @@ a {
         &__menu {
             display: inline-block;
             vertical-align: middle;
-            width: span(5 of 9);
+            width: span(4 of 9);
             position: static;
             height: auto;
             display: inline-block;
@@ -1463,6 +1471,9 @@ a {
         }
         &__body {
             margin-bottom: 70px;
+        }
+        &--page{
+        	padding-top: 150px;
         }
     }
 
@@ -1921,6 +1932,16 @@ a {
         &__button {
             width: span(6 of 24);
         }
+        &--page{
+        	padding-top: 150px;
+        	.posts{
+        		&__title{
+        			padding: 0;
+        			width: span(22 of 24);        			
+		            margin-left: span(0.5 of 24);
+        		}
+        	}
+        }
     }
 
     .promo {
@@ -2150,6 +2171,16 @@ a {
             margin-top: 0;
             width: span(5 of 16);
         }
+        &--page{
+        	padding-top: 150px;
+			.posts{
+				&__title{
+					width: span(16 of 24);
+					margin-left: 0;
+					margin-bottom: 50px;
+				}
+			}
+        }
     }
 
     .input--search {
@@ -2316,6 +2347,9 @@ a {
         }
         &__promo {
             height: 500px;
+        }
+        &--page{
+        	padding-top: 200px;
         }
     }
 

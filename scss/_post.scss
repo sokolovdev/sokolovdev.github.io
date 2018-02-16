@@ -144,6 +144,18 @@
         float: left;
         padding-right: 5px;
     }
+    img, iframe{
+    	max-width: 100%;
+    	
+    }
+    img{
+    	max-height: 400px;
+    	margin: 0 auto;
+    	display: block;
+    }
+    li{
+    	font-family: light;
+    }
     p {
         color: #000;
         font-family: light;
@@ -178,9 +190,17 @@
             margin-top: 20px;
         }
     }
-    h3 {
+    h2,h3,h4,h5,h6,h7 {
         font-size: 21px;
+        line-height: normal;
         font-family: 'med';
+    }
+    h1{
+    	font-size: 28px;
+    	font-family: 'med';
+    	& + *{
+    		margin-top: 30px;
+    	}
     }
     h2,
     h3,
@@ -369,6 +389,14 @@
     }
 }
 
+.policy{
+	padding: 100px 0 50px;
+	&__body{
+		max-width: 500px;
+        margin: 0 auto;
+	}
+}
+
 @media (min-width: 768px) {
     .post--page {
         padding: 115px 0 40px;
@@ -420,12 +448,26 @@
         }
     }
 
+	.policy{
+		padding-top: 150px;
+		&__body{
+			max-width: none;
+			padding: 0 span(2 of 24)
+		}
+	}
 
     .text--post-page {
         font-size: 18px;
         &>p:nth-child(1):first-letter {
             font-size: 69px;
             line-height: 60px;
+        }
+        li{
+        	font-size: 21px;
+        	line-height: 30px;
+        	&::before{
+        		top: 13px;
+        	}
         }
         p {
             font-size: 21px;
@@ -456,8 +498,11 @@
                 margin-top: 20px;
             }
         }
-        h3 {
+        h3,h2,h4,h5,h6,h7 {
             font-size: 30px;
+        }
+        h1{
+        	font-size: 42px;
         }
         *+.highlight {
             margin-top: 40px;
@@ -502,7 +547,6 @@
             margin-top: 15px;
         }
         li {
-            font-size: 18px;
             width: 70%;
         }
     }
@@ -591,6 +635,12 @@
         }
     }
 
+	
+	.policy{
+		&__body{
+			padding: 0 span(3 of 24);
+		}
+	}
 
     .text--post-page {
         font-size: 16px;
@@ -667,7 +717,12 @@
 
         }
     }
-
+	
+	.policy{
+		&__body{
+			padding: 0 span(2 of 24);
+		}
+	}
 
     .text--post-page {
         font-size: 16px;
@@ -801,8 +856,21 @@
                 margin-top: 60px;
             }
         }
-        h3 {
+        li{
+        	font-size: 24px;
+            line-height: 34px;
+
+            &::before {
+                top: 15px;
+                width: 5px;
+                height: 5px;
+            }
+        }
+        h2,h3,h4,h5,h6,h7 {
             font-size: 36px;
+        }
+        h1{
+        	font-size: 48px;
         }
         .highlight {
             padding: 35px 0;
@@ -833,12 +901,8 @@
             }
         }
         li {
-            font-size: 21px;
-            line-height: 28px;
+            
 
-            &::before {
-                top: 12px;
-            }
         }
     }
 
