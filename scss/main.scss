@@ -24,6 +24,45 @@ input {
     -webkit-backface-visibility: hidden;
 }
 
+.error {
+    height: 100vh;
+    &__container {
+        height: 100%;
+    }
+    &__body {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.text--404 {
+    text-align: center;
+    h1 {
+        font-size: 30px;
+        font-family: 'med';
+        margin-bottom: 20px;
+    }
+    a {
+        font-size: 21px;
+        border-bottom: 1px solid rgba(102, 153, 255, .3);
+        color: #69f;
+    }
+    @media (min-width: 1240px) {
+        h1 {
+            font-size: 60px;
+        }
+        a {
+            font-size: 28px;
+            transition: 0.3s ease;
+            &:hover {
+                color: #a05b89;
+                border-bottom: 1px solid rgba(160, 91, 137, .5);
+            }
+        }
+    }
+}
 
 .container {
     margin: 0 auto;
@@ -183,7 +222,7 @@ input {
 }
 
 .open-menu {
-	overflow: hidden;
+    overflow: hidden;
     .header__hamburger {
         span {
             background-color: rgba(0, 0, 0, 0);
@@ -375,13 +414,13 @@ a {
     &::before {
         transition: 0.3s ease;
     }
-    &--subscribe{
-    	&.send {
+    &--subscribe {
+        &.send {
             .form {
                 &__body {
                     transform: translate(150%, 0);
-                    @media (min-width: 768px){
-                    	transform: translate(0, 150%);
+                    @media (min-width: 768px) {
+                        transform: translate(0, 150%);
                     }
                 }
                 &__response {
@@ -391,8 +430,8 @@ a {
             }
             &::before {
                 transform: translate(100%, 100%) rotate(-15deg);
-                @media (min-width: 768px){
-                	transform: translate(-50%, 100%) rotate(-15deg);
+                @media (min-width: 768px) {
+                    transform: translate(-50%, 100%) rotate(-15deg);
                 }
                 @media (min-width: 1024px) {
                     transform: translate(-50%, 100%) rotate(-15deg);
@@ -400,8 +439,8 @@ a {
             }
         }
     }
-    &--main {    	
-		position: relative;
+    &--main {
+        position: relative;
         &.send {
             .form {
 
@@ -611,12 +650,12 @@ a {
         max-width: 350px;
         margin: 0 auto;
     }
-    &--page{
-    	padding-top: 100px;
-    	.posts__title{
-    		margin-bottom: 30px;
-    		text-align: center;
-    	}
+    &--page {
+        padding-top: 100px;
+        .posts__title {
+            margin-bottom: 30px;
+            text-align: center;
+        }
     }
 }
 
@@ -768,9 +807,6 @@ a {
             &__description {
                 padding: 20px 15px 0;
             }
-            &__tags{
-            	 border-top: 1px solid rgba(51, 51, 51, 0.2);
-            }
         }
     }
     &.post--text {
@@ -881,11 +917,9 @@ a {
             box-sizing: border-box;
             position: absolute;
             width: 100%;
-            height: 40px;
-            line-height: 38px;
             bottom: 0;
             left: 0;
-            padding: 0 15px;
+            padding: 10px 15px;
             z-index: 2;
         }
         &__excerpt {
@@ -972,12 +1006,19 @@ a {
             font-size: 14px;
             font-family: light;
             display: inline-block;
-            a {
+            cursor: pointer;            
+            margin-right: 10px;
+            margin-bottom: 5px;
+            &--more {
+                color: rgba(0, 0, 0, 1);
+            }
+            a,
+            p {
                 color: inherit;
                 border-bottom: 1px solid rgba(41, 41, 41, 0.3);
             }
-            &+.tags__item {
-                margin-left: 10px;
+            p {
+                line-height: normal;
             }
         }
     }
@@ -1000,7 +1041,6 @@ a {
     /* w3c */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a05b89', endColorstr='#754a90', GradientType=0);
     /* ie6-9 */
-   
 }
 
 .popular {
@@ -1472,8 +1512,8 @@ a {
         &__body {
             margin-bottom: 70px;
         }
-        &--page{
-        	padding-top: 150px;
+        &--page {
+            padding-top: 150px;
         }
     }
 
@@ -1598,7 +1638,8 @@ a {
                 }
                 .tag {
                     color: rgba(255, 255, 255, 0.9);
-                    a {
+                    a,
+                    p {
                         border-bottom: 1px solid rgba(255, 255, 255, 0.5);
                     }
                 }
@@ -1639,6 +1680,11 @@ a {
                     color: rgba(255, 255, 255, 0.9);
                     a {
                         border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+                    }
+                }
+                .tags__item--more{
+                    p{
+                        border-bottom: 1px solid rgba(255,255,255,0.5);
                     }
                 }
             }
@@ -1695,6 +1741,11 @@ a {
                         line-height: 43px;
                     }
                 }
+                .tags__item--more{
+                    p{
+                        border-bottom: 1px solid rgba(255,255,255,0.5);
+                    }
+                }
                 .tag {
                     color: rgba(255, 255, 255, 0.9);
                     a {
@@ -1714,7 +1765,7 @@ a {
                 margin-top: 20px;
             }
             &__tags {
-                line-height: 36px;
+                padding: 6px 15px;
             }
         }
     }
@@ -1753,6 +1804,7 @@ a {
             &__excerpt {
                 margin-top: 20px;
                 font-size: 21px;
+                line-height: 24px;
             }
         }
     }
@@ -1932,15 +1984,15 @@ a {
         &__button {
             width: span(6 of 24);
         }
-        &--page{
-        	padding-top: 150px;
-        	.posts{
-        		&__title{
-        			padding: 0;
-        			width: span(22 of 24);        			
-		            margin-left: span(0.5 of 24);
-        		}
-        	}
+        &--page {
+            padding-top: 150px;
+            .posts {
+                &__title {
+                    padding: 0;
+                    width: span(22 of 24);
+                    margin-left: span(0.5 of 24);
+                }
+            }
         }
     }
 
@@ -1978,7 +2030,7 @@ a {
         }
         .post {
             &__tags {
-                padding: 0 20px;
+                padding: 7px 20px;
             }
         }
     }
@@ -2171,15 +2223,15 @@ a {
             margin-top: 0;
             width: span(5 of 16);
         }
-        &--page{
-        	padding-top: 150px;
-			.posts{
-				&__title{
-					width: span(16 of 24);
-					margin-left: 0;
-					margin-bottom: 50px;
-				}
-			}
+        &--page {
+            padding-top: 150px;
+            .posts {
+                &__title {
+                    width: span(16 of 24);
+                    margin-left: 0;
+                    margin-bottom: 50px;
+                }
+            }
         }
     }
 
@@ -2257,6 +2309,7 @@ a {
             }
             &__excerpt {
                 font-size: 24px;
+                line-height: 28px;
             }
         }
     }
@@ -2309,10 +2362,10 @@ a {
         }
     }
 
-    .text--main{
-    	p{
-    		width: 92%;
-    	}
+    .text--main {
+        p {
+            width: 92%;
+        }
     }
 
     .form--subscribe {
@@ -2348,8 +2401,8 @@ a {
         &__promo {
             height: 500px;
         }
-        &--page{
-        	padding-top: 200px;
+        &--page {
+            padding-top: 200px;
         }
     }
 
@@ -2440,9 +2493,7 @@ a {
                 line-height: 35px;
             }
             &__tags {
-                height: 55px;
-                line-height: 55px;
-                padding: 0 30px;
+                padding: 14px 30px;
             }
         }
     }
@@ -2466,6 +2517,7 @@ a {
         }
     }
 }
+
 
 
 
@@ -2565,8 +2617,8 @@ a {
             }
             .recomend__post-title {
                 color: #a05b89;
-                &:after{
-                	color: #a05b89;
+                &:after {
+                    color: #a05b89;
                 }
             }
         }
