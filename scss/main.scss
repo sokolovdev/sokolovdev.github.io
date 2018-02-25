@@ -1404,6 +1404,11 @@ a {
     }
     @media (min-width: 1240px) {
         padding: 150px 0 210px;
+        &__contact{
+            &::before{
+                left: -35px!important;
+            }
+        }
         &__col--2 {
             padding-left: span(1 of 14);
         }
