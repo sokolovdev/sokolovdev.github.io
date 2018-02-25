@@ -35,12 +35,6 @@ $(document).ready(function() {
         })
     }
 
-    $('.search input').on('keydown', function(e) {
-        if (e.keyCode === '13') {
-            //поиск по сайту
-        }
-    })
-
 
     $('.form__button').on('click', function() {
         $(this).closest('.form').addClass('send');
@@ -73,7 +67,7 @@ $(document).ready(function() {
                 }
             })
             prefix = prefixCount(tagsPost - 2);
-            var appendix = '<li class="tags__item tags__item--more tag"><p>Ещё + ' + (tagsPost - 2) + ' тег' + prefix + '</p></li>';
+            var appendix = '<li class="tags__item tags__item--more tag"><p>eщё + ' + (tagsPost - 2) /*+ ' тег' + prefix*/ + '</p></li>';
 
             $(this).append(appendix);
         }
@@ -87,33 +81,25 @@ $(document).ready(function() {
             }
         })
         prefix = prefixCount(tagsAll - 6);
-        $('.list--tags .list__more-tags').html('Ещё + ' + (tagsAll - 6) + ' тег' + prefix);
+        $('.list--tags .list__more-tags').html('eщё + ' + (tagsAll - 6) + ' тег' + prefix);
     }
-
-    /* if((tags-6) === 1 || (tags-6) === 21 || (tags-6) === 31 || (tags-6) === 41 || (tags-6) === 51){
-         var prefix = ''
-     } else if ((tags-6) > 1 && (tags-6) < 5){
-         var prefix = 'а'
-     } else if ((tags-6 ) >= 5) {
-         var prefix = 'ов'
-     }*/
 
 
     $('.list--tags .list__more-tags').on('click', function() {
-        if ($(this).html() !== 'Скрыть') {
+        if ($(this).html() !== 'скрыть') {
             $('.list--tags .tag').each(function() {
                 if ($(this).index() > 5) {
                     $(this).fadeIn(300);
                 }
             })
-            $(this).html('Скрыть');
+            $(this).html('скрыть');
         } else {
             $('.list--tags .tag').each(function() {
                 if ($(this).index() > 5) {
                     $(this).fadeOut(300);
                 }
             })
-            $(this).html('Ещё + ' + (tagsAll - 6) + ' тег' + prefix);
+            $(this).html('eщё + ' + (tagsAll - 6) + ' тег' + prefix);
             setTimeout(function() {
 
             }, 300)
@@ -122,10 +108,10 @@ $(document).ready(function() {
 
     })
 
-    $('.tags--post .tags__item--more').on('click', function() {
+    $('body').on('click', '.tags--post .tags__item--more', function() {
         var count = 0,
             $this = $(this);
-        if ($(this).find('p').html() !== 'Скрыть') {
+        if ($(this).find('p').html() !== 'скрыть') {
 
             $(this).closest('.tags--post').find('.tag:not(.tags__item--more)').each(function() {
 
@@ -135,7 +121,7 @@ $(document).ready(function() {
                 }
             })
             console.log(count);
-            $(this).find('p').html('Скрыть');
+            $(this).find('p').html('скрыть');
         } else {
 
             $(this).closest('.tags--post').find('.tag:not(.tags__item--more)').each(function() {
@@ -145,7 +131,7 @@ $(document).ready(function() {
                 }
             })
             setTimeout(function() {
-                $this.find('p').html('Ещё + ' + count + ' тег' + prefix);
+                $this.find('p').html('eщё + ' + count /*+ ' тег' + prefix*/ );
             }, 300)
 
         }
@@ -156,6 +142,31 @@ $(document).ready(function() {
             $('.post__body').addClass('letter');
         }
     }
+
+
+    if ($('.post--card').length > 0) {
+        $('.post--card .post__excerpt').each(function() {
+            var str = $(this).html(),
+                $this = $(this);
+            if (str.length > 50) {
+                str = str.substring(0, 50);
+                if (str.indexOf('.') !== -1) {
+                    str = str.substring(0, str.indexOf('.') + 1);
+                } else {
+                    str = str.substring(0, 47) + '...';
+                }
+            }
+            $(this).html(str);
+        })
+    }
+
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 10) {
+            $('.header').addClass('trf');
+        } else {
+            $('.header').removeClass('trf');
+        }
+    })
 
 
 });
