@@ -57,3 +57,15 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'it';
+    src: url('../fonts/Spectral-italic.eot');
+    src: url('../fonts/Spectral-italic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Spectral-italic.woff2') format('woff2'),
+        url('../fonts/Spectral-italic.woff') format('woff'),
+        url('../fonts/Spectral-italic.ttf') format('truetype'),
+        url('../fonts/Spectral-italic.svg#Spectral-italic') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+

@@ -8,7 +8,6 @@ $susy: ( 'columns': susy-repeat(48),
 'container-spread': 'narrow',
 );
 
-
 body {
     font-size: 14px;
     background-color: #fff;
@@ -692,8 +691,11 @@ a {
     &__tags {
         margin-bottom: 30px;
     }
+    &__body{
+        font-size: 0;
+    }
     &__item {
-        max-width: 350px;
+        max-width: 280px;
         margin: 0 auto;
         &+.posts__item {
             margin-top: 20px;
@@ -854,13 +856,13 @@ a {
     &.post--photo-top {
         .post {
             &__photo {
-                height: 120px;
+                height: 140px;
                 top: 0;
                 border-top-left-radius: 5px;
                 border-top-right-radius: 5px;
             }
             &__description {
-                padding: 130px 15px 0;
+                padding: 145px 15px 0;
             }
             &__tags {
                 border-top: 1px solid rgba(51, 51, 51, 0.2);
@@ -898,7 +900,7 @@ a {
         &:before {
             font-family: 'icon';
             position: absolute;
-            content: '\e901';
+            content: '\e908';
             color: #fff;
             top: 50%;
             left: 50%;
@@ -1069,7 +1071,7 @@ a {
 }
 
 .text--post-excerpt {
-    line-height: 16px;
+    line-height: 1.2;
     font-family: 'light';
     font-size: 14px;
     color: #000;
@@ -1240,7 +1242,7 @@ a {
     &--mail {
         &:before {
             content: '\e90a';
-            font-size: 20px;
+            font-size: 26px;
         }
     }
     &--fb {
@@ -1404,8 +1406,8 @@ a {
     }
     @media (min-width: 1240px) {
         padding: 150px 0 210px;
-        &__contact{
-            &::before{
+        &__contact {
+            &::before {
                 left: -35px!important;
             }
         }
@@ -1479,6 +1481,16 @@ a {
                 position: relative;
                 border-radius: 5px;
                 overflow: hidden;
+            }
+        }
+        &.post--photo-top{
+            .post{
+                &__photo{
+                    height: 135px;
+                }
+                &__description{
+                    padding: 140px 15px 0;
+                }
             }
         }
     }
@@ -1765,6 +1777,10 @@ a {
         .tags {
             &__item {
                 font-size: 16px;
+                p{
+                    display: inline;
+                    line-height: 16px;
+                }
             }
         }
     }
@@ -1815,7 +1831,7 @@ a {
         border-radius: 0;
         height: 440px!important;
         &.post--big {
-            height: 450px!important;
+            height: 400px!important;
             text-align: center;
             .post {
                 &__title {
@@ -2023,7 +2039,6 @@ a {
     }
     .text--post-excerpt {
         font-size: 16px;
-        line-height: 18px;
     }
 
 
@@ -2168,6 +2183,18 @@ a {
             } */
         }
     }
+
+    .search {
+        &.open{
+            .search__input{
+                width: span(5 of 7);
+            }
+        }
+        &__input {
+            width: span(4 of 7);
+        }
+    }
+
 
 
     .main {
@@ -2316,10 +2343,17 @@ a {
                 padding: 7px 20px;
             }
         }
+        &.post--photo-top{
+            .post{
+                &__photo{
+                    height: 195px;
+                }
+                &__description{
+                    padding: 210px 20px 0
+                }
+            }
+        }
     }
-
-
-    .subscribe {}
 
     .form--subscribe {
         padding: 45px 0;
@@ -2462,6 +2496,17 @@ a {
         &__button {
             width: span(5 of 12);
             margin-top: 30px;
+        }
+    }
+    
+    .search {
+        &.open{
+            .search__input{
+                width: span(4 of 7);
+            }
+        }
+        &__input {
+            width: span(3 of 7);
         }
     }
 
@@ -2685,6 +2730,18 @@ a {
         }
     }
 
+     .search {
+        &.open{
+            .search__input{
+                width: span(3.5 of 7);
+            }
+        }
+        &__input {
+            width: span(2.5 of 7);
+        }
+    }
+
+
     .text--main {
         p {
             width: 92%;
@@ -2745,7 +2802,7 @@ a {
     .post--card {
         height: 540px!important;
         &.post--big {
-            height: 540px!important;
+            height: 440px!important;
             .post {
                 &__title {
                     font-size: 36px;
@@ -2753,7 +2810,6 @@ a {
                 }
                 &__excerpt {
                     font-size: 21px;
-                    line-height: normal;
                 }
                 &__description {
                     width: span(8 of 15);
@@ -2843,6 +2899,7 @@ a {
         }
     }
 }
+
 
 
 

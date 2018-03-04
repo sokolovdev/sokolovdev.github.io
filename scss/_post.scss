@@ -3,10 +3,10 @@
     background-color: #f9f9f9;
     .post {
         &__photo {
-            height: 47vw;
+            height: 61vw;
             position: relative;
             overflow: hidden;
-            margin-bottom: 25px;
+            margin-bottom: 5px;
             max-height: 350px;
             img {
                 position: absolute;
@@ -15,6 +15,15 @@
                 transform: translate(-50%, 0);
                 width: 100%;
             }
+        }
+        &__photo-descr {
+            font-size: 12px;
+            font-family: 'it';
+            color: rgba(0, 0, 0, 0.5);
+            margin: 0 auto;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            max-width: 500px;
         }
         &__title {
             font-size: 24px;
@@ -113,7 +122,7 @@
             &--telegram {
                 background-color: #35aadd;
                 &::before {
-                    content: '\e908'
+                    content: '\e90c'
                 }
             }
             &+.post__button-share {
@@ -149,6 +158,20 @@
             float: left;
             padding-right: 2px;
         }
+    }
+    .wp-caption-text {
+        font-style: italic;
+        font-family: sp;
+        font-size: 12px;
+        opacity: 0.5;
+    }
+    em,
+    i {
+        font-style: italic;
+    }
+    strong,
+    b {
+        font-weight: bold;
     }
     img,
     iframe {
@@ -188,7 +211,7 @@
             margin-top: 25px;
         }
     }
-    a {
+    a:not(.recomendation) {
         color: #6699ff;
         background-image: linear-gradient(rgba(102, 153, 255, 0.5), rgba(102, 153, 255, 0.5));
         background-repeat: repeat-x;
@@ -420,8 +443,17 @@
         .post {
             &__photo {
                 height: 370px;
-                margin-bottom: 50px;
+                margin-bottom: 20px;
                 max-height: none;
+            }
+            &__photo-descr {
+                font-size: 18px;
+                margin: 0;
+                margin-bottom: 22px;
+                max-width: none;
+                width: span(9 of 12);
+                box-sizing: border-box;
+                padding-left: span(1 of 12);
             }
             &__title {
                 font-size: 48px;
@@ -430,7 +462,7 @@
             }
             &__excerpt {
                 font-size: 24px;
-                margin-bottom: 55px;
+                margin-bottom: 40px;
             }
             &__wrapper {
                 max-width: none;
@@ -506,6 +538,9 @@
             &+h6 {
                 margin-top: 40px;
             }
+        }
+        .wp-caption-text {
+            font-size: 18px;
         }
         .aside {
             &+p {
@@ -593,8 +628,13 @@
         padding: 110px 0 70px;
         .post {
             &__photo {
-                margin-bottom: 75px;
+                margin-bottom: 15px;
                 height: 490px;
+            }
+            &__photo-descr {
+                margin-bottom: 40px;
+                width: span(20 of 24);
+                padding-left: span(3 of 24);
             }
             &__title {
                 width: span(16 of 18);
@@ -626,7 +666,7 @@
                     padding: 0;
                     width: auto;
                     position: absolute;
-                    top: 0;
+                    top: 10px;
                     left: span(0.5 of 24);
                     .post__sharing-wrapper {
                         width: auto;
@@ -722,7 +762,11 @@
         .post {
             &__photo {
                 width: 75%;
-                margin-bottom: 45px;
+                margin-bottom: 15px;
+            }
+            &__photo-descr {
+                width: span(16 of 24);
+                padding-left: span(2 of 24);
             }
             &__title {
                 width: span(13 of 20); // font-size: 36px;
@@ -739,7 +783,7 @@
             &__body {
                 width: span(14 of 20);
             }
-            &__tags{
+            &__tags {
                 width: span(14 of 20);
             }
             &__comments {
@@ -749,6 +793,7 @@
                 width: span(14 of 20);
                 &--aside {
                     width: auto;
+                    left: 0;
                 }
             }
             &__postscriptum {
@@ -855,7 +900,12 @@
         .post {
             &__photo {
                 height: 600px;
-                margin-bottom: 70px;
+                margin-bottom: 20px;
+            }
+            &__photo-descr {
+                font-size:  21px;
+                width: span(18 of 24);
+                margin-bottom: 55px;
             }
             &__title {
                 font-size: 60px;
@@ -900,6 +950,9 @@
             &+h6 {
                 margin-top: 60px;
             }
+        }
+        .wp-caption-text {
+            font-size: 21px;
         }
         li {
             font-size: 24px;
