@@ -1,5 +1,0 @@
-node_modules/
-build/
-.idea/
-app/js/*.js
-app/css/*.css
