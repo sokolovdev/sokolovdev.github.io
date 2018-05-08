@@ -68,7 +68,7 @@ $susy: (
             margin-bottom: 0;
         }
     }
-    @media (min-width: 768px) {
+    @media (min-width: 1240px) {
         h2 {
             font-size: 36px;
             line-height: 44px;
@@ -158,6 +158,9 @@ $susy: (
                 border-top: 1px solid #475992;
                 border-right: 1px solid #475992;
                 border-bottom: 1px solid #475992;
+                &:before{
+                    background-color: #475992;
+                }
             }
         }
     }
@@ -174,6 +177,9 @@ $susy: (
                 border-top: 1px solid #72a8db;
                 border-right: 1px solid #72a8db;
                 border-bottom: 1px solid #72a8db;
+                &:before{
+                    background-color: #72a8db;
+                }
             }
         }
     }
@@ -190,6 +196,9 @@ $susy: (
                 border-top: 1px solid #a71f8d;
                 border-right: 1px solid #a71f8d;
                 border-bottom: 1px solid #a71f8d;
+                &:before{
+                    background-color: #a71f8d;
+                }
             }
         }
     }
@@ -206,6 +215,9 @@ $susy: (
                 border-top: 1px solid #e05743;
                 border-right: 1px solid #e05743;
                 border-bottom: 1px solid #e05743;
+                &:before{
+                    background-color: #e05743;
+                }
             }
         }
     }
@@ -216,9 +228,28 @@ $susy: (
         }
     }
     @media (min-width: 1240px) {
+
         &__name {
             font-size: 16px;
             padding-left: 16px;
+            position: relative;
+            z-index: 1;
+            &::before{
+                position: absolute;
+                height: 100%;
+                width: 0;
+                content: '';
+                transition: 0.3s ease;
+                left: 0;
+                top: 0;
+                background-color: #000;
+                z-index: -1;
+            }
+            &:hover{
+                &::before{
+                    width: 100%;
+                }
+            }
         }
     }
 }
@@ -737,6 +768,438 @@ $susy: (
 
 }
 
+.partners{
+    padding-bottom: 30px;
+    &__title{
+        margin-bottom: 17px;
+        text-align: center;
+    }
+    &__body{
+        font-size: 0;
+        width: 280px;
+        margin: 0 auto;
+    }
+    &__item{
+        position: relative;
+        border: 1px solid rgba(52, 52, 52, 0.1);
+        display: inline-block;
+        vertical-align: top;
+        box-sizing: border-box;
+        &--big{
+            height: 95px;
+            width: 140px;
+        }
+        &--med{
+            height: 95px;
+            width: 280px;
+        }
+        &--small{
+            width: 70px;
+            height: 70px;
+        }
+        img{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 100%;
+        }
+        &--legis{
+            img{
+                width: 84px;
+            }
+        }
+        &--univers{
+            img{
+                width: 116px;
+            }
+        }
+        &--pascal{
+            img{
+                width: 92px;
+            }
+        }
+        &--gobierno{
+            img{
+                width: 113px;
+            }
+        }
+        &--municip{
+            img{
+                width: 118px;
+            }
+        }
+        &--nem{
+            img{
+                width: 47px;
+            }
+        }
+        &--diario{
+            img{
+                width: 61px;
+            }
+        }
+        &--synergy{
+            img{
+                width: 55px;
+            }
+        }
+        &--uth{
+            img{
+                width: 21px;
+            }
+        }
+        &--pro{
+            img{
+                width: 36px;
+            }
+        }
+        &--tic{
+            img{
+                width: 45px;
+            }
+        }
+        &--crypto{
+            img{
+                width: 58px;
+            }
+        }
+        &--cordoba{
+            img{
+                width: 59px;
+            }
+        }
+        &--cripto{
+            img{
+                width: 53px;
+            }
+        }
+        &--cart{
+            img{
+                width: 34px;
+            }
+        }
+        &--atlarec{
+            img{
+                width: 58px;
+            }
+        }
+        &--aba{
+            img{
+                width: 54px;
+            }
+        }
+        &--iec{
+             img{
+                 width: 57px;
+             }
+         }
+        &--kick{
+            img{
+                width: 59px;
+            }
+        }
+        &--lametro{
+            img{
+                width: 56px;
+            }
+        }
+        &--tend{
+            img{
+                width: 55px;
+            }
+        }
+    }
+    @media (min-width: 768px){
+        padding-bottom: 60px;
+        &__title{
+            margin-bottom: 26px;
+        }
+        &__body{
+            width: 730px;
+        }
+        &__item{
+            border-right: none;
+            &--big,&--med{
+                width: 146px;
+                height: 146px;
+            }
+            &--small{
+                width: 73px;
+                height: 73px;
+            }
+            &:nth-child(10n+5){
+                border-right: 1px solid rgba(52, 52, 52, 0.1);
+            }
+            &:nth-child(n+6){
+                border-top: none;
+            }
+        }
+    }
+    @media (min-width: 1240px){
+        padding-bottom: 140px;
+        &__title{
+            margin-bottom: 34px;
+        }
+        &__body{
+            width: 1040px;
+        }
+        &__item{
+            &--big,&--med{
+                width: 208px;
+                height: 208px;
+            }
+            &--small{
+                width: 104px;
+                height: 104px;
+            }
+            &--legis{
+                img{
+                    width: 120px;
+                }
+            }
+            &--univers{
+                img{
+                    width: 174px;
+                }
+            }
+            &--pascal{
+                img{
+                    width: 132px;
+                }
+            }
+            &--gobierno{
+                img{
+                    width: 162px;
+                }
+            }
+            &--municip{
+                img{
+                    width: 168px;
+                }
+            }
+            &--nem{
+                img{
+                    width: 69px;
+                }
+            }
+            &--diario{
+                img{
+                    width: 92px;
+                }
+            }
+            &--synergy{
+                img{
+                    width: 82px;
+                }
+            }
+            &--uth{
+                img{
+                    width: 31px;
+                }
+            }
+            &--pro{
+                img{
+                    width: 53px;
+                }
+            }
+            &--tic{
+                img{
+                    width: 67px;
+                }
+            }
+            &--crypto{
+                img{
+                    width: 86px;
+                }
+            }
+            &--cordoba{
+                img{
+                    width: 87px;
+                }
+            }
+            &--cripto{
+                img{
+                    width: 79px;
+                }
+            }
+            &--cart{
+                img{
+                    width: 49px;
+                }
+            }
+            &--atlarec{
+                img{
+                    width: 87px;
+                }
+            }
+            &--aba{
+                img{
+                    width: 80px;
+                }
+            }
+            &--iec{
+                img{
+                    width: 84px;
+                }
+            }
+            &--kick{
+                img{
+                    width: 89px;
+                }
+            }
+            &--lametro{
+                img{
+                    width: 83px;
+                }
+            }
+            &--tend{
+                img{
+                    width: 82px;
+                }
+            }
+        }
+    }
+}
 
+.loaded{
+    opacity: 1!important;
+    transform:  none!important;
+}
+
+
+.popup img{
+    transition: 0.3s ease;
+    transform: translate(0,10px);
+    opacity: 0;
+}
+
+.show-popup{
+    overflow: hidden;
+    .popup{
+        opacity: 1;
+        pointer-events: all;
+    }
+}
+
+.popup{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    z-index: 1111;
+    transition: 0.3s ease;
+    &__body{
+        padding: 40px 20px 40px;
+    }
+    &__close{
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width:  20px;
+        height: 20px;
+        z-index:1112;
+        cursor: pointer;
+        &::before,&::after{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            content: '';
+            background-color: #000;
+            height: 1px;
+            width: 28px;
+        }
+        &::before{
+            transform: translate(-50%, -50%) rotate(45deg);
+        }
+        &::after{
+            transform: translate(-50%, -50%) rotate(-45deg);
+        }
+        @media (min-width: 1024px){
+            top: 20px;
+            right: 20px;
+            width:  30px;
+            height: 30px;
+            &::before, &::after{
+                width: 42px;
+            }
+        }
+    }
+    img{
+        display: inline-block;
+        vertical-align: top;
+        margin-right: 5px;
+        margin-bottom: 5px;
+        max-width: 135px;
+        @media (min-width: 600px){
+            max-width: 260px;
+            margin-bottom: 10px;
+            margin-right: 10px;
+        }
+        @media (min-width: 768px){
+            max-width: 354px;
+        }
+        @media (min-width: 1024px){
+            max-width: 482px;
+        }
+        @media (min-width: 1240px){
+            max-width: 393px;
+        }
+        @media (min-width: 1560px){
+            max-width: 500px;
+        }
+        @media (min-width: 1900px){
+            max-width: 613px;
+        }
+    }
+}
+
+@media (min-width: 1240px){
+
+    .button--blue-border{
+        transition: 0.3s ease;
+        &:hover{
+            color: #fff;
+            background-color: #589dd1;
+        }
+    }
+
+    .button--blue{
+        transition: 0.3s ease;
+        &:hover{
+            background-color: #518ebb;
+            box-shadow: 0px 13px 43px 5px rgba(88,157,209,0.54);
+        }
+    }
+
+    .menu__item--lang{
+        transition: 0.3s ease;
+        &:hover{
+            color: rgba(255,255,255,0.7);
+        }
+    }
+    .menu__item--main{
+        position: relative;
+        &::before{
+            content: '';
+            position: absolute;
+            bottom: 0;
+            width: 0;
+            transition: width 0.3s ease;
+            height: 1px;
+            background-color: #fff;
+            right: 0;
+        }
+        &:hover{
+            &::before{
+                width: 100%;
+                left: 0;
+            }
+        }
+    }
+
+}
 
 @import '_fonts.scss';
