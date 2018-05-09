@@ -287,7 +287,7 @@ a {
                 p {
                     border-bottom: 1px solid rgba(255, 255, 255, 0.5);
                     display: inline-block;
-                    padding-bottom: 4px;
+                    padding-bottom: 2px;
                 }
             }
             &--lang {
@@ -352,8 +352,8 @@ a {
             left: 0;
             width: 100%;
             height: 100%;
-            background: url(/img/pat.svg) no-repeat center center;
-            background-size: cover;
+            background: url(/img/pat.svg) 63% 5% no-repeat;
+            background-size: 159%;
             opacity: 0.05;
             z-index: 1;
         }
@@ -372,8 +372,8 @@ a {
         }
     }
     @media (min-width: 1240px) {
-        padding-top: 215px;
-        max-height: 700px;
+        padding-top: 145px;
+        max-height: 547px;
         &__text {
             max-width: 960px;
             width: span(11.5 of 12);
@@ -386,6 +386,10 @@ a {
         &__button {
             max-width: 346px;
         }
+    }
+    @media (min-width: 1560px){
+        padding-top: 215px;
+        max-height: 700px;
     }
 }
 

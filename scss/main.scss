@@ -245,10 +245,10 @@ $susy: (
                 background-color: #000;
                 z-index: -1;
             }
-            &:hover{
-                &::before{
-                    width: 100%;
-                }
+        }
+        &:hover{
+            .social__name::before{
+                width: 100%;
             }
         }
     }
@@ -301,8 +301,8 @@ $susy: (
             top: 0;
             left: 0;
             z-index: 0;
-            background: url(/img/pat.svg) no-repeat center center;
-            background-size: cover;
+            background: url(/img/pat.svg) 96% 29% no-repeat;
+            background-size: 170%;
             opacity: 0.05;
             display: block;
             pointer-events: none;
@@ -342,6 +342,11 @@ $susy: (
             &:nth-child(3) {
                 &::before {
                     content: '\e909';
+                }
+            }
+            &:nth-child(4) {
+                &::before {
+                    content: "\e90c";
                 }
             }
         }
@@ -534,7 +539,7 @@ $susy: (
         p{
             display: inline-block;
             border-bottom: 1px solid rgba(88, 157, 209,0.5);
-            padding-bottom: 3px;
+            padding-bottom: 1px;
         }
     }
     @media (min-width: 600px){
@@ -699,7 +704,7 @@ $susy: (
             width: 1048px;
             max-width: none;
         }
-        padding: 259px 0 71px;
+        padding: 159px 0 71px;
     }
 }
 
@@ -750,7 +755,7 @@ $susy: (
     }
     &__link{
         font-size: 14px;
-        line-height: 20px;
+        line-height: 22px;
         color: #589dd1;
         &::before{
             content: '';
@@ -1091,6 +1096,7 @@ $susy: (
     background-color: #fff;
     z-index: 1111;
     transition: 0.3s ease;
+    overflow: scroll;
     &__body{
         padding: 40px 20px 40px;
     }

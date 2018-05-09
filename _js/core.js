@@ -13,8 +13,8 @@ $('document').ready(function () {
             }
         ]
     });
-    for( i=1; i < 63; i++){
-        $('.popup__body').append('<img data-src=\"/img/photos/' + i + '.jpg\">');
+    for( i=1; i < 58; i++){
+        $('.popup__body').append('<img data-src=\"/photos/' + i + '.jpg\">');
     }
 
     function __lI(el) {
