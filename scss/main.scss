@@ -164,6 +164,25 @@ $susy: (
             }
         }
     }
+    &--tw {
+        .social {
+            &__logo {
+                background-color: #55adee;
+                &::before {
+                    content: '\e904';
+                    font-size: 24px;
+                }
+            }
+            &__name {
+                border-top: 1px solid #55adee;
+                border-right: 1px solid #55adee;
+                border-bottom: 1px solid #55adee;
+                &:before{
+                    background-color: #55adee;
+                }
+            }
+        }
+    }
     &--tel {
         .social {
             &__logo {
