@@ -1,0 +1,129 @@
+@import './node_modules/susy/sass/susy';
+@import '_reset.css';
+
+$susy: ('columns': susy-repeat(48),
+        'gutters': 0,
+        'spread': 'narrow',
+        'container-spread': 'narrow',
+);
+
+body {
+    //font-size: 14px;
+    -webkit-font-smoothing: antialiased;
+    //font-family: 'reg';
+}
+//
+//*:focus {
+//    outline: none;
+//}
+//
+//.container {
+//    width: 100%;
+//    max-width: 1120px;
+//    margin: 0 auto;
+//    padding: 0 20px;
+//    box-sizing: border-box;
+//    @media (min-width: 1120px){
+//        padding: 0;
+//    }
+//}
+
+
+.black{
+    .main__slide{
+        color: #000;
+    }
+    #particles-js{
+        background-color: #fff;
+    }
+}
+
+.main{
+    font-size:0;
+    &__left{
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 20%;
+        height:100vh;
+        background-color: #141414;
+    }
+    &__right{
+        width: 80%;
+        margin-left:20%;
+        height: 100vh;
+        position: relative;
+        z-index: 2;
+        pointer-events: none;
+    }
+    &__slide{
+        font-size: 80px;
+        height: 100vh;
+        text-align: center;
+        font-family:sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        transition: 1s ease;
+
+    }
+    &__particles{
+        position: fixed;
+        right: 0;
+        top: 0;
+        width: 80%;
+        height:100vh;
+        z-index: 1;
+        background-color: #000;
+    }
+}
+
+canvas {
+    display: block;
+    vertical-align: bottom;
+} /* ---- particles.js container ---- */
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    background-image: url("");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    transition: 1s ease;
+} /* ---- stats.js ---- */
+.count-particles {
+    background: #000022;
+    position: absolute;
+    top: 48px;
+    left: 0;
+    width: 80px;
+    color: #13e8e9;
+    font-size: 0.8em;
+    text-align: left;
+    text-indent: 4px;
+    line-height: 14px;
+    padding-bottom: 2px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+}
+.js-count-particles {
+    font-size: 1.1em;
+}
+#stats,
+.count-particles {
+    -webkit-user-select: none;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+#stats {
+    border-radius: 3px 3px 0 0;
+    overflow: hidden;
+}
+.count-particles {
+    border-radius: 0 0 3px 3px;
+}
+
+
