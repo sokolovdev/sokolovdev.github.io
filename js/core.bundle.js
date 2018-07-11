@@ -2,6 +2,7 @@
 
 
 
+
 particlesJS.load('particles-js','particles.json', function() {
     console.log('callback - particles.js config loaded');
 });
@@ -65,5 +66,10 @@ $(document).on('scroll', function () {
         }
     }
 
+})
+
+$('.header__hamburger').on('click', function () {
+    $(this).toggleClass('active');
+    $('body').toggleClass('open-menu');
 })
 },{}]},{},[1]);

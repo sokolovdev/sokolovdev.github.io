@@ -7,4 +7,103 @@ $susy: (
         'container-spread': 'narrow',
 );
 
+
+.open-menu{
+    overflow: hidden;
+    .header{
+        &__logo{
+            opacity: 0.3;
+            filter: blur(2px);
+        }
+        &__text{
+            opacity: 0.3;
+            filter: blur(2px);
+        }
+        &__button-wrapper{
+            opacity: 0.3;
+            filter: blur(2px);
+        }
+        &__menu{
+            transform: translate(0,0);
+        }
+    }
+    .content{
+        opacity: 0.3;
+        filter: blur(2px);
+    }
+    .menu__item--header{
+        transform: scale(1) scaleZ(1) rotateX(-0) translateX(0);
+        opacity:1;
+        @for $i from 0 through 10 {
+            &:nth-child(#{$i}){
+                transition-delay: 0.05 + 0.05s*$i;
+            }
+
+        }
+    }
+    .socials__text,.socials__item{
+        transform: scale(1) scaleZ(1) rotateX(-0) translateX(0);
+        opacity:1;
+    }
+    .socials{
+        &__text{
+            transition-delay: 0.5s;
+        }
+        &__item{
+            &:nth-child(2){
+                transition-delay: 0.50s;
+            }
+            &:nth-child(3){
+                transition-delay: 0.55s;
+            }
+        }
+    }
+}
+
+.menu__item--header{
+    transition: all .9s cubic-bezier(.25,.46,.45,.94);
+    transform: scale(.99) scaleZ(1) rotateX(-3deg) translateX(30px);
+    opacity:0;
+    @media (min-width: 1240px){
+        opacity:1;
+    }
+
+}
+
+.socials{
+    &__text,&__item{
+        transition: all .9s cubic-bezier(.25,.46,.45,.94);
+        transform: scale(.99) scaleZ(1) rotateX(-3deg) translateX(30px);
+        opacity:0;
+        @media (min-width: 1240px){
+            opacity:1;
+        }
+    }
+
+
+}
+
+
+
+
+/*transitions*/
+
+.header{
+    &__logo,&__text,&__button-wrapper{
+        transition: 0.5s ease;
+    }
+    &__menu{
+        transition: 0.3s cubic-bezier(1,0,0,1);
+    }
+}
+
+.content{
+    transition: 0.5s ease;
+    pointer-events: none;
+    z-index: 1;
+    position: relative;
+}
+
+
+
 @import '_fonts.scss';
