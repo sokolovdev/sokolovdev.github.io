@@ -10,6 +10,10 @@ $susy: (
 
 .open-menu{
     overflow: hidden;
+    #particles-js{
+        opacity: 0.3;
+        filter: blur(2px);
+    }
     .header{
         &__logo{
             opacity: 0.3;

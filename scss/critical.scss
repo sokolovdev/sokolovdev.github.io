@@ -19,6 +19,11 @@ body {
     outline: none;
 }
 
+input{
+    -webkit-appearance: none;
+    border-radius: 0;
+}
+
 a{
     text-decoration: none;
 }
@@ -57,7 +62,14 @@ a{
     }
 }
 
-
+.background{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width:100%;
+    height: 100%;
+    background-color: #000;
+}
 
 .header{
     padding: 20px;
@@ -371,7 +383,6 @@ canvas {
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: #000000;
     background-image: url("");
     background-repeat: no-repeat;
     background-size: cover;
