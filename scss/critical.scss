@@ -407,6 +407,9 @@ a{
     &__title{
         margin-bottom: 10px;
     }
+    &__list{
+        max-width: 400px;
+    }
     &__item{
         position: relative;
         padding: 10px 0 18px;
@@ -433,6 +436,9 @@ a{
     }
     @media (min-width: 768px){
         padding: 80px 0 50px;
+        &__list{
+            max-width: none;
+        }
         &__title{
             margin-bottom: 30px;
         }

@@ -90,6 +90,8 @@ $(document).ready(function () {
 $(window).on('resize', function () {
     if ($(window).width() >= 1240){
         $('.skills').width($('body').width() - 300)
+    } else {
+        $('.skills').attr('style', '');
     }
 })
 
