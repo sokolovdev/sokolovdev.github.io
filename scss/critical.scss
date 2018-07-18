@@ -395,10 +395,17 @@ a{
     color: $gray;
     @media (min-width: 768px){
         font-size:36px;
+        &--big{
+            font-size: 48px;
+        }
     }
     @media (min-width: 1240px){
         font-size:3.75vw;
         line-height:3.75vw;
+        &--big{
+            font-size:3.75vw;
+            line-height:3.75vw;
+        }
     }
 }
 

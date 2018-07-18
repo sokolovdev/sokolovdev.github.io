@@ -52,26 +52,26 @@ $(document).on('scroll', function () {
             slide2 = true
         }
     }
-    //
-    // if($(this).scrollTop() > $('.slide-3').offset().top * 0.8) {
-    //     if(slide3) {
-    //         $('body').removeClass('black');
-    //         pJSDom[0].pJS.particles.color.value = '#ffffff';
-    //         pJSDom[0].pJS.particles.line_linked.color = '#ffffff';
-    //         pJSDom[0].pJS.fn.particlesRefresh();
-    //
-    //         slide3 = false
-    //     }
-    // }  else {
-    //     if(!slide3) {
-    //
-    //         $('body').addClass('black');
-    //         pJSDom[0].pJS.particles.color.value = '#000000';
-    //         pJSDom[0].pJS.particles.line_linked.color = '#000000';
-    //         pJSDom[0].pJS.fn.particlesRefresh();
-    //         slide3 = true
-    //     }
-    // }
+
+    if($(this).scrollTop() > $('.experts').offset().top * 0.8) {
+        if(slide3) {
+            $('body').removeClass('white');
+            pJSDom[0].pJS.particles.color.value = '#ffffff';
+            pJSDom[0].pJS.particles.line_linked.color = '#ffffff';
+            pJSDom[0].pJS.fn.particlesRefresh();
+
+            slide3 = false
+        }
+    }  else {
+        if(!slide3) {
+
+            $('body').addClass('white');
+            pJSDom[0].pJS.particles.color.value = '#000000';
+            pJSDom[0].pJS.particles.line_linked.color = '#000000';
+            pJSDom[0].pJS.fn.particlesRefresh();
+            slide3 = true
+        }
+    }
 
 })
 
