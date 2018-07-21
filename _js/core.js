@@ -23,56 +23,77 @@ update = function () {
 requestAnimationFrame(update);
 
 
-$(document).ready(function () {
-    // console.log(pJSDom[0])
+function white() {
+    $('body').addClass('white');
+    pJSDom[0].pJS.particles.color.value = '#000000';
+    pJSDom[0].pJS.particles.line_linked.color = '#000000';
+    pJSDom[0].pJS.fn.particlesRefresh();
+}
 
-})
+function noWhite() {
+    $('body').removeClass('white');
+    pJSDom[0].pJS.particles.color.value = '#ffffff';
+    pJSDom[0].pJS.particles.line_linked.color = '#ffffff';
+    pJSDom[0].pJS.fn.particlesRefresh();
+}
 
-var slide2 = true,
-    slide3 = true;
-
-$(document).on('scroll', function () {
-    if($(this).scrollTop() > $('.timeline').offset().top  * 0.8) {
-
-        if(slide2) {
-            $('body').addClass('white');
-            pJSDom[0].pJS.particles.color.value = '#000000';
-            pJSDom[0].pJS.particles.line_linked.color = '#000000';
-            pJSDom[0].pJS.fn.particlesRefresh();
-            slide2 = false
-        }
-
-    } else {
-        if(!slide2) {
-            $('body').removeClass('white');
-            pJSDom[0].pJS.particles.color.value = '#ffffff';
-            pJSDom[0].pJS.particles.line_linked.color = '#ffffff';
-            pJSDom[0].pJS.fn.particlesRefresh();
-            slide2 = true
-        }
+var waypointsTimelineDown = $('.timeline').waypoint(function(direction) {
+    if(direction === 'down'){
+        white()
     }
 
-    if($(this).scrollTop() > $('.experts').offset().top * 0.8) {
-        if(slide3) {
-            $('body').removeClass('white');
-            pJSDom[0].pJS.particles.color.value = '#ffffff';
-            pJSDom[0].pJS.particles.line_linked.color = '#ffffff';
-            pJSDom[0].pJS.fn.particlesRefresh();
+}, {
+    offset: '80%'
+})
 
-            slide3 = false
-        }
-    }  else {
-        if(!slide3) {
-
-            $('body').addClass('white');
-            pJSDom[0].pJS.particles.color.value = '#000000';
-            pJSDom[0].pJS.particles.line_linked.color = '#000000';
-            pJSDom[0].pJS.fn.particlesRefresh();
-            slide3 = true
-        }
+var waypointsExperts = $('.experts').waypoint(function(direction) {
+    if(direction === 'down'){
+        noWhite()
     }
 
+}, {
+    offset: '50%'
 })
+
+var waypointsRegistrationDown = $('.registration').waypoint(function(direction) {
+    if(direction === 'down') {
+        white()
+    }
+
+}, {
+    offset: '80%'
+})
+
+
+var waypointsTimelineUp = $('.timeline').waypoint(function(direction) {
+    if(direction === 'up'){
+        noWhite()
+    }
+
+}, {
+    offset: '80%'
+})
+var waypointsExpertsUp = $('.experts').waypoint(function(direction) {
+    if(direction === 'up'){
+        white()
+    }
+
+}, {
+    offset: '50%'
+})
+
+var waypointsRegistrationUp = $('.registration').waypoint(function(direction) {
+    if(direction === 'up') {
+        noWhite()
+    }
+
+}, {
+    offset: '80%'
+})
+
+
+
+
 
 $('.header__hamburger').on('click', function () {
     $(this).toggleClass('active');

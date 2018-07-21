@@ -243,7 +243,7 @@ block content
                         img(src='/img/3.png')
         +b.media
             +e.container.container
-                +e.title.title--big Публикации в СМИ
+                +e.H2.title.title--big Публикации в СМИ
                 +e.list
                     +e.A(href="#").item
                         span Llega a Córdoba una de las mayores plataformas de “blockchain”
@@ -257,5 +257,32 @@ block content
                         span Blockchain tuvo su paso por la ciudad de Córdoba
                 +e.A(href="#").download
                     span Больше публикаций
+        +b.registration
+            +e.container.container
+                +e.H2.title.title--big Регистрация
+                +e.text
+                    p 499$ с команды
+                    p.small 999$
+                    span Минимум — 2 человека
+                    span Максимум — 6 человек
+                +e.FORM.form.form__
+                    +e.body
+                        +e.input--big.input.check.error
+                            input(name="name" placeholder="ВАШЕ ИМЯ" autocomplete="off")
+                        +e.input.input.check
+                            input(name="email" type="email" placeholder="E-MAIL" autocomplete="off")
+                        +e.input.input
+                            input(name="telegram" placeholder="TELEGRAM ID" autocomplete="off")
+                        +e.input.input
+                            input(name="company" placeholder="КОМПАНИЯ" autocomplete="off")
+                        +e.input.input
+                            input(name="industry" placeholder="ИНДУСТРИЯ" autocomplete="off")
+                        +e.BUTTON(type="button").button.button--blue Перейти к оплате
+                        +e.privacy Оплата через
+                            a(href="www.coinpayments.net" target="_blank")  www.coinpayments.net
+                    +e.preloader
+                +e.img
+                    img
+
 block footer-scripts
     script(src='/js/particles.js')
