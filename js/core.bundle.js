@@ -24,6 +24,36 @@ update = function () {
 requestAnimationFrame(update);
 
 
+particlesJS.load('timeline-bg','particles.json', function() {
+    // $($('canvas')[0]).css('height', $('body').height());
+    // $($('canvas')[0]).css('opacity', 0);
+    // setTimeout(function () {
+    //     pJSDom[0].pJS.fn.particlesRefresh();
+    //     $($('canvas')[0]).css('opacity', 1);
+    // },1000)
+
+    // console.log($('body').height())
+});
+var count_particles, stats, update;
+// count_particles = document.querySelector('.js-count-particles');
+update = function () {
+    // if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
+    //     count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
+    // }
+    requestAnimationFrame(update);
+};
+requestAnimationFrame(update);
+//
+
+$(document).ready(function () {
+    console.log(pJSDom)
+})
+// pJSDom[0].pJS.particles.color.value = '#000000';
+// pJSDom[0].pJS.particles.line_linked.color = '#000000';
+// pJSDom[0].pJS.fn.particlesRefresh();
+
+
+
 function white() {
     $('body').addClass('white');
     pJSDom[0].pJS.particles.color.value = '#000000';
@@ -40,16 +70,27 @@ function noWhite() {
 
 var waypointsTimelineDown = $('.timeline').waypoint(function(direction) {
     if(direction === 'down'){
-        white()
+        // white()
+
+        $('.timeline').addClass('white')
+        $('.header').addClass('white')
+        pJSDom[1].pJS.particles.color.value = '#000000';
+        pJSDom[1].pJS.particles.line_linked.color = '#000000';
+        pJSDom[1].pJS.fn.particlesRefresh();
     }
 
 }, {
-    offset: '80%'
+    offset: '30%'
 })
 
 var waypointsExperts = $('.experts').waypoint(function(direction) {
     if(direction === 'down'){
-        noWhite()
+        // noWhite()
+        $('.timeline').removeClass('white')
+        $('.header').removeClass('white')
+        pJSDom[1].pJS.particles.color.value = '#fff';
+        pJSDom[1].pJS.particles.line_linked.color = '#fff';
+        pJSDom[1].pJS.fn.particlesRefresh();
     }
 
 }, {
@@ -68,15 +109,25 @@ var waypointsRegistrationDown = $('.registration').waypoint(function(direction) 
 
 var waypointsTimelineUp = $('.timeline').waypoint(function(direction) {
     if(direction === 'up'){
-        noWhite()
+        // noWhite()
+        $('.timeline').removeClass('white')
+        $('.header').removeClass('white')
+        pJSDom[1].pJS.particles.color.value = '#fff';
+        pJSDom[1].pJS.particles.line_linked.color = '#fff';
+        pJSDom[1].pJS.fn.particlesRefresh();
     }
 
 }, {
-    offset: '80%'
+    offset: '30%'
 })
 var waypointsExpertsUp = $('.experts').waypoint(function(direction) {
     if(direction === 'up'){
-        white()
+        // white()
+        $('.timeline').addClass('white')
+        $('.header').addClass('white')
+        pJSDom[1].pJS.particles.color.value = '#000000';
+        pJSDom[1].pJS.particles.line_linked.color = '#000000';
+        pJSDom[1].pJS.fn.particlesRefresh();
     }
 
 }, {

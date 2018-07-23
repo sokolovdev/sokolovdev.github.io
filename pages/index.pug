@@ -83,6 +83,7 @@ block content
                         p 3 место
                         span 15000 UNI
         +b.SECTION.timeline
+            +e#timeline-bg.bg
             +e.container.container
                 +e.top
                     +e.H2.title.title Timeline
@@ -97,6 +98,7 @@ block content
                                     li
                                         a(href="#") Александр Петров
                                         |   , бизнес-ангел — вступительное слово
+                                        img(src="/img/3.jpg")
                                     li
                                         a(href="#") Анзор Дауров
                                         |   , гид и ментор проектов в U.Community — White Paper на 1-2-3. Как создать привлекательную для инвесторов кампанию
@@ -267,16 +269,21 @@ block content
                     span Максимум — 6 человек
                 +e.FORM.form.form__
                     +e.body
-                        +e.input--big.input.check.error
-                            input(name="name" placeholder="ВАШЕ ИМЯ" autocomplete="off")
-                        +e.input.input.check
-                            input(name="email" type="email" placeholder="E-MAIL" autocomplete="off")
-                        +e.input.input
-                            input(name="telegram" placeholder="TELEGRAM ID" autocomplete="off")
-                        +e.input.input
-                            input(name="company" placeholder="КОМПАНИЯ" autocomplete="off")
-                        +e.input.input
-                            input(name="industry" placeholder="ИНДУСТРИЯ" autocomplete="off")
+                        +e.input--big.input__.check.error
+                            input(name="name" autocomplete="off" id="name")
+                            +e.LABEL(for="name").label Ваше имя
+                        +e.input.input__.check
+                            input(name="email" type="email" id="email" autocomplete="off")
+                            +e.LABEL(for="email").label e-mail
+                        +e.input.input__
+                            input(name="telegram" id="telegram"  autocomplete="off")
+                            +e.LABEL(for="telegram").label telegram ID
+                        +e.input.input__
+                            input(name="company" id="company"  autocomplete="off")
+                            +e.LABEL(for="company").label компания
+                        +e.input.input__
+                            input(name="industry" id="industry"  autocomplete="off")
+                            +e.LABEL(for="industry").label индустрия
                         +e.BUTTON(type="button").button.button--blue Перейти к оплате
                         +e.privacy Оплата через
                             a(href="www.coinpayments.net" target="_blank")  www.coinpayments.net
