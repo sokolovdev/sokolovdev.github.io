@@ -169,5 +169,10 @@ $(window).on('resize', function () {
 
 $(document).on('scroll', function () {
     // $('canvas').css('transform', 'translate(0,'+ -$(this).scrollTop()*0.05 +'px)')
+
+    $('input').on('input', function(){
+        $(this).closest('.input').find('.input__label').html($(this).val());
+    })
+
 })
 },{}]},{},[1]);
