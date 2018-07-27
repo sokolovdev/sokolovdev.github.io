@@ -85,7 +85,10 @@ var waypointsTimelineDown = $('.timeline').waypoint(function(direction) {
         // white()
 
         $('.timeline').addClass('white')
-        $('.header').addClass('white')
+
+        if($(window).width() > 1240){
+            $('.header').addClass('white')
+        }
         pJSDom[1].pJS.particles.color.value = '#000000';
         pJSDom[1].pJS.particles.line_linked.color = '#000000';
         pJSDom[1].pJS.fn.particlesRefresh();
@@ -180,11 +183,11 @@ var list = $('.viewport-list').waypoint(function(direction) {
 
     setTimeout(function () {
         $($this[0].element).removeClass('showed-list')
-    },900)
+    },2000)
 
     setTimeout(function () {
         $($this[0].element).removeClass('viewport-list')
-    },901)
+    },2001)
 
 }, {
     offset: '60%'

@@ -93,10 +93,13 @@ a{
         display: none;
     }
     &__button{
-        position: absolute;
-        right: 70px;
-        top: 20px;
-        z-index: 1;
+
+        &-wrapper{
+            position: absolute;
+            right: 70px;
+            top: 20px;
+            z-index: 1;
+        }
     }
     &__logo{
         svg{
@@ -184,7 +187,7 @@ a{
 
 
         }
-        &__button{
+        &__button-wrapper{
             right: 134px;
             top: 25px;
         }
@@ -256,7 +259,7 @@ a{
             bottom: 20px;
             left: 20px;
         }
-        &__button{
+        &__button-wrapper{
             position: static;
         }
     }
