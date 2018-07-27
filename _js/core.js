@@ -45,8 +45,20 @@ requestAnimationFrame(update);
 //
 
 $(document).ready(function () {
-    console.log(pJSDom)
-})
+    if ($(window).width() > 1240){
+
+        setTimeout(function () {
+            $('.header__sidebar').addClass('showed-sidebar');
+        },100)
+        setTimeout(function () {
+            $('.header__sidebar').removeClass('showed-sidebar');
+        },1200)
+        setTimeout(function () {
+            $('.header__sidebar').removeClass('viewport-sidebar');
+        },1201)
+    }
+
+});
 // pJSDom[0].pJS.particles.color.value = '#000000';
 // pJSDom[0].pJS.particles.line_linked.color = '#000000';
 // pJSDom[0].pJS.fn.particlesRefresh();
@@ -142,6 +154,60 @@ var waypointsRegistrationUp = $('.registration').waypoint(function(direction) {
     offset: '80%'
 })
 
+var viewport = $('.viewport').waypoint(function(direction) {
+    $($(this)[0].element).addClass('showed');
+
+    var $this = $(this);
+
+    setTimeout(function () {
+        $($this[0].element).removeClass('showed')
+    },900)
+
+    setTimeout(function () {
+        $($this[0].element).removeClass('viewport')
+    },901)
+
+}, {
+    offset: '85%'
+})
+
+
+var list = $('.viewport-list').waypoint(function(direction) {
+    $($(this)[0].element).addClass('showed-list');
+
+    var $this = $(this);
+
+    setTimeout(function () {
+        $($this[0].element).removeClass('showed-list')
+    },900)
+
+    setTimeout(function () {
+        $($this[0].element).removeClass('viewport-list')
+    },901)
+
+}, {
+    offset: '60%'
+})
+
+var graph = $('.viewport-praph').waypoint(function(direction) {
+    $($(this)[0].element).addClass('showed-graph');
+
+    var $this = $(this);
+
+    setTimeout(function () {
+        $($this[0].element).removeClass('showed-graph')
+    },900)
+
+    setTimeout(function () {
+        $($this[0].element).removeClass('viewport-praph')
+    },901)
+
+}, {
+    offset: '100%'
+})
+
+
+
 
 
 
@@ -155,6 +221,17 @@ $(document).ready(function () {
     if ($(window).width() >= 1240){
         $('.skills').width($('body').width() - 300)
     }
+    $('input').on('focus', function(){
+        $(this).closest('.input').addClass('focused')
+    })
+
+    $('input').on('blur', function(){
+        if($(this).val() === ''){
+            $(this).closest('.input').removeClass('focused')
+        }
+
+    })
+
 
 })
 
@@ -169,8 +246,6 @@ $(window).on('resize', function () {
 $(document).on('scroll', function () {
     // $('canvas').css('transform', 'translate(0,'+ -$(this).scrollTop()*0.05 +'px)')
 
-    $('input').on('input', function(){
-        $(this).closest('.input').find('.input__label').html($(this).val());
-    })
+
 
 })
