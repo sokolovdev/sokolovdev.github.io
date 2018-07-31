@@ -97,11 +97,39 @@ var waypointsTimelineDown = $('.timeline').waypoint(function(direction) {
     offset: '30%'
 })
 
+
+
+var waypointsTimelineDownCenter = $('.timeline').waypoint(function(direction) {
+    if(direction === 'down'){
+        // white()
+
+        $('body').addClass('white');
+
+    }
+
+}, {
+    offset: '-50%'
+})
+
+var waypointsTimelineDownCenter = $('.timeline').waypoint(function(direction) {
+    if(direction === 'up'){
+        // white()
+
+        $('body').removeClass('white');
+
+    }
+
+}, {
+    offset: '-50%'
+})
+
+
 var waypointsExperts = $('.experts').waypoint(function(direction) {
     if(direction === 'down'){
         // noWhite()
         $('.timeline').removeClass('white')
         $('.header').removeClass('white')
+        $('body').removeClass('white');
         pJSDom[1].pJS.particles.color.value = '#fff';
         pJSDom[1].pJS.particles.line_linked.color = '#fff';
         pJSDom[1].pJS.fn.particlesRefresh();
@@ -139,6 +167,7 @@ var waypointsExpertsUp = $('.experts').waypoint(function(direction) {
         // white()
         $('.timeline').addClass('white')
         $('.header').addClass('white')
+        $('body').addClass('white');
         pJSDom[1].pJS.particles.color.value = '#000000';
         pJSDom[1].pJS.particles.line_linked.color = '#000000';
         pJSDom[1].pJS.fn.particlesRefresh();
@@ -171,7 +200,7 @@ var viewport = $('.viewport').waypoint(function(direction) {
     },901)
 
 }, {
-    offset: '85%'
+    offset: '95%'
 })
 
 
@@ -246,9 +275,14 @@ $(window).on('resize', function () {
     }
 })
 
-$(document).on('scroll', function () {
-    // $('canvas').css('transform', 'translate(0,'+ -$(this).scrollTop()*0.05 +'px)')
 
+$(".menu__item--header").on("click", function (event) {
+    event.preventDefault();
 
+    var id  = $(this).attr('href'),
+        top = $(id).offset().top - 50;
 
-})
+    console.log(top)
+
+    $('body,html').animate({scrollTop: top}, 1500);
+});
