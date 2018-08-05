@@ -1,17 +1,54 @@
 
 
 
+if($(window).width() < 768){
+    particlesJS.load('particles-js','particlesMobile.json', function() {
+        // $($('canvas')[0]).css('height', $('body').height());
+        // $($('canvas')[0]).css('opacity', 0);
+        // setTimeout(function () {
+        //     pJSDom[0].pJS.fn.particlesRefresh();
+        //     $($('canvas')[0]).css('opacity', 1);
+        // },1000)
 
-particlesJS.load('particles-js','particles.json', function() {
-    // $($('canvas')[0]).css('height', $('body').height());
-    // $($('canvas')[0]).css('opacity', 0);
-    // setTimeout(function () {
-    //     pJSDom[0].pJS.fn.particlesRefresh();
-    //     $($('canvas')[0]).css('opacity', 1);
-    // },1000)
+        // console.log($('body').height())
+    });
 
-    // console.log($('body').height())
-});
+    particlesJS.load('timeline-bg','particles.json', function() {
+        // $($('canvas')[0]).css('height', $('body').height());
+        // $($('canvas')[0]).css('opacity', 0);
+        // setTimeout(function () {
+        //     pJSDom[0].pJS.fn.particlesRefresh();
+        //     $($('canvas')[0]).css('opacity', 1);
+        // },1000)
+
+        // console.log($('body').height())
+    });
+} else {
+    particlesJS.load('particles-js','particles.json', function() {
+        // $($('canvas')[0]).css('height', $('body').height());
+        // $($('canvas')[0]).css('opacity', 0);
+        // setTimeout(function () {
+        //     pJSDom[0].pJS.fn.particlesRefresh();
+        //     $($('canvas')[0]).css('opacity', 1);
+        // },1000)
+
+        // console.log($('body').height())
+    });
+
+    particlesJS.load('timeline-bg','particlesMobile.json', function() {
+        // $($('canvas')[0]).css('height', $('body').height());
+        // $($('canvas')[0]).css('opacity', 0);
+        // setTimeout(function () {
+        //     pJSDom[0].pJS.fn.particlesRefresh();
+        //     $($('canvas')[0]).css('opacity', 1);
+        // },1000)
+
+        // console.log($('body').height())
+    });
+}
+
+
+
 var count_particles, stats, update;
 // count_particles = document.querySelector('.js-count-particles');
 update = function () {
@@ -23,16 +60,7 @@ update = function () {
 requestAnimationFrame(update);
 
 
-particlesJS.load('timeline-bg','particles.json', function() {
-    // $($('canvas')[0]).css('height', $('body').height());
-    // $($('canvas')[0]).css('opacity', 0);
-    // setTimeout(function () {
-    //     pJSDom[0].pJS.fn.particlesRefresh();
-    //     $($('canvas')[0]).css('opacity', 1);
-    // },1000)
 
-    // console.log($('body').height())
-});
 var count_particles, stats, update;
 // count_particles = document.querySelector('.js-count-particles');
 update = function () {
