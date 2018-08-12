@@ -87,9 +87,13 @@ var waypointsTimelineDown = $('.timeline').waypoint(function(direction) {
         if($(window).width() > 1240){
             $('.header').addClass('white')
         }
-        pJSDom[1].pJS.particles.color.value = '#000000';
-        pJSDom[1].pJS.particles.line_linked.color = '#000000';
-        pJSDom[1].pJS.fn.particlesRefresh();
+        if($(window).width() > 768){
+            pJSDom[1].pJS.particles.color.value = '#000000';
+            pJSDom[1].pJS.particles.line_linked.color = '#000000';
+            pJSDom[1].pJS.fn.particlesRefresh();
+        }
+
+
     }
 
 }, {
@@ -107,7 +111,7 @@ var waypointsTimelineDownCenter = $('.timeline').waypoint(function(direction) {
     }
 
 }, {
-    offset: '-50%'
+    offset: '-20%'
 })
 
 var waypointsTimelineDownCenter = $('.timeline').waypoint(function(direction) {
@@ -119,7 +123,7 @@ var waypointsTimelineDownCenter = $('.timeline').waypoint(function(direction) {
     }
 
 }, {
-    offset: '-50%'
+    offset: '-20%'
 })
 
 
@@ -129,9 +133,12 @@ var waypointsExperts = $('.experts').waypoint(function(direction) {
         $('.timeline').removeClass('white')
         $('.header').removeClass('white')
         $('body').removeClass('white');
-        pJSDom[1].pJS.particles.color.value = '#fff';
-        pJSDom[1].pJS.particles.line_linked.color = '#fff';
-        pJSDom[1].pJS.fn.particlesRefresh();
+        if($(window).width() > 768){
+            pJSDom[1].pJS.particles.color.value = '#fff';
+            pJSDom[1].pJS.particles.line_linked.color = '#fff';
+            pJSDom[1].pJS.fn.particlesRefresh();
+        }
+
     }
 
 }, {
@@ -153,9 +160,13 @@ var waypointsTimelineUp = $('.timeline').waypoint(function(direction) {
         // noWhite()
         $('.timeline').removeClass('white')
         $('.header').removeClass('white')
-        pJSDom[1].pJS.particles.color.value = '#fff';
-        pJSDom[1].pJS.particles.line_linked.color = '#fff';
-        pJSDom[1].pJS.fn.particlesRefresh();
+
+        if($(window).width() > 768) {
+            pJSDom[1].pJS.particles.color.value = '#fff';
+            pJSDom[1].pJS.particles.line_linked.color = '#fff';
+            pJSDom[1].pJS.fn.particlesRefresh();
+        }
+
     }
 
 }, {
@@ -167,9 +178,12 @@ var waypointsExpertsUp = $('.experts').waypoint(function(direction) {
         $('.timeline').addClass('white')
         $('.header').addClass('white')
         $('body').addClass('white');
-        pJSDom[1].pJS.particles.color.value = '#000000';
-        pJSDom[1].pJS.particles.line_linked.color = '#000000';
-        pJSDom[1].pJS.fn.particlesRefresh();
+        if($(window).width() > 768){
+            pJSDom[1].pJS.particles.color.value = '#000000';
+            pJSDom[1].pJS.particles.line_linked.color = '#000000';
+            pJSDom[1].pJS.fn.particlesRefresh();
+        }
+
     }
 
 }, {
