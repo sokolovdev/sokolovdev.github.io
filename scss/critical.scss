@@ -171,6 +171,9 @@ a{
     &__navigation{
         margin-bottom: 50px;
     }
+    &__logo-side{
+        display: none;
+    }
 
     @media (min-width: 768px){
         padding: 25px 20px 145px;
@@ -204,6 +207,23 @@ a{
     @media (min-width: 1240px){
         padding: 30px 40px;
         position: absolute;
+        &__logo-side{
+            display: block;
+            margin-bottom:35px;
+            position: absolute;
+            left: 20px;
+            top: 30px;
+            transform: translate(0,-92px);
+            svg{
+                width: 179px;
+                height: 62px;
+            }
+            path{
+                fill: #fff;
+            }
+
+
+        }
         &__text{
             top: 50px;
             left: 409px;
@@ -229,7 +249,7 @@ a{
             max-width: 300px;
             height: 100vh;
             z-index: 2;
-            padding: 140px 15px 20px 20px;
+            padding: 40px 15px 20px 20px;
             box-sizing: border-box;
             &.viewport-sidebar{
                 transform: translate(100%,0);
@@ -330,7 +350,7 @@ a{
         font-size:21px;
         color: #fff;
         & + .menu__item{
-            margin-top: 30px;
+            margin-top: 23px;
         }
     }
     &__item--small{
@@ -386,7 +406,7 @@ a{
     position: relative;
     img{
         position: absolute;
-        top: 0;
+        top: -2vw;
         left: 63.75vw;
         width: 21.56vw;
         height: 15.93vw;
