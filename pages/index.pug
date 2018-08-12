@@ -10,10 +10,11 @@ block content
         +b.SECTION.main
             +e.container.container
                 +e.text.text--main
-                    h3.viewport Интенсив 18 августа 2018
-                    h1.viewport Whale tank
-                    h2.viewport Bootcamp para criptoproyectos
-                    p.viewport Узнай, чем руководствуются инвесторы при выборе проектов! 18 августа — интенсивный тренинг для команд, готовящихся к ICO
+                    img(src="/img/date.svg").viewport
+                    //h3.viewport Интенсив 18 августа 20181
+                    h1.viewport Crypto Bootcamp
+                    //h2.viewport Bootcamp para criptoproyectos
+                    p.viewport Узнай, чем руководствуются инвесторы при выборе проектов! 28 августа — интенсивный тренинг для команд, готовящихся к ICO
         +b#objectives.SECTION.objectives
             +e.container.container
                 +e.H2.title.title.viewport Цели интенсива
@@ -35,32 +36,32 @@ block content
                         span.viewport 05
         +b.SECTION.skills
             +e.container.container
-                +e.H2.title.title.viewport На интенсиве вы научитесь
+                +e.H2.title.title--white.viewport На интенсиве вы научитесь
                 +e.list
-                    +e.item.viewport Первым распознавать перспективный проект и инвестировать на ранней стадии
-                    +e.item.viewport Оценивать экономическую модель проекта
-                    +e.item.viewport Налаживать связи в индустрии
-                    +e.item.viewport Оценивать потенциал роста токена
-                    +e.item.viewport Оценивать команду
+                    +e.item--icon-1.viewport Первым распознавать перспективный проект и инвестировать на ранней стадии
+                    +e.item--icon-2.viewport Оценивать экономическую модель проекта
+                    +e.item--icon-3.viewport Налаживать связи в индустрии
+                    +e.item--icon-4.viewport Оценивать потенциал роста токена
+                    +e.item--icon-5.viewport Оценивать команду
         +b#program.SECTION.program
             +e.container.container
                 +e.H2.title.title.viewport Программа интенсива делится на три части
                 +e.list
-                    +e.item
-                        //include ../img/1.svg
-                        img(src="/img/1.svg").viewport
-                        h3.viewport Лекционная часть
-                        p.viewport Эксперты будут делиться с участниками своими наработками и секретами успешных сборов.
-                    +e.item
-                        //include ../img/2.svg
-                        img(src="/img/2.svg").viewport
+                    +e.item.viewport
+                        include ../img/1.svg
+                        //img(src="/img/1.svg").viewport
+                        h3 Лекционная часть
+                        p Эксперты будут делиться с участниками своими наработками и секретами успешных сборов.
+                    +e.item.viewport
+                        include ../img/2.svg
+                        //img(src="/img/2.svg").viewport
                         h3.viewport Работа в группах
                         p.viewport Все участники смогут разделиться на группы «по интересам» и задать свои вопросы экспертам. А также узнать их профессиональное мнение о своих наработках и идеях.
-                    +e.item
-                        //include ../img/3.svg
-                        img(src="/img/3.svg").viewport
-                        h3.viewport Питчинг проектов
-                        p.viewport По итогам интенсива менторы отберут 10 команд, которые смогут представить свои проекты жюри и инвесторам.
+                    +e.item.viewport
+                        include ../img/3.svg
+                        //img(src="/img/3.svg").viewport
+                        h3 Питчинг проектов
+                        p По итогам интенсива менторы отберут 10 команд, которые смогут представить свои проекты жюри и инвесторам.
         +b#promo.SECTION.promo
             +e.container.container
                 +e.H2.title.title.viewport В мире блокчейна возможно все!
@@ -199,11 +200,6 @@ block content
                             img(src="/img/team/9.jpg")
                         +e.A(href="#").name.viewport Анатолий Радченко
                         +e.organization.viewport United Traders
-                    +e.item
-                        +e.photo.viewport
-                            img(src="/img/team/10.jpg")
-                        +e.A(href="#").name.viewport Иван Петуховский
-                        +e.organization.viewport EXMO
         +b#partners.SECTION.partners
             +e.container.container
                 +e.title.title--big.viewport Партнеры
@@ -228,28 +224,6 @@ block content
                         img(src='/img/partners/9.png')
                     +e.A(href="#").item
                         img(src='/img/partners/10.png')
-                    +e.A(href="#").item
-                        img(src='/img/partners/11.png')
-                    +e.A(href="#").item
-                        img(src='/img/partners/12.png')
-                    +e.A(href="#").item
-                        img(src='/img/partners/13.png')
-                    +e.A(href="#").item
-                        img(src='/img/partners/14.png')
-                    +e.A(href="#").item
-                        img(src='/img/partners/15.png')
-                    +e.A(href="#").item
-                        img(src='/img/partners/16.png')
-                    +e.A(href="#").item
-                        img(src='/img/partners/17.png')
-                    +e.A(href="#").item
-                        img(src='/img/partners/18.png')
-                    +e.A(href="#").item
-                        img(src='/img/partners/19.png')
-                    +e.A(href="#").item
-                        img(src='/img/partners/20.png')
-                    +e.A(href="#").item
-                        img(src='/img/partners/21.png')
         +b#media.media
             +e.container.container
                 +e.H2.title.title--big.viewport Публикации в СМИ
@@ -296,7 +270,8 @@ block content
                             a(href="www.coinpayments.net" target="_blank")  www.coinpayments.net
                     +e.preloader
                 +e.img
-                    img
+                    include ../img/form.svg
+                    img(src="/img/mask.png")
 
 block footer-scripts
     script(src='/js/particles.js')

@@ -203,6 +203,7 @@ a{
     }
     @media (min-width: 1240px){
         padding: 30px 40px;
+        position: absolute;
         &__text{
             top: 50px;
             left: 409px;
@@ -288,6 +289,30 @@ a{
         color: $gray;
         display: block;
         padding-left:30px;
+        display: inline-block;
+        vertical-align: middle;
+        position: relative;
+        &::before{
+            position: absolute;
+            left: 0;
+            top: 1px;
+            color: $gray;
+        }
+        &--develope{
+            &::before{
+                content: '</>';
+            }
+        }
+        &--design{
+            &::before{
+                font-family: icon;
+                content: '\e901';
+                font-size:28px;
+            }
+        }
+        & + .socials__item{
+            margin-left:15px;
+        }
     }
 }
 
@@ -358,6 +383,14 @@ a{
 }
 
 .text--main{
+    position: relative;
+    img{
+        position: absolute;
+        top: 0;
+        left: 63.75vw;
+        width: 21.56vw;
+        height: 15.93vw;
+    }
     h3{
         color: $gray;
         font-size:21px;
@@ -365,7 +398,7 @@ a{
         margin-bottom:23px;
     }
     h1{
-        font-size:60px;
+        font-size:14.375vw;
         color: #40bbdc;
         font-family: hv;
         margin-bottom:22px;
@@ -387,7 +420,7 @@ a{
     }
     @media (min-width: 500px){
         h1{
-            font-size:12vw;
+            //font-size:12vw;
         }
         h2{
             font-size:5.2vw;
@@ -415,6 +448,12 @@ a{
             font-size:21px;
             line-height: 24px;
         }
+        img{
+            top: -15px;
+            left: 455px;
+            width: 179px;
+            height: 130px;
+        }
 
     }
     @media (min-width:1240px) {
@@ -433,6 +472,12 @@ a{
             line-height:1.8vw;
             width: span(5.2 of 8);
         }
+        img{
+            left: 37vw;
+            top: -3vw;
+            width: 17.26vw;
+            height: 12.57vw;
+        }
 
     }
 }
@@ -444,6 +489,9 @@ a{
     font-size:24px;
     //line-height: 24px;
     color: $gray;
+    &--white{
+        color: #fff;
+    }
     @media (min-width: 768px){
         font-size:36px;
         &--big{
@@ -495,7 +543,7 @@ a{
     @media (min-width: 768px){
         padding: 80px 0 50px;
         &__list{
-            max-width: none;
+            max-width: 700px;
         }
         &__title{
             margin-bottom: 30px;
@@ -518,6 +566,9 @@ a{
         padding: 7vw 0 3.125vw;
         &__title{
             margin-bottom: 2.7vw;
+        }
+        &__list{
+            max-width: none;
         }
         &__item{
             padding: 1.5vw 0;
