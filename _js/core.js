@@ -3,35 +3,35 @@
 var count_particles, stats, update;
 
 if($(window).width() > 768){
-    particlesJS.load('particles-js','particles.json', function() {
-        // $($('canvas')[0]).css('height', $('body').height());
-        // $($('canvas')[0]).css('opacity', 0);
-        // setTimeout(function () {
-        //     pJSDom[0].pJS.fn.particlesRefresh();
-        //     $($('canvas')[0]).css('opacity', 1);
-        // },1000)
-
-        // console.log($('body').height())
-    });
-
-    particlesJS.load('timeline-bg','particlesMobile.json', function() {
-        // $($('canvas')[0]).css('height', $('body').height());
-        // $($('canvas')[0]).css('opacity', 0);
-        // setTimeout(function () {
-        //     pJSDom[0].pJS.fn.particlesRefresh();
-        //     $($('canvas')[0]).css('opacity', 1);
-        // },1000)
-
-        // console.log($('body').height())
-    });
-
-    update = function () {
-        // if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
-        //     count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
-        // }
-        requestAnimationFrame(update);
-    };
-    requestAnimationFrame(update);
+    // particlesJS.load('particles-js','particles.json', function() {
+    //     // $($('canvas')[0]).css('height', $('body').height());
+    //     // $($('canvas')[0]).css('opacity', 0);
+    //     // setTimeout(function () {
+    //     //     pJSDom[0].pJS.fn.particlesRefresh();
+    //     //     $($('canvas')[0]).css('opacity', 1);
+    //     // },1000)
+    //
+    //     // console.log($('body').height())
+    // });
+    //
+    // particlesJS.load('timeline-bg','particlesMobile.json', function() {
+    //     // $($('canvas')[0]).css('height', $('body').height());
+    //     // $($('canvas')[0]).css('opacity', 0);
+    //     // setTimeout(function () {
+    //     //     pJSDom[0].pJS.fn.particlesRefresh();
+    //     //     $($('canvas')[0]).css('opacity', 1);
+    //     // },1000)
+    //
+    //     // console.log($('body').height())
+    // });
+    //
+    // update = function () {
+    //     // if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
+    //     //     count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
+    //     // }
+    //     requestAnimationFrame(update);
+    // };
+    // requestAnimationFrame(update);
 }
 
 
@@ -65,16 +65,16 @@ $(document).ready(function () {
 
 function white() {
     $('body').addClass('white');
-    pJSDom[0].pJS.particles.color.value = '#000000';
-    pJSDom[0].pJS.particles.line_linked.color = '#000000';
-    pJSDom[0].pJS.fn.particlesRefresh();
+    // pJSDom[0].pJS.particles.color.value = '#000000';
+    // pJSDom[0].pJS.particles.line_linked.color = '#000000';
+    // pJSDom[0].pJS.fn.particlesRefresh();
 }
 
 function noWhite() {
     $('body').removeClass('white');
-    pJSDom[0].pJS.particles.color.value = '#ffffff';
-    pJSDom[0].pJS.particles.line_linked.color = '#ffffff';
-    pJSDom[0].pJS.fn.particlesRefresh();
+    // pJSDom[0].pJS.particles.color.value = '#ffffff';
+    // pJSDom[0].pJS.particles.line_linked.color = '#ffffff';
+    // pJSDom[0].pJS.fn.particlesRefresh();
 }
 
 var waypointsTimelineDown = $('.timeline').waypoint(function(direction) {
@@ -87,9 +87,9 @@ var waypointsTimelineDown = $('.timeline').waypoint(function(direction) {
             $('.header').addClass('white')
         }
         if($(window).width() > 768){
-            pJSDom[1].pJS.particles.color.value = '#000000';
-            pJSDom[1].pJS.particles.line_linked.color = '#000000';
-            pJSDom[1].pJS.fn.particlesRefresh();
+            // pJSDom[1].pJS.particles.color.value = '#000000';
+            // pJSDom[1].pJS.particles.line_linked.color = '#000000';
+            // pJSDom[1].pJS.fn.particlesRefresh();
         }
 
 
@@ -133,9 +133,9 @@ var waypointsExperts = $('.experts').waypoint(function(direction) {
         $('.header').removeClass('white')
         $('body').removeClass('white');
         if($(window).width() > 768){
-            pJSDom[1].pJS.particles.color.value = '#fff';
-            pJSDom[1].pJS.particles.line_linked.color = '#fff';
-            pJSDom[1].pJS.fn.particlesRefresh();
+            // pJSDom[1].pJS.particles.color.value = '#fff';
+            // pJSDom[1].pJS.particles.line_linked.color = '#fff';
+            // pJSDom[1].pJS.fn.particlesRefresh();
         }
 
     }
@@ -161,9 +161,9 @@ var waypointsTimelineUp = $('.timeline').waypoint(function(direction) {
         $('.header').removeClass('white')
 
         if($(window).width() > 768) {
-            pJSDom[1].pJS.particles.color.value = '#fff';
-            pJSDom[1].pJS.particles.line_linked.color = '#fff';
-            pJSDom[1].pJS.fn.particlesRefresh();
+            // pJSDom[1].pJS.particles.color.value = '#fff';
+            // pJSDom[1].pJS.particles.line_linked.color = '#fff';
+            // pJSDom[1].pJS.fn.particlesRefresh();
         }
 
     }
@@ -178,9 +178,9 @@ var waypointsExpertsUp = $('.experts').waypoint(function(direction) {
         $('.header').addClass('white')
         $('body').addClass('white');
         if($(window).width() > 768){
-            pJSDom[1].pJS.particles.color.value = '#000000';
-            pJSDom[1].pJS.particles.line_linked.color = '#000000';
-            pJSDom[1].pJS.fn.particlesRefresh();
+            // pJSDom[1].pJS.particles.color.value = '#000000';
+            // pJSDom[1].pJS.particles.line_linked.color = '#000000';
+            // pJSDom[1].pJS.fn.particlesRefresh();
         }
 
     }
