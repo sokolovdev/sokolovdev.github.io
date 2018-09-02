@@ -1,8 +1,6 @@
-
-
 var count_particles, stats, update;
 
-if($(window).width() > 768){
+if ($(window).width() > 768) {
     // particlesJS.load('particles-js','particles.json', function() {
     //     // $($('canvas')[0]).css('height', $('body').height());
     //     // $($('canvas')[0]).css('opacity', 0);
@@ -42,18 +40,18 @@ if($(window).width() > 768){
 
 
 
-$(document).ready(function () {
-    if ($(window).width() > 1240){
+$(document).ready(function() {
+    if ($(window).width() > 1240) {
 
-        setTimeout(function () {
+        setTimeout(function() {
             $('.header__sidebar').addClass('showed-sidebar');
-        },100)
-        setTimeout(function () {
+        }, 100)
+        setTimeout(function() {
             $('.header__sidebar').removeClass('showed-sidebar');
-        },1200)
-        setTimeout(function () {
+        }, 1200)
+        setTimeout(function() {
             $('.header__sidebar').removeClass('viewport-sidebar');
-        },1201)
+        }, 1201)
     }
 
 });
@@ -78,15 +76,15 @@ function noWhite() {
 }
 
 var waypointsTimelineDown = $('.timeline').waypoint(function(direction) {
-    if(direction === 'down'){
+    if (direction === 'down') {
         // white()
 
         $('.timeline').addClass('white')
 
-        if($(window).width() > 1240){
+        if ($(window).width() > 1240) {
             $('.header').addClass('white')
         }
-        if($(window).width() > 768){
+        if ($(window).width() > 768) {
             // pJSDom[1].pJS.particles.color.value = '#000000';
             // pJSDom[1].pJS.particles.line_linked.color = '#000000';
             // pJSDom[1].pJS.fn.particlesRefresh();
@@ -102,7 +100,7 @@ var waypointsTimelineDown = $('.timeline').waypoint(function(direction) {
 
 
 var waypointsTimelineDownCenter = $('.timeline').waypoint(function(direction) {
-    if(direction === 'down'){
+    if (direction === 'down') {
         // white()
 
         $('body').addClass('white');
@@ -114,7 +112,7 @@ var waypointsTimelineDownCenter = $('.timeline').waypoint(function(direction) {
 })
 
 var waypointsTimelineDownCenter = $('.timeline').waypoint(function(direction) {
-    if(direction === 'up'){
+    if (direction === 'up') {
         // white()
 
         $('body').removeClass('white');
@@ -127,12 +125,12 @@ var waypointsTimelineDownCenter = $('.timeline').waypoint(function(direction) {
 
 
 var waypointsExperts = $('.experts').waypoint(function(direction) {
-    if(direction === 'down'){
+    if (direction === 'down') {
         // noWhite()
         $('.timeline').removeClass('white')
         $('.header').removeClass('white')
         $('body').removeClass('white');
-        if($(window).width() > 768){
+        if ($(window).width() > 768) {
             // pJSDom[1].pJS.particles.color.value = '#fff';
             // pJSDom[1].pJS.particles.line_linked.color = '#fff';
             // pJSDom[1].pJS.fn.particlesRefresh();
@@ -145,7 +143,7 @@ var waypointsExperts = $('.experts').waypoint(function(direction) {
 })
 
 var waypointsRegistrationDown = $('.registration').waypoint(function(direction) {
-    if(direction === 'down') {
+    if (direction === 'down') {
         white()
     }
 
@@ -155,12 +153,12 @@ var waypointsRegistrationDown = $('.registration').waypoint(function(direction) 
 
 
 var waypointsTimelineUp = $('.timeline').waypoint(function(direction) {
-    if(direction === 'up'){
+    if (direction === 'up') {
         // noWhite()
         $('.timeline').removeClass('white')
         $('.header').removeClass('white')
 
-        if($(window).width() > 768) {
+        if ($(window).width() > 768) {
             // pJSDom[1].pJS.particles.color.value = '#fff';
             // pJSDom[1].pJS.particles.line_linked.color = '#fff';
             // pJSDom[1].pJS.fn.particlesRefresh();
@@ -172,12 +170,12 @@ var waypointsTimelineUp = $('.timeline').waypoint(function(direction) {
     offset: '30%'
 })
 var waypointsExpertsUp = $('.experts').waypoint(function(direction) {
-    if(direction === 'up'){
+    if (direction === 'up') {
         // white()
         $('.timeline').addClass('white')
         $('.header').addClass('white')
         $('body').addClass('white');
-        if($(window).width() > 768){
+        if ($(window).width() > 768) {
             // pJSDom[1].pJS.particles.color.value = '#000000';
             // pJSDom[1].pJS.particles.line_linked.color = '#000000';
             // pJSDom[1].pJS.fn.particlesRefresh();
@@ -190,7 +188,7 @@ var waypointsExpertsUp = $('.experts').waypoint(function(direction) {
 })
 
 var waypointsRegistrationUp = $('.registration').waypoint(function(direction) {
-    if(direction === 'up') {
+    if (direction === 'up') {
         noWhite()
     }
 
@@ -198,22 +196,7 @@ var waypointsRegistrationUp = $('.registration').waypoint(function(direction) {
     offset: '80%'
 })
 
-var viewport = $('.viewport').waypoint(function(direction) {
-    $($(this)[0].element).addClass('showed');
 
-    var $this = $(this);
-
-    setTimeout(function () {
-        $($this[0].element).removeClass('showed')
-    },900)
-
-    setTimeout(function () {
-        $($this[0].element).removeClass('viewport')
-    },901)
-
-}, {
-    offset: '95%'
-})
 
 
 var list = $('.viewport-list').waypoint(function(direction) {
@@ -221,13 +204,13 @@ var list = $('.viewport-list').waypoint(function(direction) {
 
     var $this = $(this);
 
-    setTimeout(function () {
+    setTimeout(function() {
         $($this[0].element).removeClass('showed-list')
-    },2000)
+    }, 2000)
 
-    setTimeout(function () {
+    setTimeout(function() {
         $($this[0].element).removeClass('viewport-list')
-    },2001)
+    }, 2001)
 
 }, {
     offset: '60%'
@@ -238,13 +221,13 @@ var graph = $('.viewport-praph').waypoint(function(direction) {
 
     var $this = $(this);
 
-    setTimeout(function () {
+    setTimeout(function() {
         $($this[0].element).removeClass('showed-graph')
-    },900)
+    }, 900)
 
-    setTimeout(function () {
+    setTimeout(function() {
         $($this[0].element).removeClass('viewport-praph')
-    },901)
+    }, 901)
 
 }, {
     offset: '100%'
@@ -256,31 +239,123 @@ var graph = $('.viewport-praph').waypoint(function(direction) {
 
 
 
-$('.header__hamburger').on('click', function () {
+$('.header__hamburger').on('click', function() {
     $(this).toggleClass('active');
     $('body').toggleClass('open-menu');
 });
 
-$(document).ready(function () {
-    if ($(window).width() >= 1240){
-        $('.skills').width($('body').width() - 300)
+$(document).ready(function() {
+
+    var viewport = $('.viewport').waypoint(function(direction) {
+        $($(this)[0].element).addClass('showed');
+
+        var $this = $(this);
+
+        setTimeout(function() {
+            $($this[0].element).removeClass('showed')
+        }, 900)
+
+        setTimeout(function() {
+            $($this[0].element).removeClass('viewport')
+        }, 901)
+
+    }, {
+        offset: '95%'
+    })
+
+    if ($(window).width() >= 1240) {
+        $('.skills').width($('body').width() - 300);
     }
-    $('input').on('focus', function(){
+
+    $('input').on('focus', function() {
         $(this).closest('.input').addClass('focused')
     })
 
-    $('input').on('blur', function(){
-        if($(this).val() === ''){
+    $('input').on('blur', function() {
+        if ($(this).val() === '') {
             $(this).closest('.input').removeClass('focused')
         }
 
     })
 
+    var fixWrapper = $('._fixWrapper'),
+        secondWrapper = $('._fixWrapperSecond'),
+        fixRight = $('._fixRight'),
+        fixLeft = $('._fixLeft'),
+        header = $('.header'),
+        headerHeight = header.outerHeight(),
+        fixRightTop = fixRight.offset().top,
+        fixWrapperTop = fixWrapper.offset().top,
+        secondWrapperTop = secondWrapper.offset().top,
+        rightTop = 0,
+        fixWrapperHeight = fixWrapper.outerHeight(),
+        fixRightHeight = fixRight.outerHeight();
+
+    if ($(window).width() >= 1240) {
+        rightTop = fixRightTop - fixWrapperTop - 30;
+    } else if ($(window).width() < 768) {
+        rightTop = 10
+    } else {
+        rightTop = 20
+    }
+
+
+    $('.check-line').css('top',(secondWrapperTop-rightTop*3-fixRight.outerHeight()));
+
+    $(document).scroll(function() {
+
+        if ($(window).width() >= 1240) {
+            if ($(this).scrollTop() > window.innerHeight) {
+                $('.header').addClass('show-logo')
+            } else {
+                $('.header').removeClass('show-logo')
+            }
+
+            if ($(this).scrollTop() >= fixWrapper.offset().top) {
+                fixRight.css('position', 'fixed');
+                fixRight.css('top', rightTop);
+                fixRight.css('bottom', 'auto');
+                if ($(this).scrollTop() >= (secondWrapperTop - fixRight.outerHeight() - rightTop*3)) {
+                    fixRight.css('position', 'absolute');
+                    fixRight.css('bottom', rightTop);
+                    fixRight.css('top', 'auto');
+                    fixWrapper.css('position', 'relative');
+                }
+
+            } else {
+                fixRight.css('position', 'static');
+                fixRight.css('top', 'auto');
+                fixRight.css('top', 'auto');
+            }
+        } else {
+            if ($(this).scrollTop() >= fixWrapper.offset().top - header.outerHeight()) {
+                fixRight.css('position', 'fixed');
+                fixRight.css('top', (rightTop + header.outerHeight()));
+
+
+                if ($(this).scrollTop() >= secondWrapper.offset().top - fixRight.outerHeight() - header.outerHeight() - rightTop * 2) {
+                    fixRight.css('position', 'absolute');
+                    fixRight.css('top', fixWrapper.outerHeight() - rightTop - fixRightHeight);
+                    fixWrapper.css('position', 'relative');
+                }
+
+            } else {
+                $('._fixRight').css('position', 'static');
+                $('._fixRight').css('top', 'auto');
+            }
+        }
+
+
+
+
+    })
+
+
 
 })
 
-$(window).on('resize', function () {
-    if ($(window).width() >= 1240){
+$(window).on('resize', function() {
+    if ($(window).width() >= 1240) {
         $('.skills').width($('body').width() - 300)
     } else {
         $('.skills').attr('style', '');
@@ -288,31 +363,13 @@ $(window).on('resize', function () {
 })
 
 
-$(".menu__item--header").on("click", function (event) {
+$(".menu__item--header").on("click", function(event) {
     event.preventDefault();
 
-    var id  = $(this).attr('href'),
+    var id = $(this).attr('href'),
         top = $(id).offset().top - 50;
 
     console.log(top)
 
-    $('body,html').animate({scrollTop: top}, 1500);
+    $('body,html').animate({ scrollTop: top }, 1500);
 });
-
-
-
-
-if($(window).width() >= 1240){
-    console.log(window.innerHeight);
-    $(document).scroll(function () {
-
-        if($(this).scrollTop() > window.innerHeight){
-            console.log($(this).scrollTop() > window.innerHeight)
-            $('.header').addClass('show-logo')
-        } else {
-            console.log($(this).scrollTop() > window.innerHeight)
-            $('.header').removeClass('show-logo')
-        }
-    })
-}
-
