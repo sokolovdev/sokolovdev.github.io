@@ -30,7 +30,7 @@ a{
 
 .container {
     width: 100%;
-    padding: 0 20px;
+    padding: 0 6.25%;
     box-sizing: border-box;
     @media (min-width: 1240px){
         padding: 0 40px;
@@ -562,9 +562,7 @@ a{
     }
     @media (min-width: 768px){
         padding: 80px 0 50px;
-        &__list{
-            max-width: 700px;
-        }
+       
         &__title{
             margin-bottom: 30px;
         }
@@ -574,6 +572,7 @@ a{
                 font-size:21px;
                 line-height: 24px;
                 width: span(11 of 12);
+                max-width: 700px;
             }
             span{
                 top: 20px;
@@ -597,6 +596,7 @@ a{
                 font-size:1.8vw;
                 line-height: 2.1vw;
                 width: span(6.5 of 9);
+                max-width: 56.45vw;
             }
             span{
                 top: 1.5vw;

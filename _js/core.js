@@ -148,7 +148,7 @@ var waypointsRegistrationDown = $('.registration').waypoint(function(direction) 
     }
 
 }, {
-    offset: '80%'
+    offset: '50%'
 })
 
 
@@ -193,7 +193,7 @@ var waypointsRegistrationUp = $('.registration').waypoint(function(direction) {
     }
 
 }, {
-    offset: '80%'
+    offset: '50%'
 })
 
 
@@ -300,7 +300,7 @@ $(document).ready(function() {
     }
 
 
-    $('.check-line').css('top',(secondWrapperTop-rightTop*3-fixRight.outerHeight()));
+    $('.check-line').css('top', (secondWrapperTop - rightTop * 3 - fixRight.outerHeight()));
 
     $(document).scroll(function() {
 
@@ -315,7 +315,7 @@ $(document).ready(function() {
                 fixRight.css('position', 'fixed');
                 fixRight.css('top', rightTop);
                 fixRight.css('bottom', 'auto');
-                if ($(this).scrollTop() >= (secondWrapperTop - fixRight.outerHeight() - rightTop*3)) {
+                if ($(this).scrollTop() >= (secondWrapperTop - fixRight.outerHeight() - rightTop * 3)) {
                     fixRight.css('position', 'absolute');
                     fixRight.css('bottom', rightTop);
                     fixRight.css('top', 'auto');
@@ -367,9 +367,130 @@ $(".menu__item--header").on("click", function(event) {
     event.preventDefault();
 
     var id = $(this).attr('href'),
-        top = $(id).offset().top - 50;
-
-    console.log(top)
+        top = $(id).offset().top;
+    if ($(window).width() < 1240) top = top - 50;
 
     $('body,html').animate({ scrollTop: top }, 1500);
+    $('body').removeClass('open-menu');
+
 });
+
+
+
+function animate(el, animated) {
+
+    if (animated) {
+        setClasses(el)
+    } else {
+        // el.find('g').removeClass('hovering hoveringMid hoveringSmall')
+        // el.find('path').removeClass('hovering hoveringMid hoveringSmall')
+
+    }
+}
+
+$('.program__item').on('mouseenter', function() {
+    let animated = true;
+
+    animate($(this), animated);
+})
+
+$('.program__item').on('mouseleave', function() {
+    let animated = false;
+
+    animate($(this), animated);
+})
+
+function setClasses(el) {
+    var cubes = el.find('.animated'),
+        lineMid = el.find('.animated--mid'),
+        lineSmall = el.find('.animated--small'),
+        delay = 3000;
+
+    cubes.each(function() {
+        var cube = $(this);
+
+        cube.addClass('hovering');
+
+        if (cube.hasClass('animated--delay-1')) {
+            setTimeout(function() {
+                cube.removeClass('hovering');
+            }, delay + 100)
+        } else if (cube.hasClass('animated--delay-2')) {
+            setTimeout(function() {
+                cube.removeClass('hovering');
+            }, delay + 200)
+        } else if (cube.hasClass('animated--delay-3')) {
+            setTimeout(function() {
+                cube.removeClass('hovering');
+            }, delay + 300)
+        } else {
+            setTimeout(function() {
+                cube.removeClass('hovering');
+            }, delay)
+        }
+
+
+    })
+
+
+    lineMid.each(function() {
+        var lineM = $(this);
+
+        lineM.addClass('hoveringMid');
+
+        if (lineM.hasClass('animated--delay-1')) {
+            setTimeout(function() {
+                lineM.removeClass('hoveringMid');
+            }, delay + 100)
+        } else if (lineM.hasClass('animated--delay-2')) {
+            setTimeout(function() {
+                lineM.removeClass('hoveringMid');
+            }, delay + 200)
+        } else if (lineM.hasClass('animated--delay-3')) {
+            setTimeout(function() {
+                lineM.removeClass('hoveringMid');
+            }, delay + 300)
+        } else {
+            setTimeout(function() {
+                lineM.removeClass('hoveringMid');
+            }, delay)
+        }
+
+
+    })
+
+    lineSmall.each(function() {
+        var lineS = $(this);
+
+        lineS.addClass('hoveringSmall');
+
+        if (lineS.hasClass('animated--delay-1')) {
+            setTimeout(function() {
+                lineS.removeClass('hoveringSmall');
+            }, delay + 100)
+        } else if (lineS.hasClass('animated--delay-2')) {
+            setTimeout(function() {
+                lineS.removeClass('hoveringSmall');
+            }, delay + 200)
+        } else if (lineS.hasClass('animated--delay-3')) {
+            setTimeout(function() {
+                lineS.removeClass('hoveringSmall');
+            }, delay + 300)
+        } else {
+            setTimeout(function() {
+                lineS.removeClass('hoveringSmall');
+            }, delay)
+        }
+
+
+    })
+
+
+
+
+    // setClasses(el)
+    // cube.addClass('hovering')
+    // lineMid.addClass('hoveringMid')
+    // lineSmall.addClass('hoveringSmall')
+
+}
