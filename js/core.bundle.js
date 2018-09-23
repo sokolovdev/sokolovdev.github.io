@@ -389,17 +389,17 @@ function animate(el, animated) {
     }
 }
 
-$('.program__item').on('mouseenter', function() {
-    let animated = true;
+// $('.program__item').on('mouseenter', function() {
+//     let animated = true;
 
-    animate($(this), animated);
-})
+//     animate($(this), animated);
+// })
 
-$('.program__item').on('mouseleave', function() {
-    let animated = false;
+// $('.program__item').on('mouseleave', function() {
+//     let animated = false;
 
-    animate($(this), animated);
-})
+//     animate($(this), animated);
+// })
 
 function setClasses(el) {
     var cubes = el.find('.animated'),
