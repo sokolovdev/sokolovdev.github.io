@@ -290,10 +290,10 @@ EQAAAKO+1LoUjlUDAQAAwLD/X4ABAGMt25RUVp2VAAAAAElFTkSuQmCC" transform="matrix(0.99
 <path style="fill:none;stroke:#ED2F7A;stroke-width:8.6081;stroke-miterlimit:10;" d="M2195.3,1392.1l339.4-197.4
 	c24.1-14,24-48.8-0.2-62.7l-340.6-195.2c-30.4-17.4-67.8-17.3-98,0.3l-339.4,197.4c-24.1,14-24,48.8,0.2,62.7l340.6,195.2
 	C2127.6,1409.9,2165,1409.7,2195.3,1392.1z"/>
-<path style="fill:none;stroke:#ED2F7A;stroke-width:3.2169;stroke-miterlimit:10;" d="M2195.3,1309.4l339.4-197.4
+<path class="block-bottom-1" style="fill:none;stroke:#ED2F7A;stroke-width:3.2169;stroke-miterlimit:10;" d="M2195.3,1309.4l339.4-197.4
 	c24.1-14,24-48.8-0.2-62.7l-340.6-195.2c-30.4-17.4-67.8-17.3-98,0.3l-339.4,197.4c-24.1,14-24,48.8,0.2,62.7l340.6,195.2
 	C2127.6,1327.1,2165,1327,2195.3,1309.4z"/>
-<g>
+<g class="main-block-1">
 	<g>
 		
 			<linearGradient id="SVGID1" gradientUnits="userSpaceOnUse" x1="2131.2002" y1="-1413.5999" x2="2539.3193" y2="-1413.5999" gradientTransform="matrix(1 0 0 1 0 2172)">
@@ -1421,10 +1421,10 @@ SUVORK5CYII=" transform="matrix(0.9992 0 0 0.9992 1912.0695 1327.0887)">
 <path style="fill:none;stroke:#44BADA;stroke-width:7.6585;stroke-linejoin:round;stroke-miterlimit:10;" d="M368.2,2699.6
 	L66.3,2524c-21.4-12.5-21.3-43.5,0.2-55.8l303-173.6c27-15.5,60.3-15.4,87.2,0.3l301.9,175.6c21.4,12.5,21.3,43.5-0.2,55.8
 	l-303,173.6C428.4,2715.4,395.1,2715.3,368.2,2699.6z"/>
-<path style="fill:none;stroke:#44BADA;stroke-width:7.6585;stroke-linejoin:round;stroke-miterlimit:10;" d="M368.2,2626
+<path class="block-bottom-4" style="fill:none;stroke:#44BADA;stroke-width:7.6585;stroke-linejoin:round;stroke-miterlimit:10;" d="M368.2,2626
 	L66.3,2450.4c-21.4-12.5-21.3-43.5,0.2-55.8l303-173.6c27-15.5,60.3-15.4,87.2,0.3l301.9,175.6c21.4,12.5,21.3,43.5-0.2,55.8
 	l-303,173.6C428.4,2641.8,395.1,2641.7,368.2,2626z"/>
-<g>
+<g class="main-block-4">
 	<g>
 		
 			<linearGradient id="SVGID5" gradientUnits="userSpaceOnUse" x1="13663.4863" y1="-248.133" x2="14290.6035" y2="117.4998" gradientTransform="matrix(-1 0 0 1 14261.6016 2172)">
@@ -1453,10 +1453,10 @@ SUVORK5CYII=" transform="matrix(0.9992 0 0 0.9992 1912.0695 1327.0887)">
 <path style="fill:none;stroke:#EAE200;stroke-width:7.6585;stroke-linejoin:round;stroke-miterlimit:10;" d="M1662.5,2722.2
 	l-301.9-175.6c-21.4-12.5-21.3-43.5,0.2-55.8l303-173.6c27-15.5,60.3-15.4,87.2,0.3l301.9,175.6c21.4,12.5,21.3,43.5-0.2,55.8
 	l-303,173.6C1722.7,2738,1689.4,2737.9,1662.5,2722.2z"/>
-<path style="fill:none;stroke:#EAE200;stroke-width:7.6585;stroke-linejoin:round;stroke-miterlimit:10;" d="M1662.5,2648.6
+<path class="block-bottom-3" style="fill:none;stroke:#EAE200;stroke-width:7.6585;stroke-linejoin:round;stroke-miterlimit:10;" d="M1662.5,2648.6
 	L1360.6,2473c-21.4-12.5-21.3-43.5,0.2-55.8l303-173.6c27-15.5,60.3-15.4,87.2,0.3l301.9,175.6c21.4,12.5,21.3,43.5-0.2,55.8
 	l-303,173.6C1722.7,2664.4,1689.4,2664.3,1662.5,2648.6z"/>
-<g>
+<g class="main-block-3">
 	
 		<linearGradient id="SVGID8" gradientUnits="userSpaceOnUse" x1="12369.2178" y1="-225.5735" x2="12996.335" y2="140.0591" gradientTransform="matrix(-1 0 0 1 14261.6016 2172)">
 		<stop  offset="0" style="stop-color:#969200"/>
@@ -1483,10 +1483,10 @@ SUVORK5CYII=" transform="matrix(0.9992 0 0 0.9992 1912.0695 1327.0887)">
 <path style="fill:none;stroke:#00EA78;stroke-width:7.6585;stroke-linejoin:round;stroke-miterlimit:10;" d="M884.3,1775.5
 	l-301.9-175.6c-21.4-12.5-21.3-43.5,0.2-55.8l303-173.6c27-15.5,60.3-15.4,87.2,0.3l301.9,175.6c21.4,12.5,21.3,43.5-0.2,55.8
 	l-303,173.6C944.5,1791.3,911.3,1791.2,884.3,1775.5z"/>
-<path style="fill:none;stroke:#00EA78;stroke-width:7.6585;stroke-linejoin:round;stroke-miterlimit:10;" d="M884.3,1701.9
+<path class="block-bottom-2" style="fill:none;stroke:#00EA78;stroke-width:7.6585;stroke-linejoin:round;stroke-miterlimit:10;" d="M884.3,1701.9
 	l-301.9-175.6c-21.4-12.5-21.3-43.5,0.2-55.8l303-173.6c27-15.5,60.3-15.4,87.2,0.3l301.9,175.6c21.4,12.5,21.3,43.5-0.2,55.8
 	l-303,173.6C944.5,1717.7,911.3,1717.6,884.3,1701.9z"/>
-<g>
+<g class="main-block-2">
 	<g>
 		
 			<linearGradient id="SVGID11" gradientUnits="userSpaceOnUse" x1="13147.3613" y1="-1172.2468" x2="13774.4795" y2="-806.6142" gradientTransform="matrix(-1 0 0 1 14261.6016 2172)">

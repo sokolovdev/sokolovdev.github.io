@@ -20,14 +20,14 @@
         {}
       ],
       "properties": {
-        "order": 60,
-        "id": 6,
+        "order": 2,
+        "id": 7,
         "name": "icons-02",
         "prevSize": 32,
         "code": 59648
       },
       "setIdx": 0,
-      "setId": 3,
+      "setId": 2,
       "iconIdx": 0
     },
     {
@@ -49,14 +49,14 @@
         {}
       ],
       "properties": {
-        "order": 59,
-        "id": 5,
+        "order": 3,
+        "id": 6,
         "name": "icons-03",
         "prevSize": 32,
         "code": 59649
       },
       "setIdx": 0,
-      "setId": 3,
+      "setId": 2,
       "iconIdx": 1
     },
     {
@@ -78,14 +78,14 @@
         {}
       ],
       "properties": {
-        "order": 58,
-        "id": 4,
+        "order": 4,
+        "id": 5,
         "name": "icons-04",
         "prevSize": 32,
         "code": 59650
       },
       "setIdx": 0,
-      "setId": 3,
+      "setId": 2,
       "iconIdx": 2
     },
     {
@@ -107,14 +107,14 @@
         {}
       ],
       "properties": {
-        "order": 57,
-        "id": 3,
+        "order": 5,
+        "id": 4,
         "name": "icons-05",
         "prevSize": 32,
         "code": 59651
       },
       "setIdx": 0,
-      "setId": 3,
+      "setId": 2,
       "iconIdx": 3
     },
     {
@@ -136,14 +136,14 @@
         {}
       ],
       "properties": {
-        "order": 56,
-        "id": 2,
+        "order": 6,
+        "id": 3,
         "name": "icons-06",
         "prevSize": 32,
         "code": 59652
       },
       "setIdx": 0,
-      "setId": 3,
+      "setId": 2,
       "iconIdx": 4
     },
     {
@@ -168,14 +168,14 @@
         {}
       ],
       "properties": {
-        "order": 55,
-        "id": 1,
+        "order": 7,
+        "id": 2,
         "name": "icons-07",
         "prevSize": 32,
         "code": 59653
       },
       "setIdx": 0,
-      "setId": 3,
+      "setId": 2,
       "iconIdx": 5
     },
     {
@@ -197,15 +197,44 @@
         {}
       ],
       "properties": {
-        "order": 54,
-        "id": 0,
+        "order": 8,
+        "id": 1,
         "name": "icons-08",
         "prevSize": 32,
         "code": 59654
       },
       "setIdx": 0,
-      "setId": 3,
+      "setId": 2,
       "iconIdx": 6
+    },
+    {
+      "icon": {
+        "paths": [
+          "M737.75 467.753v87.591h-182.406v183.309h-87.591v-183.309h-181.503v-87.591h181.503v-181.503h87.591v181.503h182.406z"
+        ],
+        "attrs": [
+          {}
+        ],
+        "isMulticolor": false,
+        "isMulticolor2": false,
+        "grid": 0,
+        "tags": [
+          "icons-09-09"
+        ]
+      },
+      "attrs": [
+        {}
+      ],
+      "properties": {
+        "order": 9,
+        "id": 0,
+        "name": "icons-09-09",
+        "prevSize": 32,
+        "code": 59655
+      },
+      "setIdx": 0,
+      "setId": 2,
+      "iconIdx": 7
     }
   ],
   "height": 1024,
