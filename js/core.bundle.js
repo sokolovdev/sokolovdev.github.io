@@ -495,4 +495,12 @@ function setClasses(el) {
     // lineSmall.addClass('hoveringSmall')
 
 }
+
+
+$('.registration__toggle').on('click', function(){
+    $('.registration__toggle').removeClass('active');
+    $('.registration__tab').removeClass('active');
+    $(this).addClass('active');
+    $('.registration__tab').eq($(this).index()).addClass('active');
+})
 },{}]},{},[1]);

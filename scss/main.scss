@@ -472,10 +472,10 @@ $gray: #fff;
                     width: 5.8vw;
                 }
                 .main-block{
-                    animation: hoveringBlock 3s linear infinite;
+                    animation: hoveringBlock 3s ease-out infinite;
                 }
                 .block-bottom{
-                    animation: hoveringCircle 3s linear infinite;
+                    animation: hoveringCircle 3s ease-out infinite;
                 }
             }
             &:nth-child(3) {
@@ -485,53 +485,53 @@ $gray: #fff;
                 }
 
                 .blue-2{
-                    animation: growBlue1 30s linear infinite 1s
+                    animation: growBlue1 10s ease-out infinite 1s
                 }
                 .blue-1{
-                    animation: growBlue2 30s linear infinite 1s
+                    animation: growBlue2 10s ease-out infinite 1s
                 }
 
                 .green-2{
-                    animation: growGreen1 30s linear infinite 1.5s
+                    animation: growGreen1 10s ease-out infinite 1.5s
                 }
                 .green-1{
-                    animation: growGreen2 30s linear infinite 1.5s
+                    animation: growGreen2 10s ease-out infinite 1.5s
                 }
 
                 .yellow-2{
-                    animation: growYellow1 30s linear infinite
+                    animation: growYellow1 10s ease-out infinite
                 }
                 .yellow-1{
-                    animation: growYellow2 30s linear infinite
+                    animation: growYellow2 10s ease-out infinite
                 }
             }
             &:nth-child(2) {
                 .main-block-1{
-                    animation: hoveringBlock 3s linear infinite;
+                    animation: hoveringBlock 3s ease-out infinite;
                 }
                 .block-bottom-1{
-                    animation: hoveringCircle 3s linear infinite;
+                    animation: hoveringCircle 3s ease-out infinite;
                 }
 
                  .main-block-2{
-                    animation: hoveringBlock 2.5s linear 0.5s infinite;
+                    animation: hoveringBlock 2.5s ease-out 0.5s infinite;
                 }
                 .block-bottom-2{
-                    animation: hoveringCircle 2.5s linear 0.5s infinite;
+                    animation: hoveringCircle 2.5s ease-out 0.5s infinite;
                 }
 
                  .main-block-3{
-                    animation: hoveringBlock 4s linear 0.7s infinite;
+                    animation: hoveringBlock 4s ease-out 0.7s infinite;
                 }
                 .block-bottom-3{
-                    animation: hoveringCircle 4s linear 0.7s infinite;
+                    animation: hoveringCircle 4s ease-out 0.7s infinite;
                 }
 
                  .main-block-4{
-                    animation: hoveringBlock 2s linear 0.2s infinite;
+                    animation: hoveringBlock 2s ease-out 0.2s infinite;
                 }
                 .block-bottom-4{
-                    animation: hoveringCircle 2s linear 0.2s infinite;
+                    animation: hoveringCircle 2s ease-out 0.2s infinite;
                 }
                 svg {
                     width: 21.1vw;
@@ -1875,111 +1875,172 @@ $gray: #fff;
 .registration {
     padding: 30px 0 60px;
     &__title {
-        margin-bottom: 20px;
+        margin-bottom: 17px;
+        letter-spacing: 1.8px;
     }
     &__text {
-        margin-bottom: 45px;
-        p {
-            color: $gray;
-            font-size: 21px;
-            letter-spacing: 1.6px;
-            margin-bottom: 6px;
-            transition: 0.5s ease;
-            &.small {
-                font-size: 14px;
-                color: #e5648d;
-                letter-spacing: 1.1px;
-                margin-bottom: 18px;
-                text-decoration: line-through;
+        margin-bottom: 27px;
+        max-width: 200px;
+        p{
+            font-size:  14px;
+            color: #1c1c1c;
+            font-family: med;
+            line-height: 16px;
+            & + p {
+                margin-top: 1px;
             }
-        }
-        span {
-            font-size: 14px;
-            color: $gray;
-            display: block;
-            transition: 0.5s ease;
-            & + span {
-                margin-top: 5px;
+            &.strong{
+                font-family: exbold;
             }
         }
     }
-    &__form {
-        pointer-events: all;
+    &__toggle{
+        display: inline-block;  
+        font-family: exbold;
+        color: rgba(42, 42, 42, 0.7);
+        font-size:  16px;
+        line-height: 21px;
+        border-bottom: 1px solid transparent;
+        margin-bottom: -1px;
+        padding-bottom: 7px;
+        transition: 0.3s ease;
+        cursor: pointer;
+        & + .registration__toggle{
+            margin-left: 13px;
+        }
+        &.active{
+            border-color: #e5638c!important;
+            color: #e5638c;
+            
+        }
+    }
+    &__toggles{
+        border-bottom: 1px solid rgb(242, 242, 242);
+        margin-bottom:  27px;
+        display: inline-block;
+    }
+    &__tabs{
         max-width: 400px;
+        pointer-events: all;
+        position: relative;
+        z-index: 2;
+    }
+    &__tab{
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        pointer-events: none;
+        transition: 0.5s ease;
+        transform: translate3d(0,10px,0) rotate(-0.3deg);
+        &.active{
+            pointer-events: all;
+            opacity: 1;
+            transform: none;
+            transition: 0.5s ease  0.5s;
+        }
+        &--main{
+            position: relative;
+        }
     }
     &__img{
         display: none;
     }
+    &__button{
+        display: inline-block;  
+        text-align: center;
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
     @media (min-width: 768px) {
-        padding: 115px 0 150px;
-        &__title {
-            margin-bottom: 30px;
-            margin-left: 17.86667%;
+        padding: 75px 0 150px;
+        &__toggle{
+            font-size:  24px;
+            line-height: 24px;
+            padding-bottom: 9px;
+            border-width: 2px;
+            margin-bottom:  -2px;
+            & + .registration__toggle{
+                margin-left: 27px;
+            }
         }
-        &__text {
-            margin-left: 17.86667%;
-            p {
-                font-size: 36px;
-                letter-spacing: 2.7px;
-                &.small {
-                    font-size: 24px;
-                    letter-spacing: 1.8px;
+        &__toggles{
+            margin-bottom: 55px;
+            border-width: 2px;
+        }
+        &__text{
+            max-width: 320px;
+            margin-bottom: 35px;
+            p{
+                font-size: 21px;
+                line-height: 24px;
+                & + p{
+                    margin-top: 0;
                 }
             }
-            span {
-                font-size: 16px;
-            }
         }
-        &__form {
-            margin-left: 17.86667%;
+        &__title {
+            letter-spacing: 3.6px;
+            margin-bottom: 38px;
+        }
+       
+        &__tabs{
             max-width: 430px;
         }
-
     }
     @media (min-width: 1240px) {
         padding: 7vw 0 9vw;
         position: relative;
         .block-1{
-            animation: hovering 4s infinite linear;
+            animation: hovering 2s infinite ease-out;
         }
         .block-1-tiny{
-            animation: hoveringTiny 4s infinite linear;
+            animation: hoveringTiny 2s infinite ease-out;
         }
         .block-2{
-            animation: hovering 4s infinite 2s linear;
+            animation: hovering 2s infinite 1.3s ease-out;
         }
         .block-2-tiny{
-            animation: hoveringTiny 4s infinite 2s linear;
+            animation: hoveringTiny 2s infinite 1.3s ease-out;
         }
         .block-3{
-            animation: hovering 4s infinite 3s linear;
+            animation: hovering 2s infinite 2.1s ease-out;
         }
         .block-3-tiny{
-            animation: hoveringTiny 4s infinite 3s linear;
+            animation: hoveringTiny 2s infinite 2.1s ease-out;
+        }
+        &__toggles{
+            position: relative;
+            z-index: 2;
         }
         &__title {
             margin-bottom: 2.3vw;
             margin-left: 0;
         }
         &__text {
-            margin-left: 0;
-            margin-bottom: 3.5vw;
-            p {
-                font-size: 2.8vw;
-                letter-spacing: 0.2vw;
-                &.small {
-                    font-size: 1.8vw;
-                    letter-spacing: 0.14vw;
-                }
-            }
-            span {
-                font-size: 1.25vw;
-                & + span {
-                    margin-top: 0.39vw;
-                }
+            margin-bottom: 2.3vw;
+            max-width: 23vw;
+            p{
+                font-size: 1.6vw;
+                line-height: 1.875vw;
             }
         }
-        &__form {
+        &__toggle{
+            font-size: 1.875vw;
+            line-height: 1.875vw;
+            padding-bottom: 0.7vw;
+            & + .registration__toggle{
+                margin-left: 1.9vw;
+            }
+            &:hover{
+                border-color: rgba(229, 99, 140, 0.5);
+            }
+        }
+        &__toggles{
+            margin-bottom: 3.5vw;
+        }
+        &__tabs {
             margin-left: 0;
             max-width: none;
             width: 36.33333%;

@@ -269,33 +269,45 @@ block content
                     span Больше публикаций
         +b.registration
             +e.container.container
-                +e.H2.title.title--big.viewport Регистрация
-                +e.text
-                    p.viewport 499$ с команды
-                    p.small.viewport 999$
-                    span.viewport Минимум — 2 человека
-                    span.viewport Максимум — 6 человек
-                +e.FORM.form.form__
-                    +e.body
-                        +e.input--big.input__.check.error.viewport
-                            input(name="name" autocomplete="off" id="name")
-                            +e.LABEL(for="name").label Ваше имя
-                        +e.input.input__.check.viewport
-                            input(name="email" type="email" id="email" autocomplete="off")
-                            +e.LABEL(for="email").label e-mail
-                        +e.input.input__.viewport
-                            input(name="telegram" id="telegram"  autocomplete="off")
-                            +e.LABEL(for="telegram").label telegram ID
-                        +e.input.input__.viewport
-                            input(name="company" id="company"  autocomplete="off")
-                            +e.LABEL(for="company").label компания
-                        +e.input.input__.viewport
-                            input(name="industry" id="industry"  autocomplete="off")
-                            +e.LABEL(for="industry").label индустрия
-                        +e.BUTTON(type="button").button.button--blue.viewport Перейти к оплате
-                        +e.privacy.viewport Оплата через
-                            a(href="www.coinpayments.net" target="_blank")  www.coinpayments.net
-                    +e.preloader
+                +e.H2.title.title--big.viewport Participar
+                +e.toggles
+                    +e.toggle.active.viewport Congreso
+                    +e.toggle.viewport Capacitación
+                    +e.toggle.viewport Hackathon
+                +e.tabs
+                    +e.tab--main.active
+                        +e.text
+                            p.viewport Mínimo 2 personas
+                            p.viewport Máximo 6 personas por equipo
+                        +e.FORM.form.form__
+                            +e.body
+                                +e.input--big.input__.check.error.viewport
+                                    input(name="name" autocomplete="off" id="name")
+                                    +e.LABEL(for="name").label Ваше имя
+                                +e.input.input__.check.viewport
+                                    input(name="email" type="email" id="email" autocomplete="off")
+                                    +e.LABEL(for="email").label e-mail
+                                +e.input.input__.viewport
+                                    input(name="telegram" id="telegram"  autocomplete="off")
+                                    +e.LABEL(for="telegram").label telegram ID
+                                +e.input.input__.viewport
+                                    input(name="company" id="company"  autocomplete="off")
+                                    +e.LABEL(for="company").label компания
+                                +e.input.input__.viewport
+                                    input(name="industry" id="industry"  autocomplete="off")
+                                    +e.LABEL(for="industry").label индустрия
+                                +e.BUTTON(type="button").button.button--blue.viewport Registrarme
+                                +e.privacy.viewport Оплата через
+                                    a(href="www.coinpayments.net" target="_blank")  www.coinpayments.net
+                            +e.preloader
+                    +e.tab
+                        +e.text
+                            p.strong Entrada libre con registración previa, cupo limitado
+                        +e.A(href="#").button.button--blue.viewport Registrarme
+                    +e.tab
+                        +e.text
+                            p.strong Preselección (entrevista con Pablo Romero ISARQ)
+                        +e.A(href="#").button.button--blue.viewport Anotarse para preselección
                 +e.img.viewport
                     include ../img/form.svg
                     img(src="/img/mask1.png")
