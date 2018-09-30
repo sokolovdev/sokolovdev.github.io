@@ -1,39 +1,47 @@
 +b.HEADER.header
+    +e.shadow
     +e.logo
-        include ../../img/logo.svg
-    +e.text.text--header
-        //p Интенсив 18 августа 2018
+        img(src="/img/new/head/2.png" alt="logo-1").viewport
+        img(src="/img/new/head/1.png" alt="logo-2").viewport
     +e.ASIDE.sidebar.viewport-sidebar
         +e.logo-side
-            include ../../img/logo.svg
+            img(src="/img/new/head/2.png" alt="logo-1")
+            img(src="/img/new/head/1.png" alt="logo-2") 
         +e.menu
             +e.NAV.navigation.menu__
                 +e.A(href="#objectives").item--header
-                    span Цели интенсива
+                    span Objetivos
                 +e.A(href="#program").item--header
-                    span Программа интенсива
+                    span Agenda
                 +e.A(href="#promo").item--header
-                    span Свободный вход
-                +e.A(href="#prizes").item--header.--small
-                    span Призы
-                +e.A(href="#timeline").item--header.--small
-                    span Timeline
+                    span Entradas
+                +e.A(href="#prizes").item--header
+                    span Premios
+                +e.A(href="#timeline").item--header
+                    span Cronograma
                 +e.A(href="#experts").item--header
-                    span Экспертное жюри
+                    span Jurado
                 +e.A(href="#partners").item--header
-                    span Партнеры
+                    span Aliados
                 +e.A(href="#media").item--header
-                    span Публикации в СМИ
+                    span Prensa
             +e.socials.socials__
                 +e.text
-                    p Проект сделали
-                +e.A(href='https://t.me/sokolovdev').item--header.--develope
-                    span @sokolovdev
-                +e.A(href='https://t.me/achernogorov').item--header.--design
-                    span @achernogorov
-        +e.FORM.button-wrapper
-            +e.INPUT(type='submit' value="Купить билет").button.button--blue
-
-    +e.hamburger
+                    p Toda la información
+                +e.A(href='tel:+59899124500').item--header
+                    span En Uruguay
+                    span Ignacio Varese
+                    span +598 99124500
+                +e.A(href='tel:+573186174774').item--header
+                    span En Colombia
+                    span Pedro Gutierrez
+                    span +57 3186174774
+                +e.A(href='tel:+5493512038496').item--header
+                    span En Argentina
+                    span Sasha Ivanova
+                    span +54 9 351 2038496
+        +e.FORM.button-wrapper.viewport
+            +e.A(href="#").button.button--blue Participar
+    +e.hamburger.viewport
         span
 

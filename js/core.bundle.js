@@ -290,7 +290,8 @@ $(document).ready(function() {
         secondWrapperTop = secondWrapper.offset().top,
         rightTop = 0,
         fixWrapperHeight = fixWrapper.outerHeight(),
-        fixRightHeight = fixRight.outerHeight();
+        fixRightHeight = fixRight.outerHeight(),
+        mainTopHeight = $('.main__top').outerHeight();
 
     if ($(window).width() >= 1240) {
         rightTop = fixRightTop - fixWrapperTop - 30;
@@ -304,14 +305,9 @@ $(document).ready(function() {
     $('.check-line').css('top', (secondWrapperTop - rightTop * 3 - fixRight.outerHeight()));
 
     $(document).scroll(function() {
-
+        
         if ($(window).width() >= 1240) {
-            if ($(this).scrollTop() > window.innerHeight) {
-                $('.header').addClass('show-logo')
-            } else {
-                $('.header').removeClass('show-logo')
-            }
-
+            
             if ($(this).scrollTop() >= fixWrapper.offset().top) {
                 fixRight.css('position', 'fixed');
                 fixRight.css('top', rightTop);
@@ -343,6 +339,14 @@ $(document).ready(function() {
             } else {
                 $('._fixRight').css('position', 'static');
                 $('._fixRight').css('top', 'auto');
+            }
+
+            var headerScrolled = $(this).scrollTop()/mainTopHeight;
+            if(headerScrolled <=1){
+                $('.header__logo').css('transform', 'translate3d(0,-' + headerScrolled * mainTopHeight + 'px,0) rotateZ(0)')
+                $('.header__button').css('transform', 'translate3d(0,-' + headerScrolled * mainTopHeight + 'px,0) rotateZ(0)')
+                $('.header__hamburger').css('transform', 'translate3d(0,-' + headerScrolled * mainTopHeight + 'px,0) rotateZ(0)')
+                $('.header__shadow').css('opacity', headerScrolled)
             }
         }
 

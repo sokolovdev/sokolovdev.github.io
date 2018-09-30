@@ -17,8 +17,11 @@ $gray: #fff;
     }
     .header {
         &__logo {
-            opacity: 0.3;
-            filter: blur(2px);
+            img{
+                opacity: 0.3;
+                filter: blur(2px);
+            }
+            
         }
         &__text {
             opacity: 0.3;
@@ -60,6 +63,9 @@ $gray: #fff;
             }
             &:nth-child(3) {
                 transition-delay: 0.55s;
+            }
+            &:nth-child(4) {
+                transition-delay: 0.6s;
             }
         }
     }
@@ -2148,7 +2154,7 @@ $gray: #fff;
 /*transitions*/
 
 .header {
-    &__logo, &__text, &__button-wrapper,&__logo-side path {
+    &__text, &__button-wrapper,&__logo-side path {
         transition: 0.5s ease;
     }
     &__menu {
@@ -2164,7 +2170,7 @@ $gray: #fff;
     position: relative;
 }
 
- .title, .timeline__title, .timeline__time, .table__text, .table__time, .table__section, .header__sidebar, .experts__name, .input input, .socials__item span, .socials__text p {
+.header__logo img,.title, .timeline__title, .timeline__time, .table__text, .table__time, .table__section, .header__sidebar, .experts__name, .input input, .socials__item span, .socials__text p {
     transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
@@ -2217,46 +2223,13 @@ $gray: #fff;
             color: #4c4c4c
         }
     }
-    .header__sidebar {
+    
 
-        @media (max-width: 1239px) {
-            background-color: rgba(0, 0, 0, 0.27);
-        }
-    }
-    .header__logo-side{
-        path{
-            fill: #4c4c4c;
-        }
-    }
+    
 
-    .menu__item--header {
+   
 
-        span {
-            color: #4c4c4c;
-        }
 
-    }
-
-    .menu__item--small {
-        &:before {
-            background-color: #4c4c4c;
-        }
-    }
-
-    .socials__text {
-        p {
-            color: #4c4c4c;
-        }
-    }
-
-    .socials__item {
-        &:before{
-            color: #4c4c4c;
-        }
-        span {
-            color: #4c4c4c;
-        }
-    }
 
     .experts__name {
         color: #4c4c4c;
