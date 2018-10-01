@@ -230,7 +230,7 @@ var graph = $('.viewport-praph').waypoint(function(direction) {
     }, 901)
 
 }, {
-    offset: '100%'
+    offset: '80%'
 })
 
 
@@ -247,7 +247,10 @@ $('.header__hamburger').on('click', function() {
 $(document).ready(function() {
 
     var viewport = $('.viewport').waypoint(function(direction) {
-        $($(this)[0].element).addClass('showed');
+        if($($(this)[0].element).hasClass('viewport')){
+            $($(this)[0].element).addClass('showed');
+        }
+        
 
         var $this = $(this);
 
@@ -263,9 +266,7 @@ $(document).ready(function() {
         offset: '95%'
     })
 
-    if ($(window).width() >= 1240) {
-        $('.skills').width($('body').width() - 300);
-    }
+    
 
     $('input').on('focus', function() {
         $(this).closest('.input').addClass('focused')
@@ -290,7 +291,8 @@ $(document).ready(function() {
         rightTop = 0,
         fixWrapperHeight = fixWrapper.outerHeight(),
         fixRightHeight = fixRight.outerHeight(),
-        mainTopHeight = $('.main__top').outerHeight();
+        mainTopHeight = $('.main__top').outerHeight(),
+        headerScrolled = 0;
 
     if ($(window).width() >= 1240) {
         rightTop = fixRightTop - fixWrapperTop - 30;
@@ -339,14 +341,12 @@ $(document).ready(function() {
                 $('._fixRight').css('position', 'static');
                 $('._fixRight').css('top', 'auto');
             }
-
-            var headerScrolled = $(this).scrollTop()/mainTopHeight;
-            if(headerScrolled <=1){
-                $('.header__logo').css('transform', 'translate3d(0,-' + headerScrolled * mainTopHeight + 'px,0) rotateZ(0)')
-                $('.header__button').css('transform', 'translate3d(0,-' + headerScrolled * mainTopHeight + 'px,0) rotateZ(0)')
-                $('.header__hamburger').css('transform', 'translate3d(0,-' + headerScrolled * mainTopHeight + 'px,0) rotateZ(0)')
-                $('.header__shadow').css('opacity', headerScrolled)
+             headerScrolled = $(this).scrollTop()/mainTopHeight;
+             if(headerScrolled <=1) {
+                
+                trfHeader()
             }
+             
         }
 
 
@@ -355,16 +355,29 @@ $(document).ready(function() {
     })
 
 
-
-})
-
-$(window).on('resize', function() {
-    if ($(window).width() >= 1240) {
-        $('.skills').width($('body').width() - 300)
-    } else {
-        $('.skills').attr('style', '');
+    if ($(window).width()<1240){
+        console.log($(this).scrollTop())
+        headerScrolled = $(this).scrollTop()/mainTopHeight;
+        if(headerScrolled >=1) headerScrolled = 1;
+        if($(this).scrollTop()>mainTopHeight){
+            trfHeader()
+        }
     }
+
+    function trfHeader(){
+        console.log(headerScrolled,mainTopHeight)
+        $('.header__logo').css('transform', 'translate3d(0,-' + headerScrolled * mainTopHeight + 'px,0) rotateZ(0)')
+        $('.header__button').css('transform', 'translate3d(0,-' + headerScrolled * mainTopHeight + 'px,0) rotateZ(0)')
+        $('.header__hamburger').css('transform', 'translate3d(0,-' + headerScrolled * mainTopHeight + 'px,0) rotateZ(0)')
+        $('.header__shadow').css('opacity', headerScrolled);
+
+    }
+
 })
+
+
+
+
 
 
 $(".menu__item--header").on("click", function(event) {
