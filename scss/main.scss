@@ -945,6 +945,7 @@ $gray: #fff;
         &__item {
             width: 25.78vw;
             height: 10.9375vw;
+            max-width: none;
             p {
                 font-size: 1.4vw;
                 bottom: 3.75vw;
