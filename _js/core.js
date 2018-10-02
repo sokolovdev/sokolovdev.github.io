@@ -99,17 +99,17 @@ var waypointsTimelineDown = $('.timeline').waypoint(function(direction) {
 
 
 
-var waypointsTimelineDownCenter = $('.timeline').waypoint(function(direction) {
-    if (direction === 'down') {
-        // white()
+// var waypointsTimelineDownCenter = $('.timeline').waypoint(function(direction) {
+//     if (direction === 'down') {
+//         // white()
 
-        $('body').addClass('white');
+//         $('body').addClass('white');
 
-    }
+//     }
 
-}, {
-    offset: '-20%'
-})
+// }, {
+//     offset: '-20%'
+// })
 
 var waypointsTimelineDownCenter = $('.timeline').waypoint(function(direction) {
     if (direction === 'up') {
@@ -124,23 +124,23 @@ var waypointsTimelineDownCenter = $('.timeline').waypoint(function(direction) {
 })
 
 
-var waypointsExperts = $('.experts').waypoint(function(direction) {
-    if (direction === 'down') {
-        // noWhite()
-        $('.timeline').removeClass('white')
-        $('.header').removeClass('white')
-        $('body').removeClass('white');
-        if ($(window).width() > 768) {
-            // pJSDom[1].pJS.particles.color.value = '#fff';
-            // pJSDom[1].pJS.particles.line_linked.color = '#fff';
-            // pJSDom[1].pJS.fn.particlesRefresh();
-        }
+// var waypointsExperts = $('.experts').waypoint(function(direction) {
+//     if (direction === 'down') {
+//         // noWhite()
+//         $('.timeline').removeClass('white')
+//         $('.header').removeClass('white')
+//         $('body').removeClass('white');
+//         if ($(window).width() > 768) {
+//             // pJSDom[1].pJS.particles.color.value = '#fff';
+//             // pJSDom[1].pJS.particles.line_linked.color = '#fff';
+//             // pJSDom[1].pJS.fn.particlesRefresh();
+//         }
 
-    }
+//     }
 
-}, {
-    offset: '50%'
-})
+// }, {
+//     offset: '50%'
+// })
 
 var waypointsRegistrationDown = $('.registration').waypoint(function(direction) {
     if (direction === 'down') {
@@ -169,23 +169,23 @@ var waypointsTimelineUp = $('.timeline').waypoint(function(direction) {
 }, {
     offset: '30%'
 })
-var waypointsExpertsUp = $('.experts').waypoint(function(direction) {
-    if (direction === 'up') {
-        // white()
-        $('.timeline').addClass('white')
-        $('.header').addClass('white')
-        $('body').addClass('white');
-        if ($(window).width() > 768) {
-            // pJSDom[1].pJS.particles.color.value = '#000000';
-            // pJSDom[1].pJS.particles.line_linked.color = '#000000';
-            // pJSDom[1].pJS.fn.particlesRefresh();
-        }
+// var waypointsExpertsUp = $('.experts').waypoint(function(direction) {
+//     if (direction === 'up') {
+//         // white()
+//         $('.timeline').addClass('white')
+//         $('.header').addClass('white')
+//         $('body').addClass('white');
+//         if ($(window).width() > 768) {
+//             // pJSDom[1].pJS.particles.color.value = '#000000';
+//             // pJSDom[1].pJS.particles.line_linked.color = '#000000';
+//             // pJSDom[1].pJS.fn.particlesRefresh();
+//         }
 
-    }
+//     }
 
-}, {
-    offset: '50%'
-})
+// }, {
+//     offset: '50%'
+// })
 
 var waypointsRegistrationUp = $('.registration').waypoint(function(direction) {
     if (direction === 'up') {
@@ -285,62 +285,62 @@ $(document).ready(function() {
         fixLeft = $('._fixLeft'),
         header = $('.header'),
         headerHeight = header.outerHeight(),
-        fixRightTop = fixRight.offset().top,
-        fixWrapperTop = fixWrapper.offset().top,
-        secondWrapperTop = secondWrapper.offset().top,
+        // fixRightTop = fixRight.offset().top,
+        // fixWrapperTop = fixWrapper.offset().top,
+        // secondWrapperTop = secondWrapper.offset().top,
         rightTop = 0,
         fixWrapperHeight = fixWrapper.outerHeight(),
         fixRightHeight = fixRight.outerHeight(),
         mainTopHeight = $('.main__top').outerHeight(),
         headerScrolled = 0;
 
-    if ($(window).width() >= 1240) {
-        rightTop = fixRightTop - fixWrapperTop - 30;
-    } else if ($(window).width() < 768) {
-        rightTop = 10
-    } else {
-        rightTop = 20
-    }
+    // if ($(window).width() >= 1240) {
+    //     rightTop = fixRightTop - fixWrapperTop - 30;
+    // } else if ($(window).width() < 768) {
+    //     rightTop = 10
+    // } else {
+    //     rightTop = 20
+    // }
 
 
-    $('.check-line').css('top', (secondWrapperTop - rightTop * 3 - fixRight.outerHeight()));
+    // $('.check-line').css('top', (secondWrapperTop - rightTop * 3 - fixRight.outerHeight()));
 
     $(document).scroll(function() {
         
         if ($(window).width() >= 1240) {
             
-            if ($(this).scrollTop() >= fixWrapper.offset().top) {
-                fixRight.css('position', 'fixed');
-                fixRight.css('top', rightTop);
-                fixRight.css('bottom', 'auto');
-                if ($(this).scrollTop() >= (secondWrapperTop - fixRight.outerHeight() - rightTop * 3)) {
-                    fixRight.css('position', 'absolute');
-                    fixRight.css('bottom', rightTop);
-                    fixRight.css('top', 'auto');
-                    fixWrapper.css('position', 'relative');
-                }
+            // if ($(this).scrollTop() >= fixWrapper.offset().top) {
+            //     fixRight.css('position', 'fixed');
+            //     fixRight.css('top', rightTop);
+            //     fixRight.css('bottom', 'auto');
+            //     if ($(this).scrollTop() >= (secondWrapperTop - fixRight.outerHeight() - rightTop * 3)) {
+            //         fixRight.css('position', 'absolute');
+            //         fixRight.css('bottom', rightTop);
+            //         fixRight.css('top', 'auto');
+            //         fixWrapper.css('position', 'relative');
+            //     }
 
-            } else {
-                fixRight.css('position', 'static');
-                fixRight.css('top', 'auto');
-                fixRight.css('top', 'auto');
-            }
+            // } else {
+            //     fixRight.css('position', 'static');
+            //     fixRight.css('top', 'auto');
+            //     fixRight.css('top', 'auto');
+            // }
         } else {
-            if ($(this).scrollTop() >= fixWrapper.offset().top - header.outerHeight()) {
-                fixRight.css('position', 'fixed');
-                fixRight.css('top', (rightTop + header.outerHeight()));
+            // if ($(this).scrollTop() >= fixWrapper.offset().top - header.outerHeight()) {
+            //     fixRight.css('position', 'fixed');
+            //     fixRight.css('top', (rightTop + header.outerHeight()));
 
 
-                if ($(this).scrollTop() >= secondWrapper.offset().top - fixRight.outerHeight() - header.outerHeight() - rightTop * 2) {
-                    fixRight.css('position', 'absolute');
-                    fixRight.css('top', fixWrapper.outerHeight() - rightTop - fixRightHeight);
-                    fixWrapper.css('position', 'relative');
-                }
+            //     if ($(this).scrollTop() >= secondWrapper.offset().top - fixRight.outerHeight() - header.outerHeight() - rightTop * 2) {
+            //         fixRight.css('position', 'absolute');
+            //         fixRight.css('top', fixWrapper.outerHeight() - rightTop - fixRightHeight);
+            //         fixWrapper.css('position', 'relative');
+            //     }
 
-            } else {
-                $('._fixRight').css('position', 'static');
-                $('._fixRight').css('top', 'auto');
-            }
+            // } else {
+            //     $('._fixRight').css('position', 'static');
+            //     $('._fixRight').css('top', 'auto');
+            // }
              headerScrolled = $(this).scrollTop()/mainTopHeight;
              if(headerScrolled <=1) {
                 

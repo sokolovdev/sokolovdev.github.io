@@ -658,6 +658,9 @@ a{
     &--white{
         color: #fff;
     }
+    &--dark{
+        color: #000;
+    }
     @media (min-width: 768px){
         font-size:36px;
         letter-spacing: 1px;
