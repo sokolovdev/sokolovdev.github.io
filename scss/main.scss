@@ -991,11 +991,273 @@ $gray: #fff;
     }
 }
 
+
+.table{
+    &__line--country{
+        padding: 7px 0 9px;
+        box-sizing: border-box;
+        border-top: 1px solid rgba(0, 0, 0,0.2);
+        border-bottom: 1px solid rgba(0, 0, 0,0.2);
+        color: #fff;
+        font-size: 16px;
+        line-height: 18px;
+        font-family: bold;
+        & + .table__line{
+            border-top: none;
+        }
+        div{
+            color: inherit;
+            font-size: inherit;
+            font-family: inherit;
+            & + div{
+                margin-top: 4px;
+            }
+        }
+    }
+    &__line{
+        &--big{
+            & + .table__line{
+                margin-top: 20px;
+            }
+        }
+    }
+    &__speakers{
+        border-top: 1px solid rgba(0, 0, 0,0.2);
+        padding-top: 20px;
+        font-size: 0;
+    }
+    &__speaker{
+        width: 50%;
+        display: inline-block;
+        vertical-align: top;
+        margin-bottom: 30px;
+    }
+    &__top{
+        color: #4c4c4c;
+        font-size: 16px;
+        line-height: 18px;
+        font-family: bold;
+         margin-bottom: 20px;
+         a{
+            color: #40bbdc;
+            border-bottom: 1px solid transparentize(#40bbdc,0.5)
+         }
+        div{
+            font-size: inherit;
+            color: inherit;
+            font-family: inherit;
+            line-height: inherit;
+            & + div{
+                margin-top: 4px;
+            }
+        }
+    }
+    &__photo{
+        width: 57%;
+        margin-bottom: 18px;
+        img{
+            width: 100%;
+        }
+    }
+   
+
+
+    @media (min-width: 768px){
+        &__line--country{
+            padding: 8px 0 10px;
+            font-size: 0;
+            div{
+                font-size: 21px;
+                line-height: 24px;
+                display: inline-block;
+                vertical-align: top;
+                & + div{
+                    margin-top: 0;
+                }
+            }
+        }
+        &__date--country{
+            width: 18.66667%;
+        }
+        &__place--country{
+            width: 60.5%;
+        }
+        &__time--country{
+            width: span(2.5 of 12);
+            text-align: right;
+        }
+
+
+
+        &__line{
+            &--big{
+                & + .table__line{
+                    margin-top: 94px;
+                }
+            }
+        }
+        &__speakers{
+            padding-top: 60px;
+        }
+        &__speaker{
+            width: span(2.5 of 12);
+            margin-bottom: 0;
+            margin-right: span(0.5 of 12);
+            &:nth-child(even){
+                margin-top: 27px;
+            }
+        }
+        &__top{
+             margin-bottom: 11px;
+             font-size: 0;
+            div{
+                display: inline-block;
+                vertical-align: top;
+                font-size: 21px;
+                line-height: 24px;
+                & + div{
+                    margin-top: 0;
+                }
+            }
+        }
+        &__photo{
+            width: 65%;
+            margin-bottom: 28px;
+        }
+        &__date--big{
+            width: span(2 of 12);
+        }
+        &__place--big{
+            width: span(8 of 12);
+        }
+        &__time--big{
+            width: span(2 of 12);
+            text-align: right;
+        }
+        &__description--big{
+            p + p{
+                margin-top: 8px;
+            }
+        }
+
+    }
+     @media (min-width: 1240px){
+        &__line--country{
+            padding: 0.625vw 0 0.78125vw;
+            div{
+                font-size: 1.64vw;
+                line-height: 1.875vw;
+            }
+        }
+        &__date--country{
+            width: span(1.5 of 9);
+            text-align: center;
+        }
+        &__place--country{
+            width: span(5.5 of 9);
+        }
+        &__time--country{
+            width: span(2 of 9);
+            text-align: center;
+        }
+
+        &__line{
+            &--big{
+                & + .table__line{
+                    margin-top: 7.6vw;
+                }
+            }
+        }
+        &__speakers{
+            padding-top:  4.6875vw;
+        }
+        &__speaker{
+            &:nth-child(1){
+                margin-left: span(0.5 of 9);
+            }
+            width: 19.23333%;
+            margin-right: 4.36667%;
+            &:nth-child(even){
+                margin-top: 2.1vw;
+            }
+        }
+        &__top{
+             margin-bottom: 0.9vw;
+            div{
+                display: inline-block;
+                vertical-align: top;
+                font-size: 1.64vw;
+                line-height: 1.875vw;
+            }
+        }
+        &__photo{
+            width: 58%;
+            margin-bottom: 2vw;
+        }
+        &__date--big{
+            width: span(1.5 of 9);
+            padding-left: 2.5vw;
+            box-sizing: border-box;
+        }
+        &__place--big{
+            width: span(6.5 of 9);
+        }
+        &__time--big{
+            width: span(1 of 9);
+            text-align: left;
+        }
+        &__description--big{
+            p + p{
+                margin-top: 0;
+                margin-left: 3.5vw;
+            }
+            p{
+                display: inline-block;
+                vertical-align: middle;
+            }
+        }
+    }
+   
+
+}
+
+.text--speaker{
+    font-size: 16px;
+    line-height: 18px;
+    color: #4c4c4c;
+    p{
+        font-family: med;
+    }
+    p + p{
+        margin-top: 5px;
+    }
+    p.green{
+        color: #50e682;
+    }
+    @media (min-width: 768px){
+        font-size: 18px;
+        line-height: 21px;
+        p + p{
+            margin-top: 2px;
+        }
+    }
+    @media (min-width: 1240px){
+        font-size: 1.4vw;
+        line-height: 1.6vw;
+        p + p{
+            margin-top: 0.2vw;
+        }
+    }
+}
+
 .timeline {
     padding: 26px 0 10px;
     &.white{
         background-color: #fff;
         .timeline__text--country{
+            color: #2a2a2a;
+        }
+        .table__line--country{
             color: #2a2a2a;
         }
     }
@@ -1009,6 +1271,7 @@ $gray: #fff;
         }
     }
     &__logos--country{
+        margin-bottom: 12px;
         img{
             display: inline-block;
             vertical-align: middle;
@@ -1024,21 +1287,17 @@ $gray: #fff;
     &__text--country{
         margin-bottom: 18px;
     }
-    &__country{
-        padding-bottom: 30px;
-    }
     &__argentina{
-        padding-top: 30px;
-        border-top: 1px solid rgba(0,0,0,0.2);
+        padding-top: 17px;
         h4{
             font-size: 21px;
             font-family: exbold;
             color: #2a2a2a;
-            margin-bottom: 15px;
+            margin-bottom: 19px;
         }
     }
     &__layout{
-        padding: 35px 7% 5px;
+        padding: 31px 7% 5px;
         margin: 0 -7%;
         background-color: #3b68a0;
         /* IE9, iOS 3.2+ */
@@ -1060,16 +1319,25 @@ $gray: #fff;
         margin:0 auto 25px;
         max-width: 320px;
     }
+    &__ball{
+        width: 23.975vw;
+        height: 23.975vw;
+        border-radius: 50%;
+        background-color: #fff;
+        box-shadow: 0px 19px 35px 0 rgba(27, 27, 27, 0.2);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
     &__logo--layout{
         display: inline-block;
         vertical-align: top;
-        background-color: #fff;
         width: 23.975vw;
         height: 23.975vw;
         border-radius: 50%;
         position: relative;
         margin-bottom: 7.14vw;
-        box-shadow: 0px 19px 35px 0 rgba(27, 27, 27, 0.2);
         img{
             position: absolute;
             top: 50%;
@@ -1086,10 +1354,22 @@ $gray: #fff;
             margin-left: 0;
         }
     }
+    &__logo--capacitacion{
+         width: 23.975vw;
+        height: 23.975vw;
+        border-radius: 50%;
+        position: relative;
+        img{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
     &__logos--layout{
         text-align: center;
     }
-    &__logo{
+    &__ball{
         &--red{
             background-color: #e6002a;
         }
@@ -1118,8 +1398,45 @@ $gray: #fff;
     .logo-9{
         width: 78%;
     }
+    &__body--big{
+        padding: 26px 0 40px;
+    }
+    &__capacitacion{
+        padding: 27px 7% 0;
+        margin: 0 -7%;
+        background-color: #292980;
+        background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxsaW5lYXJHcmFkaWVudCBpZD0idnNnZyIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjAlIj48c3RvcCBzdG9wLWNvbG9yPSIjMWUxZTRiIiBzdG9wLW9wYWNpdHk9IjEiIG9mZnNldD0iMCIvPjxzdG9wIHN0b3AtY29sb3I9IiMzNDM0YjQiIHN0b3Atb3BhY2l0eT0iMSIgb2Zmc2V0PSIxIi8+PC9saW5lYXJHcmFkaWVudD48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI3ZzZ2cpIiAvPjwvc3ZnPg==);
+        background-image: -webkit-gradient(linear, 0% 0%, 100% 0%,color-stop(0, rgb(30, 30, 75)),color-stop(1, rgb(52, 52, 180)));
+        background-image: -webkit-repeating-linear-gradient(left,rgb(30, 30, 75) 0%,rgb(52, 52, 180) 100%);
+        background-image: repeating-linear-gradient(to right,rgb(30, 30, 75) 0%,rgb(52, 52, 180) 100%);
+        background-image: -ms-repeating-linear-gradient(left,rgb(30, 30, 75) 0%,rgb(52, 52, 180) 100%);
+        @media \0screen\,screen\9 {
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff1e1e4b",endColorstr="#ff3434b4",GradientType=1);
+        }
+    }
+     &__content--capacitacion{
+        position: relative;
+        text-align: center;
+        & > img{
+            width: 74%;
+        }
+    }
+    &__logo--capacitacion{
+        position: absolute;
+        bottom: 30%;
+    }
+    &__logo--abs-8{
+        left: 0;
+    }
+    &__logo--abs-9{
+        right: 0;
+    }
+    &__text--capacitacion{
+        margin-bottom: 40px;
+        text-align: center;
+    }
     @media (min-width: 768px){
-        padding: 75px 0 0;
+        padding: 49px 0 0;
         &__title{
             margin-bottom: 55px;
         }
@@ -1128,6 +1445,10 @@ $gray: #fff;
             vertical-align: bottom;
             width: span(5 of 12);
             margin-left: span(0.5 of 12);
+            margin-bottom: 0;
+        }
+        &__table--country{
+            margin-top: 37px;
         }
         &__layout{
             position: relative;
@@ -1142,7 +1463,7 @@ $gray: #fff;
             font-size: 0;
         }
         &__argentina{
-            padding-top: 35px;
+            padding-top: 44px;
             h4{
                 font-size: 30px;
                 margin-bottom: 30px;
@@ -1158,18 +1479,40 @@ $gray: #fff;
             max-width: none;
             display: inline-block;
             width: span(6 of 12);
+            max-width: 420px;
+        }
+        &__ball{
+            width: 100px;
+            height: 100px;
+            // animation: rotateReverse 3s linear infinite;
+            transform-origin: 50% 45%;
         }
         &__logo--layout{
             width: 100px;
             height: 100px;
             margin-bottom: 0;
             position: absolute;
-            // animation: rotate 3s linear infinite;
+            
+            // 
             img{
                 // animation: rotateReverse 3s linear infinite;
+                // animation: rotateReverse 3s linear infinite;
+                transform-origin: 50% 20%;
             }
             & + .timeline__logo{
                 margin-left: 0;
+            }
+        }
+        &__logo--layout{
+            width: 100px;
+            height: 100px;
+        }
+        &__logo--capacitacion{
+            width: 112px;
+            height: 112px;
+            .timeline__ball{
+                width: 112px;
+                height: 112px;
             }
         }
         &__logo{
@@ -1202,19 +1545,55 @@ $gray: #fff;
                 bottom: -20px;
             }
         }
+        &__body--big{
+            padding: 62px 0 104px;
+        }
+
+        &__capacitacion{
+            padding: 27px 2.7% 25px;
+            margin: 0 -2.7%;
+            position: relative;
+        }
+        &__content--capacitacion{
+            width: span(7.5 of 12);
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            max-width: 500px;
+            & > img{
+                width: 58%;
+            }
+        }
+        &__logo--capacitacion{
+            position: absolute;
+            bottom: 15%;
+        }
+        &__logo--abs-8{
+            left: 4%;
+        }
+        &__logo--abs-9{
+            right: 4%;
+        }
+        &__text--capacitacion{
+            width: span(4.5 of 12);
+            margin-bottom: 0;
+            text-align: left;
+            max-width: 300px;
+        }
     }
     @media (min-width: 1240px){
-        padding: 5.15vw 0 0;
+        padding: 4.05vw 0 0;
         &__title{
             margin-bottom: 3.9vw;
         }
         &__country{
             width: span(9 of 12);
-            padding-bottom: 2.34vw;
         }
         &__logos--country{
             width: span(3 of 9);
             margin-left: span(2 of 9);
+            padding-top: 1.2vw;
+            vertical-align: top;
             img{
                 &:nth-child(1){
                     width: 5vw;
@@ -1227,6 +1606,7 @@ $gray: #fff;
         }
         &__text--country{
             width: span(4 of 9);
+             vertical-align: top;
         }
 
         &__argentina{
@@ -1244,6 +1624,11 @@ $gray: #fff;
         &__text--layout{
             margin-left: span(0.33 of 9);
             width: 45%;
+            max-width: none;
+        }
+        &__ball{
+            width: 7.89vw;
+            height: 7.89vw;
         }
         &__logo--layout{
             width: 7.89vw;
@@ -1279,6 +1664,115 @@ $gray: #fff;
                 bottom: -1.6vw;
             }
         }
+        &__table--country{
+            margin-top: 1.1vw;
+        }
+
+        &__body--big{
+            width: span(9 of 12);
+            padding: 5vw 0 9.7vw;
+        }
+
+        &__capacitacion{
+            padding: 2.3vw 0 2.3vw 2.5vw;
+            box-sizing: border-box;
+            margin: 0;
+            width: span(9 of 12);
+        }
+        &__content--capacitacion{
+            width: 62.33333%;
+            max-width: none;
+            & > img{
+                width: 58%;
+            }
+        }
+        &__logo--capacitacion{
+            position: absolute;
+            bottom: 12%;
+            width: 8.75vw;
+            height: 8.75vw;
+            .timeline__ball{
+                width: 8.75vw;
+                height: 8.75vw;
+            }
+        }
+        &__logo--abs-8{
+            left: 4%;
+        }
+        &__logo--abs-9{
+            right: 4%;
+        }
+        &__text--capacitacion{
+            width: span(4.5 of 12);
+            max-width: none;
+        }
+    }
+
+}
+
+.text--capacitacion{
+    p{
+        color: #fff;
+        font-size: 18px;
+        & + p{
+            margin-top: 19px;
+        }
+        & + ul{
+            margin-top: 21px;
+        }
+        &.bold{
+            font-size: 21px;
+            font-family: bold;
+        }
+    }
+    li{
+        color:#5959b3;
+        font-size: 14px;
+        & + li{
+            margin-top: 10px;
+        }
+    }
+    @media (min-width: 768px){
+        p{
+            font-size: 24px;
+            & + p{
+                margin-top: 9px;
+            }
+            & + ul{
+                margin-top: 50px;
+            }
+            &.bold{
+                font-size: 30px;
+                line-height: 35px;
+            }
+        }
+        li{
+            font-size: 18px;
+            & + li{
+                margin-top: 5px;
+            }
+        }
+    }
+    @media (min-width: 1240px){
+        p{
+            font-size: 1.875vw;
+            & + p{
+                margin-top: 0.7vw;
+            }
+            & + ul{
+                margin-top: 3.125vw;
+            }
+            &.bold{
+                font-size: 2.8125vw;
+                line-height: 3.125vw;
+            }
+        }
+        li{
+            font-size: 1.4vw;
+            & + li{
+                margin-top: 0.3vw;
+            }
+        }
     }
 }
 
@@ -1297,7 +1791,7 @@ $gray: #fff;
     @media (min-width: 768px){
         h4{
             font-size: 30px;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
         }
         p{
             font-size: 24px;
@@ -1321,14 +1815,14 @@ $gray: #fff;
     p{
         font-size: 18px;
         & + .bold{
-            margin-top: 25px;
+            margin-top: 14px;
         }
         &.bold{
             font-family: bold;
             font-size: 21px;
             line-height: 30px;
             & + span{
-                margin-top: 25px;
+                margin-top: 14px;
             }
         }
     }
@@ -2290,30 +2784,7 @@ $gray: #fff;
         }
 
     }
-    .table {
-        &__text {
-            border-right: 0.5px solid rgba(0, 0, 0, 0.2);
-            p, li {
-
-                color: #4c4c4c;
-            }
-            span {
-                color: #50e682;
-            }
-            a {
-                color: #40bbdc;
-            }
-        }
-        &__time {
-            color: #4c4c4c;
-        }
-        &__section {
-            border-top: 0.5px solid rgba(0, 0, 0, 0.2);
-            &:last-child {
-                border-bottom: 0.5px solid rgba(0, 0, 0, 0.2);
-            }
-        }
-    }
+    
     .prizes__title {
         color: #4c4c4c;
     }
