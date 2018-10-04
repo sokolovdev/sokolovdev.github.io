@@ -5,9 +5,9 @@ block header
     include blocks/header.pug
 block content
     .background
-    include blocks/particles.pug
     .content
         +b.SECTION.main
+            +e#particles-js.particles.viewport
             +e.container.container
                 +e.top.viewport
                     +e.flags
@@ -331,6 +331,72 @@ block content
                         +e.logo--capacitacion.--abs-9
                             +e.ball
                             img(src="/img/new/cronograma/argentina/5.jpg" alt="argentina-logo-7").logo-9
+                +e.body--small.table__
+                    +e.line--small
+                        +e.date--small 29.10
+                        +e.place--small
+                            p Universidad Blas Pascal 
+                            p Córdoba, Argentina
+                            p 11.00–16.00
+                        +e.content
+                            p Teoría
+                            p Almuerzo
+                            p Sesión de código
+                        +e.times
+                            p 11:00 — 13:00
+                            p 13:00 — 14:00 
+                            p 14:00 — 16:00 
+                    +e.line--small
+                        +e.date--small 30.10
+                        +e.place--small
+                            p Universidad Empresarial Siglo 21
+                            p Córdoba, Argentina
+                            p 11.00–16.00
+                        +e.content
+                            p Teoría
+                            p Almuerzo
+                            p Sesión de código
+                        +e.times
+                            p 11:00 — 13:00
+                            p 13:00 — 14:00 
+                            p 14:00 — 16:00 
+                    +e.line--small
+                        +e.date--small.--tall 30.10 — 31.10
+                        +e.place--small.--tall
+                            p Universidad Empresarial Siglo 21 
+                            p HACKATHON
+                            p 18:00 — 12:00
+                            a(href="#") Cronograma
+                        +e.image
+                            include ../img/gro.svg
+                    +e.line--small
+                        +e.date--small 01.11
+                        +e.place--small
+                            p Espacio iúnigo
+                            p 11.00–16.00
+                            p Buenos Aires, Argentina
+                        +e.content
+                            p Teoría
+                            p Almuerzo
+                            p Sesión de código
+                        +e.times
+                            p 11:00 — 13:00
+                            p 13:00 — 14:00 
+                            p 14:00 — 16:00 
+                    +e.line--small
+                        +e.date--small 02.11
+                        +e.place--small
+                            p Espacio iúnigo
+                            p 11.00–16.00
+                            p Buenos Aires, Argentina
+                        +e.content
+                            p Teoría
+                            p Almuerzo
+                            p Sesión de código
+                        +e.times
+                            p 11:00 — 13:00
+                            p 13:00 — 14:00 
+                            p 14:00 — 16:00 
                 +e.country--colombia
                     +e.text--country.text--country
                         h4 Colombia

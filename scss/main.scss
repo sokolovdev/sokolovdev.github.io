@@ -1020,6 +1020,12 @@ $gray: #fff;
                 margin-top: 20px;
             }
         }
+        &--small{
+            padding: 16px 0 19px;
+            font-size: 0;
+            border-bottom: 1px solid rgba(0, 0, 0,0.2);
+            position: relative;
+        }
     }
     &__speakers{
         border-top: 1px solid rgba(0, 0, 0,0.2);
@@ -1059,9 +1065,57 @@ $gray: #fff;
             width: 100%;
         }
     }
-   
-
-
+    &__date--small{
+        font-family: bold;
+        color: #2a2a2a;
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+    &__place--small{
+        font-family: bold;
+        color: #2a2a2a;
+        font-size: 16px;
+        width: span(3.7 of 4);
+        margin-bottom: 22px;
+        p{
+            line-height: 18px;
+        }
+        a{
+            color: #40bbdc;
+            border-bottom: 1px solid transparentize(#40bbdc,0.5);
+            display: inline-block;
+        }
+        p + p{
+            margin-top: 1px;
+        }
+        p + a{
+            margin-top: 15px;
+        }
+    }
+    &__place--tall{
+        width: span(2.1 of 4);
+    }
+    &__image{
+        position: absolute;
+        right: 0;
+        top: 34px;
+        width: 145px;
+    }
+    &__content,&__times{
+        display: inline-block;
+        vertical-align: top;
+        width: 50%;
+        p{
+            font-size: 14px;
+            color: #4c4c4c;
+            & + p{
+                margin-top: 7px;
+            }
+        }
+    }
+    &__times{
+        text-align: right;
+    }
     @media (min-width: 768px){
         &__line--country{
             padding: 8px 0 10px;
@@ -1140,6 +1194,61 @@ $gray: #fff;
             }
         }
 
+        &__line--small{
+            padding: 25px 0 29px;
+        }
+        &__date--small{
+            display: inline-block;
+            vertical-align: top;
+            font-size: 21px;
+            margin-bottom: 0;
+            width: span(1.35 of 12);
+            line-height: 24px;
+        }
+        &__place--small{
+            font-size: 21px;
+            display: inline-block;
+            vertical-align: top;
+            width: 46.53333%;
+            margin-bottom: 0;
+            p{
+                line-height: 24px;
+            }
+            p + p{
+                margin-top: 1px;
+            }
+            p + a{
+                margin-top: 15px;
+            }
+        }
+        &__place--tall{
+            width: 46.25%;
+        }
+        &__date--tall{
+            width: span(2.75 of 12);
+        }
+        &__image{
+            position: static;
+            width: 25.83333%;
+            display: inline-block;
+            vertical-align: top;
+        }
+        &__content,&__times{
+            p{
+                font-size: 18px;
+                & + p{
+                    margin-top: 16px;
+                }
+            }
+        }
+        &__content{
+            width: 24.41667%;
+        }
+        &__times{
+            text-align: left;
+            width: 17%;
+        }
+
     }
      @media (min-width: 1240px){
         &__line--country{
@@ -1151,7 +1260,8 @@ $gray: #fff;
         }
         &__date--country{
             width: span(1.5 of 9);
-            text-align: center;
+            padding-left: 2.4vw;
+            box-sizing: border-box;
         }
         &__place--country{
             width: span(5.5 of 9);
@@ -1216,6 +1326,76 @@ $gray: #fff;
                 vertical-align: middle;
             }
         }
+
+        &__line--small{
+            padding: 1.9vw 0 2.2vw;
+        }
+        &__date--small{
+            font-size: 1.64vw;
+            width: 13.55%;
+            line-height: 1.875vw;
+            padding-left: 2.4vw;
+            box-sizing: border-box;
+        }
+        &__place--small{
+            font-size: 1.64vw;
+            width: 40.03333%;
+            p{
+                line-height: 1.875vw;
+            }
+            p + p{
+                margin-top: 0.07vw;
+            }
+            p + a{
+                margin-top: 1.17vw;
+            }
+        }
+        &__place--tall{
+            width: 40.25%;
+        }
+        &__date--tall{
+            width: 26.81667%;
+        }
+        &__image{
+            width: 20.83333%;
+            svg{
+                overflow: visible;
+            }
+            .blue-2{
+                animation: growBlue1 10s ease-out infinite 1s
+            }
+            .blue-1{
+                animation: growBlue2 10s ease-out infinite 1s
+            }
+
+            .green-2{
+                animation: growGreen1 10s ease-out infinite 1.5s
+            }
+            .green-1{
+                animation: growGreen2 10s ease-out infinite 1.5s
+            }
+
+            .yellow-2{
+                animation: growYellow1 10s ease-out infinite
+            }
+            .yellow-1{
+                animation: growYellow2 10s ease-out infinite
+            }
+        }
+        &__content,&__times{
+            p{
+                font-size: 1.4vw;
+                & + p{
+                    margin-top: 1.25vw;
+                }
+            }
+        }
+        &__content{
+            width: 22.21667%;
+        }
+        &__times{
+            width: 24.2%;
+        }
     }
    
 
@@ -1258,6 +1438,7 @@ $gray: #fff;
 
 .timeline {
     padding: 26px 0 35px;
+    transition: 0.5s ease;
     &.white{
         background-color: #fff;
         .timeline__text--country{
@@ -1265,6 +1446,11 @@ $gray: #fff;
         }
         .table__line--country{
             color: #2a2a2a;
+        }
+    }
+    &__body{
+        &--small{
+            margin-bottom: 27px;
         }
     }
 
@@ -1457,6 +1643,9 @@ $gray: #fff;
         &__title{
             margin-bottom: 55px;
         }
+        &__body--small{
+            margin-bottom: 35px;
+        }
         &__logos--country{
             display: inline-block;
             vertical-align: bottom;
@@ -1612,6 +1801,10 @@ $gray: #fff;
     }
     @media (min-width: 1240px){
         padding: 4.05vw 0 6.25vw;
+        &__body--small{
+            margin-bottom: 4.1vw;
+            width: span(9 of 12);
+        }
         &__title{
             margin-bottom: 3.9vw;
         }
@@ -1817,12 +2010,14 @@ $gray: #fff;
     h4{
         font-size: 21px;
         margin-bottom: 15px;
+        transition: 0.5s ease;
         
         font-family: exbold;
     }
     p{
         font-size: 18px;
         line-height: 24px;
+        transition: 0.5s ease;
     }
     @media (min-width: 768px){
         h4{
@@ -2260,6 +2455,7 @@ $gray: #fff;
         p{
             font-size: 14px;
             color: rgba(233, 233, 233, 0.4);
+            transition: 0.3s ease;
         }
         & + .media__item {
             margin-top: 20px;
@@ -2819,6 +3015,9 @@ $gray: #fff;
             color: #2a2a2a
         }
 
+    }
+    .media__item p{
+        color: #2a2a2a;
     }
     
     .prizes__title {

@@ -1,35 +1,33 @@
 var count_particles, stats, update;
 
-if ($(window).width() > 768) {
-    // particlesJS.load('particles-js','particles.json', function() {
-    //     // $($('canvas')[0]).css('height', $('body').height());
-    //     // $($('canvas')[0]).css('opacity', 0);
-    //     // setTimeout(function () {
-    //     //     pJSDom[0].pJS.fn.particlesRefresh();
-    //     //     $($('canvas')[0]).css('opacity', 1);
-    //     // },1000)
-    //
-    //     // console.log($('body').height())
-    // });
-    //
-    // particlesJS.load('timeline-bg','particlesMobile.json', function() {
-    //     // $($('canvas')[0]).css('height', $('body').height());
-    //     // $($('canvas')[0]).css('opacity', 0);
-    //     // setTimeout(function () {
-    //     //     pJSDom[0].pJS.fn.particlesRefresh();
-    //     //     $($('canvas')[0]).css('opacity', 1);
-    //     // },1000)
-    //
-    //     // console.log($('body').height())
-    // });
-    //
-    // update = function () {
-    //     // if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
-    //     //     count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
-    //     // }
-    //     requestAnimationFrame(update);
-    // };
-    // requestAnimationFrame(update);
+if ($(window).width() >= 768) {
+    particlesJS.load('particles-js','particles.json', function() {
+        $($('canvas')[0]).css('height', $('#particles').height());
+        $($('canvas')[0]).css('opacity', 0);
+        setTimeout(function () {
+            pJSDom[0].pJS.fn.particlesRefresh();
+            $($('canvas')[0]).css('opacity', 1);
+        },1000)
+    });
+    
+    particlesJS.load('timeline-bg','particlesMobile.json', function() {
+        // $($('canvas')[0]).css('height', $('body').height());
+        // $($('canvas')[0]).css('opacity', 0);
+        // setTimeout(function () {
+        //     pJSDom[0].pJS.fn.particlesRefresh();
+        //     $($('canvas')[0]).css('opacity', 1);
+        // },1000)
+    
+        // console.log($('body').height())
+    });
+    
+    update = function () {
+        // if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
+        //     count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
+        // }
+        requestAnimationFrame(update);
+    };
+    requestAnimationFrame(update);
 }
 
 
@@ -142,14 +140,7 @@ var waypointsTimelineDownCenter = $('.timeline').waypoint(function(direction) {
 //     offset: '50%'
 // })
 
-var waypointsRegistrationDown = $('.registration').waypoint(function(direction) {
-    if (direction === 'down') {
-        white()
-    }
 
-}, {
-    offset: '50%'
-})
 
 
 var waypointsTimelineUp = $('.timeline').waypoint(function(direction) {
@@ -187,13 +178,22 @@ var waypointsTimelineUp = $('.timeline').waypoint(function(direction) {
 //     offset: '50%'
 // })
 
+var waypointsRegistrationDown = $('.registration').waypoint(function(direction) {
+    if (direction === 'down') {
+        white()
+    }
+
+}, {
+    offset: '100%'
+})
+
 var waypointsRegistrationUp = $('.registration').waypoint(function(direction) {
     if (direction === 'up') {
         noWhite()
     }
 
 }, {
-    offset: '50%'
+    offset: '100%'
 })
 
 
