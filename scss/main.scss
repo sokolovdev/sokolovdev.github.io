@@ -1227,12 +1227,18 @@ $gray: #fff;
     color: #4c4c4c;
     p{
         font-family: med;
+        padding-right: 7px;
+        box-sizing: border-box;
     }
     p + p{
         margin-top: 5px;
     }
     p.green{
         color: #50e682;
+    }
+    a{
+        color: #40bbdc;
+        border-bottom: 1px solid rgba(64,187,220,.5);
     }
     @media (min-width: 768px){
         font-size: 18px;
@@ -1251,7 +1257,7 @@ $gray: #fff;
 }
 
 .timeline {
-    padding: 26px 0 10px;
+    padding: 26px 0 35px;
     &.white{
         background-color: #fff;
         .timeline__text--country{
@@ -1272,16 +1278,27 @@ $gray: #fff;
     }
     &__logos--country{
         margin-bottom: 12px;
+        .logo-1{
+            width: 64px;
+        }
+        .logo-2{
+            width: 177px;
+            margin-left: 33px;
+        }
+        .logo-10{
+            width: 56px;
+        }
+        .logo-11{
+            width: 91px;
+            margin-left: 13px;
+        }
+        .logo-12{
+            width: 105px;
+            margin-left: 15px;
+        }
         img{
             display: inline-block;
             vertical-align: middle;
-            &:nth-child(1){
-                width: 64px;
-            }
-            &:nth-child(2){
-                width: 177px;
-                margin-left: 33px;
-            }
         }
     }
     &__text--country{
@@ -1418,7 +1435,7 @@ $gray: #fff;
         position: relative;
         text-align: center;
         & > img{
-            width: 74%;
+            width: 65%;
         }
     }
     &__logo--capacitacion{
@@ -1436,7 +1453,7 @@ $gray: #fff;
         text-align: center;
     }
     @media (min-width: 768px){
-        padding: 49px 0 0;
+        padding: 49px 0 60px;
         &__title{
             margin-bottom: 55px;
         }
@@ -1446,6 +1463,18 @@ $gray: #fff;
             width: span(5 of 12);
             margin-left: span(0.5 of 12);
             margin-bottom: 0;
+            font-size: 0;
+            .logo-10{
+                width: 61px;
+            }
+            .logo-11{
+                width: 100px;
+                margin-left: 15px;
+            }
+            .logo-12{
+                width: 110px;
+                margin-left: 17px;
+            }
         }
         &__table--country{
             margin-top: 37px;
@@ -1561,7 +1590,7 @@ $gray: #fff;
             right: 0;
             max-width: 500px;
             & > img{
-                width: 58%;
+                width: 52%;
             }
         }
         &__logo--capacitacion{
@@ -1582,7 +1611,7 @@ $gray: #fff;
         }
     }
     @media (min-width: 1240px){
-        padding: 4.05vw 0 0;
+        padding: 4.05vw 0 6.25vw;
         &__title{
             margin-bottom: 3.9vw;
         }
@@ -1590,18 +1619,28 @@ $gray: #fff;
             width: span(9 of 12);
         }
         &__logos--country{
-            width: span(3 of 9);
-            margin-left: span(2 of 9);
+            width: span(4 of 9);
+            margin-left: span(1 of 9);
             padding-top: 1.2vw;
             vertical-align: top;
-            img{
-                &:nth-child(1){
-                    width: 5vw;
-                }
-                &:nth-child(2){
-                    width: 13.82vw;
-                    margin-left: 2.57vw;
-                }
+            text-align: right;
+            &.logo-1{
+                width: 5vw;
+            }
+            &.logo-2{
+                width: 13.82vw;
+                margin-left: 2.57vw;
+            }
+            .logo-10{
+                width: 5.1vw;
+            }
+            .logo-11{
+                width: 8.5vw;
+                margin-left: 2.5vw;
+            }
+            .logo-12{
+                width: 9.6vw;
+                margin-left: 1.7vw;
             }
         }
         &__text--country{
@@ -2307,7 +2346,7 @@ $gray: #fff;
     position: relative;
 
     &::before {
-        content: 'Не обязательно';
+        content: 'Opcional';
         font-size: 12px;
         font-family: med;
         color: transparentize($gray, 0.3);
