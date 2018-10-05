@@ -380,7 +380,7 @@ $(document).ready(function() {
 
 
 
-$(".menu__item--header").on("click", function(event) {
+$(".menu__item--header, .header__button").on("click", function(event) {
     event.preventDefault();
 
     var id = $(this).attr('href'),
@@ -389,6 +389,7 @@ $(".menu__item--header").on("click", function(event) {
 
     $('body,html').animate({ scrollTop: top }, 1500);
     $('body').removeClass('open-menu');
+    $('.header__hamburger').removeClass('active');
 
 });
 
@@ -519,3 +520,52 @@ $('.registration__toggle').on('click', function(){
     $(this).addClass('active');
     $('.registration__tab').eq($(this).index()).addClass('active');
 })
+
+$('.form__button').click(function(e) {
+        var $this = $(this),
+            data = $this.closest('form').serialize(),
+            $email = $this.closest('.form').find('input[name="email"]'),
+            $name = $this.closest('.form').find('input[name="name"]'),
+            pattern = /^([a-z0-9_\.-])+@[a-z0-9-]+\.([a-z]{2,4}\.)?[a-z]{2,4}$/i,
+            $input = $this.closest('.form').find('.input'),
+            formCheked = false;
+
+        if ($email.val() !== '') {
+            if (!pattern.test($email.val())) {
+                $email.closest('.input').addClass('error');
+                formCheked = false;
+            } else {
+                $email.closest('.input').removeClass('error');
+                formCheked = true;
+            }
+        } else {
+            $email.closest('.input').addClass('error ');
+            formCheked = false;
+        }
+
+        if ($name.val() !== '') {
+            $name.closest('.input').removeClass('error');
+            formCheked = true;
+        } else {
+            $name.closest('.input').addClass('error');
+            formCheked = false;
+        }
+
+
+
+        if (formCheked) {
+            $(this).closest('.form').addClass('loading');
+            $.ajax({
+                type: 'POST', 
+                url: '/send.php',
+                data: data, 
+                success: function(data) { 
+                    $(this).closest('.form').removeClass('loading');
+                    $(this).closest('.form').addClass('send');
+                }
+            });
+        }
+
+
+
+    });
