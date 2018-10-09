@@ -9,6 +9,85 @@ html(lang="ru")
         block content
             .buffer
         include footer.pug
+        +b.popup--capacitacion
+            +e.body
+                +e.title
+                    h3 Temario de capacitación
+                    p Duración de capacitación — 4 horas 
+                +e.text.text--popup
+                    h4 NEM Tech
+                    ul
+                        li Architecting on NEM
+                        li NIS Node Requirements
+                        li Account (GET method)
+                        li Announce (POST method)
+                        li Json Object for Announce
+                    ol
+                        li Transaction
+                        li Namespace
+                        li Mosaic
+                        li Convert Account to Multi-sign
+                        li Multisig Transactions
+                        li Cosign Transactions
+                        li Transaction Fees
+                    ul
+                        li Common API (GET Method)
+                        li Example of using NEM-SDK on Java and C#
+                    h4 NEM Catapult
+                    p Highlight feature
+                    ol
+                        li Aggregated Transactions
+                        li Multi-level Multi-signature Account
+                    h4 Coding session
+                +e.close
+        +b.popup--cronograma
+            +e.body
+                +e.title
+                    h3 Hackathon en Universidad Empresarial Siglo 21
+                +e.text.text--popup
+                    h4 Dia 1
+                    p.bold 18:00
+                    p Palabras de Bienvenida y explicación de las Reglas de Hackathon
+                    p Qué necesitas saber antes de empezar
+                    ul
+                        li Andrés Salamone, Córdoba Bitcoin
+                        li Sasha Ivanova, embajadora NEM en Argentina
+                    p.bold 18:30
+                    p Presentación de Mentores que van a apoyar a los equipos
+                    ul
+                        li Shin Tatt
+                        li Pablo Romero
+                        li Daniel Tolosa
+                    p.bold 19:00
+                    p Presentación de Desafíos y detalles de cada uno
+                    p Preguntas y respuestas
+                    ul
+                        li Municipalidad de Córdoba
+                        li Universidad Blas Pascal
+                    p.bold 19:30
+                    p Se forman los equipos finales y Hackathon empieza
+                    h4 Dia 2
+                    p.bold 0:30
+                    p Primera revisión de progreso
+                    ul
+                        li Shin Tatt
+                    p.bold 5:00
+                    p Revisión del pitch (presentación)
+                    ul
+                        li Sasha Ivanova
+                    p.bold 7:00
+                    p Desayuno
+                    p.bold 8:00
+                    p Última revisión
+                    p.bold 9:00
+                    p Presentación del juzgado de los expertos
+                    p.bold 10:00
+                    p Presentación final
+                    p.bold 11:00
+                    p.bold Juzgado toma decisión vota la comunidad votan los sponsors
+                    p.bold 12:00
+                    p Premio para los ganadores y Networking
+                +e.close
         link(href="/css/main.min.css", rel="stylesheet")
         script(src="https://code.jquery.com/jquery-3.2.1.min.js",defer)
         script(src="/js/jquery.waypoints.min.js" ,defer)

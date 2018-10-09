@@ -61,31 +61,32 @@ block content
         +b#program.SECTION.program
             +e.container.container
                 +e.H2.title.title.viewport El Blockchain Bootcamp consta de tres partes
-                +e.list
-                    +e.item.viewport
-                        include ../img/lec.svg
-                        //img(src="/img/1.svg").viewport
-                        h3 Congreso (Serie de meetups y charlas)
-                        p Los referentes de la industria Blockchain en América Latina van a compartir sus experiencias, secretos y growth hacks.
-                    +e.item.viewport
-                        include ../img/pitch.svg
-                        //img(src="/img/3.svg").viewport
-                        h3 Capacitación
-                        p A cargo de Shin Tatt Wong, Arquitecto de soluciones & Entrenador Técnico de NEM Malasia.
-                    +e.item.viewport
-                        include ../img/gro.svg
-                        //img(src="/img/2.svg").viewport
-                        h3.viewport Hackathon
-                        p.viewport La capacitación va a culminar con el Hackathon NEM, donde diferentes entidades - gobiernos, empresas y universidades - van a presentar sus desafíos. Ganará el equipo que presente la mejor solución de un caso de uso real.
-                        p.viewport El equipo Ganador se lleva el PREMIO
-                +e.couch
-                    +e.img.viewport
-                        img(src="/img/tatt.png")
-                    +e.text
-                        h3.viewport Shin Tatt
-                        p.viewport Entrenó desarrolladores en todo el mundo incluyendo  Australia, China, Dubai, Malasia, Nueva Zelanda, Filipinas, Singapur, Corea del Sur y Vietnam.
-                        p.viewport Shin Tatt ha guiado proyectos de diferentes industrias para entender y implementar NEM.
-                        span.viewport Temario de capacitación
+                +e.body
+                    +e.list
+                        +e.item.viewport
+                            include ../img/lec.svg
+                            //img(src="/img/1.svg").viewport
+                            h3 Congreso (Serie de meetups y charlas)
+                            p Los referentes de la industria Blockchain en América Latina van a compartir sus experiencias, secretos y growth hacks.
+                        +e.item.viewport
+                            include ../img/pitch.svg
+                            //img(src="/img/3.svg").viewport
+                            h3 Capacitación
+                            p A cargo de Shin Tatt Wong, Arquitecto de soluciones & Entrenador Técnico de NEM Malasia.
+                        +e.item.viewport
+                            include ../img/gro.svg
+                            //img(src="/img/2.svg").viewport
+                            h3.viewport Hackathon
+                            p.viewport La capacitación va a culminar con el Hackathon NEM, donde diferentes entidades - gobiernos, empresas y universidades - van a presentar sus desafíos. Ganará el equipo que presente la mejor solución de un caso de uso real.
+                            p.viewport El equipo Ganador se lleva el PREMIO
+                    +e.couch
+                        +e.img.viewport
+                            img(src="/img/tatt.png")
+                        +e.text
+                            h3.viewport Shin Tatt
+                            p.viewport Entrenó desarrolladores en todo el mundo incluyendo  Australia, China, Dubai, Malasia, Nueva Zelanda, Filipinas, Singapur, Corea del Sur y Vietnam.
+                            p.viewport Shin Tatt ha guiado proyectos de diferentes industrias para entender y implementar NEM.
+                            span.viewport._openCapacitacion Temario de capacitación
         +b#promo.SECTION.promo.viewport
             +e.container.container
                 +e.H2.title.title.viewport ¡En el mundo de Blockchain todo es posible!
@@ -366,7 +367,7 @@ block content
                             p Universidad Empresarial Siglo 21 
                             p HACKATHON
                             p 18:00 — 12:00
-                            a(href="#") Cronograma
+                            a._openCronograma Cronograma
                         +e.image
                             include ../img/gro.svg
                     +e.line--small
@@ -542,6 +543,11 @@ block content
                                     +e.LABEL(for="industry").label Industria
                                 +e.BUTTON(type="button").button.button--blue.viewport Registrarme
                             +e.preloader
+                    +e.tab--response
+                        +e.text
+                            p.strong Su suscripción ha sido aceptada. 
+                            p.strong En breve les contactan por correo electronico
+                        +e.BUTTON(type="button").button--back.button--blue.viewport ¡Listo!
                 +e.img.viewport
                     include ../img/form.svg
                     img(src="/img/mask1.png")
