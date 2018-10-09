@@ -320,13 +320,17 @@ $(document).ready(function() {
 
         var $this = $(this);
 
-        setTimeout(function() {
-            $($this[0].element).removeClass('showed')
-        }, 1100)
+        if ($(window).width() > 1240) {
+            setTimeout(function() {
+                $($this[0].element).removeClass('showed')
+            }, 1100)
 
-        setTimeout(function() {
-            $($this[0].element).removeClass('viewport')
-        }, 1101)
+            setTimeout(function() {
+                $($this[0].element).removeClass('viewport')
+            }, 1101)
+        }
+
+
 
     }, {
         offset: '95%'
@@ -361,26 +365,16 @@ $(document).ready(function() {
         headerScrolled = 0;
     $(document).scroll(function() {
 
-        if ($(window).width() >= 1240) {
-        } else {
+        if ($(window).width() < 1240) {
             headerScrolled = $(this).scrollTop() / mainTopHeight;
-            if (headerScrolled <= 1) {
-                trfHeader()
+            if (headerScrolled >= 1) {
+                headerScrolled = 1
             }
-
+            trfHeader()
         }
-
-
     })
 
 
-    if ($(window).width() < 1240) {
-        headerScrolled = $(this).scrollTop() / mainTopHeight;
-        if (headerScrolled >= 1) headerScrolled = 1;
-        if ($(this).scrollTop() > mainTopHeight) {
-            trfHeader()
-        }
-    }
 
     function trfHeader() {
         $('.header__logo').css('transform', 'translate3d(0,-' + headerScrolled * mainTopHeight + 'px,0) rotateZ(0)')
@@ -419,12 +413,12 @@ $('.registration__toggle').on('click', function() {
     $('.registration__tab').eq($(this).index()).addClass('active');
 })
 
-$('.registration__button--back').on('click', function(){
+$('.registration__button--back').on('click', function() {
     $('.registration__toggle').eq(2).addClass('active');
     $('.registration__tab').removeClass('active');
     $('.registration__tab').eq(2).addClass('active');
-    $('input').val(''); 
-    $('.input').removeClass('focused'); 
+    $('input').val('');
+    $('.input').removeClass('focused');
 })
 
 $('.form__button').click(function(e) {
@@ -459,7 +453,7 @@ $('.form__button').click(function(e) {
         nameChecked = false;
     }
 
-    console.log(nameChecked,emailChecked)
+    console.log(nameChecked, emailChecked)
 
 
     if (nameChecked && emailChecked) {
@@ -479,19 +473,17 @@ $('.form__button').click(function(e) {
     }
 });
 
-$('._openCapacitacion').on('click', function(){
+$('._openCapacitacion').on('click', function() {
     $('.popup--capacitacion').addClass('open');
     $('body').css('overflow', 'hidden');
 })
 
-$('._openCronograma').on('click', function(){
+$('._openCronograma').on('click', function() {
     $('.popup--cronograma').addClass('open');
     $('body').css('overflow', 'hidden');
 })
 
-$('.popup__close').on('click', function(){
+$('.popup__close').on('click', function() {
     $(this).closest('.popup').removeClass('open');
     $('body').css('overflow', 'visible');
 })
-
-

@@ -1598,6 +1598,7 @@ $gray: #fff;
     }
     &__logos--layout{
         text-align: center;
+        font-size: 0;
     }
     &__ball{
         &--red{
@@ -2784,6 +2785,8 @@ $gray: #fff;
         border-bottom: 1px solid rgb(242, 242, 242);
         margin-bottom:  27px;
         display: inline-block;
+        font-size: 0;
+        white-space: nowrap;
     }
     &__tabs{
         max-width: 400px;
