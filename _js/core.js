@@ -200,24 +200,24 @@ var waypointsExpertsUp = $('.experts').waypoint(function(direction) {
 
 
 
-var waypointsRegistrationDown = $('.registration').waypoint(function(direction) {
-    if (direction === 'down') {
-        white()
-    }
-
-}, {
-    offset: '100%'
-})
-
-var waypointsRegistrationUp = $('.registration').waypoint(function(direction) {
-    if (direction === 'up') {
-        noWhite()
-    }
-
-}, {
-    offset: '100%'
-})
-
+// var waypointsRegistrationDown = $('.registration').waypoint(function(direction) {
+//     if (direction === 'down') {
+//         $('.registration').addClass('white');
+//     }
+//
+// }, {
+//     offset: '100%'
+// })
+//
+// var waypointsRegistrationUp = $('.registration').waypoint(function(direction) {
+//     if (direction === 'up') {
+//         $('.registration').removeClass('white');
+//     }
+//
+// }, {
+//     offset: '100%'
+// })
+//
 
 
 
@@ -430,7 +430,14 @@ $('.form__button').click(function(e) {
         $input = $this.closest('.form').find('.input'),
         formCheked = false,
         emailChecked = false,
-        nameChecked = false;
+        nameChecked = false,
+        formUrl = '/sendHack.php';
+
+    if($this.hasClass('form__button--hackathon')){
+        formUrl = '/sendHack.php'
+    } else if ($this.hasClass('form__button--capacitacion')){
+        formUrl = '/sendCap.php'
+    }
 
     if ($email.val() !== '') {
         if (!pattern.test($email.val())) {
@@ -453,15 +460,13 @@ $('.form__button').click(function(e) {
         nameChecked = false;
     }
 
-    console.log(nameChecked, emailChecked)
-
-
+    console.log(formUrl)
     if (nameChecked && emailChecked) {
         $(this).closest('.form').addClass('loading');
         var form = $(this);
         $.ajax({
             type: 'POST',
-            url: '/send.php',
+            url: formUrl,
             data: data,
             success: function(data) {
                 form.closest('.form').removeClass('loading');

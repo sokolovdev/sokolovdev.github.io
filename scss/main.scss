@@ -1494,6 +1494,7 @@ $gray: #fff;
     }
     &__logos--country{
         margin-bottom: 12px;
+        font-size: 0;
         .logo-1{
             width: 64px;
         }
@@ -2245,7 +2246,7 @@ $gray: #fff;
                 opacity: 1;
                 transform: translate(0, 0);
                 transition: 0.3s ease;
-                @for $i from 0 through 31 {
+                @for $i from 0 through 35 {
                     &:nth-child(#{$i}) {
                         transition-delay: 0.1s*$i;
                     }
@@ -2485,9 +2486,20 @@ $gray: #fff;
             font-size: 14px;
             color: rgba(233, 233, 233, 0.4);
             transition: 0.3s ease;
+            & + img{
+                margin-top: 8px;
+            }
         }
         & + .media__item {
             margin-top: 20px;
+        }
+        img{
+            width: 30%;
+        }
+        &:nth-child(1){
+            img{
+                width:65%;
+            }
         }
     }
     @media (min-width: 768px) {
@@ -2517,6 +2529,9 @@ $gray: #fff;
             }
             p{
                 font-size: 16px;
+                & + img{
+                    margin-top: 10px;
+                }
             }
             & + .media__item {
                 margin-top: 0;
@@ -2546,6 +2561,9 @@ $gray: #fff;
             }
             p{
                 font-size: 1.25vw;
+                & + img{
+                    margin-top: 0.7vw;
+                }
             }
             &:hover {
                 span {
@@ -2741,6 +2759,9 @@ $gray: #fff;
 
 .registration {
     padding: 30px 0 60px;
+    &.white{
+        background-color: #fff;
+    }
     &__title {
         margin-bottom: 17px;
         letter-spacing: 1.8px;
@@ -2861,6 +2882,8 @@ $gray: #fff;
     @media (min-width: 1240px) {
         padding: 7vw 0 9vw;
         position: relative;
+        transition: 0.5s ease;
+
         .block-1{
             animation: hovering 2s infinite ease-out;
         }
